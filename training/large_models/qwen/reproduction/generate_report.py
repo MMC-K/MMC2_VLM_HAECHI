@@ -114,3 +114,14 @@ def remote_text(path: str) -> str:
 
 def remote_json(path: str) -> dict:
     return json.loads(remote_text(path))
+
+
+def remote_find(root: str, name: str) -> str:
+    paths = sorted(
+        line
+        for line in kubectl("find", root, "-type", "f", "-name", name, "-print").splitlines()
+        if line
+    )
+    if len(paths) != 1:
+        raise RuntimeError(f"Expected one {name} below {root}, found {paths}")
+    return paths[0]
