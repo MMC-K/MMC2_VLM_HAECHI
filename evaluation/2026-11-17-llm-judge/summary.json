@@ -1,0 +1,93 @@
+{
+  "judge_model_requested": "gemini-3.5-flash-lite",
+  "judge_models_returned": [
+    "gemini-3.5-flash-lite"
+  ],
+  "primary_metric": "100 * number labeled correct / all 100 questions; partial, incorrect, unjudgeable retained in denominator",
+  "calibration": {
+    "n": 10,
+    "passed": 10
+  },
+  "results": {
+    "qwen_base": {
+      "count": 100,
+      "counts": {
+        "correct": 26,
+        "partial": 3,
+        "incorrect": 71,
+        "unjudgeable": 0
+      },
+      "correct_rate_percent": 26,
+      "correct_rate_ci95_percent": [
+        18.404698464748133,
+        35.37098944918718
+      ]
+    },
+    "qwen_haechi": {
+      "count": 100,
+      "counts": {
+        "correct": 18,
+        "partial": 4,
+        "incorrect": 78,
+        "unjudgeable": 0
+      },
+      "correct_rate_percent": 18,
+      "correct_rate_ci95_percent": [
+        11.70022549894635,
+        26.667358386300734
+      ]
+    },
+    "hyperclova_base": {
+      "count": 100,
+      "counts": {
+        "correct": 36,
+        "partial": 0,
+        "incorrect": 64,
+        "unjudgeable": 0
+      },
+      "correct_rate_percent": 36,
+      "correct_rate_ci95_percent": [
+        27.271220401404328,
+        45.764597548391265
+      ]
+    },
+    "hyperclova_haechi": {
+      "count": 100,
+      "counts": {
+        "correct": 32,
+        "partial": 7,
+        "incorrect": 61,
+        "unjudgeable": 0
+      },
+      "correct_rate_percent": 32,
+      "correct_rate_ci95_percent": [
+        23.66914732499909,
+        41.662618610452384
+      ]
+    }
+  },
+  "paired": {
+    "qwen": {
+      "improved": 6,
+      "regressed": 14,
+      "both_correct": 12,
+      "both_not_correct": 68,
+      "correct_rate_delta_pp": -8
+    },
+    "hyperclova": {
+      "improved": 15,
+      "regressed": 19,
+      "both_correct": 17,
+      "both_not_correct": 49,
+      "correct_rate_delta_pp": -4
+    }
+  },
+  "repeatability": {
+    "count": 40,
+    "all_labels_agreed": 39,
+    "binary_correctness_agreed": 39,
+    "disagreement_blind_ids": [
+      "47aac9169612d3edb476"
+    ]
+  }
+}
