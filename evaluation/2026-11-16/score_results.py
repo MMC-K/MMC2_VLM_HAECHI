@@ -16,3 +16,6 @@ def edit(a,b):
   for j,y in enumerate(b,1):current.append(min(current[-1]+1,previous[j]+1,previous[j-1]+(x!=y)))
   previous=current
  return previous[-1]
+def quantile(x,q):
+ x=sorted(x);pos=(len(x)-1)*q;i=int(pos)
+ return x[i]+(x[min(i+1,len(x)-1)]-x[i])*(pos-i)
