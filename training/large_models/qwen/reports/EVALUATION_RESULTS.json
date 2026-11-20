@@ -1,0 +1,1139 @@
+{
+  "generated_at": "2026-09-02 Asia/Seoul",
+  "official_base": {
+    "label": "Official Qwen3.5-27B",
+    "model": "/data/workspace/post-training/outputs/qwen35-27b-official"
+  },
+  "tuned": {
+    "label": "27B v28cl + 9B heritage recipe",
+    "model": "/data/workspace/post-training/outputs/qwen35-27b-v28cl-h400-hs100-scale2500-step2500-hf"
+  },
+  "sections": {
+    "general_multimodal": {
+      "title": "General multimodal",
+      "unit": "%",
+      "rows": [
+        {
+          "benchmark": "General-VL macro (6)",
+          "official_base": 45.435692508090355,
+          "tuned": 77.59746683442907,
+          "delta": 32.161774326338715,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "MMBench_DEV_EN_V11",
+          "official_base": 30.41795665634675,
+          "tuned": 90.63467492260062,
+          "delta": 60.21671826625388,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "MMStar",
+          "official_base": 39.4,
+          "tuned": 77.33333333333333,
+          "delta": 37.93333333333333,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "MMStar_KO",
+          "official_base": 45.2,
+          "tuned": 72.33333333333334,
+          "delta": 27.13333333333334,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "KRETA",
+          "official_base": 48.544819557625146,
+          "tuned": 86.14668218859138,
+          "delta": 37.60186263096624,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "MMMU_Pro_10c",
+          "official_base": 44.27745664739884,
+          "tuned": 61.849710982658955,
+          "delta": 17.572254335260112,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "HallusionBench aAcc",
+          "official_base": 64.7739221871714,
+          "tuned": 77.28706624605678,
+          "delta": 12.513144058885388,
+          "higher_is_better": true
+        }
+      ]
+    },
+    "mammoth_exact": {
+      "title": "Mammoth exact accuracy",
+      "unit": "%",
+      "rows": [
+        {
+          "benchmark": "Heritage macro (3)",
+          "official_base": 38.064236111111114,
+          "tuned": 40.212673611111114,
+          "delta": 2.1484375,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "OCR macro (3)",
+          "official_base": 19.986979166666668,
+          "tuned": 22.09201388888889,
+          "delta": 2.1050347222222214,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "heritage_multi_attr",
+          "official_base": 22.005208333333336,
+          "tuned": 28.255208333333332,
+          "delta": 6.2499999999999964,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "heritage_reverse_mt",
+          "official_base": 92.1875,
+          "tuned": 90.4296875,
+          "delta": -1.7578125,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "heritage_simple",
+          "official_base": 0.0,
+          "tuned": 1.953125,
+          "delta": 1.953125,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "ocr_font",
+          "official_base": 19.661458333333336,
+          "tuned": 19.661458333333336,
+          "delta": 0.0,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "ocr_outdoor",
+          "official_base": 36.1328125,
+          "tuned": 41.40625,
+          "delta": 5.2734375,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "ocr_public_exec",
+          "official_base": 4.166666666666666,
+          "tuned": 5.208333333333334,
+          "delta": 1.0416666666666679,
+          "higher_is_better": true
+        }
+      ]
+    },
+    "mammoth_containment": {
+      "title": "Mammoth target containment",
+      "unit": "%",
+      "rows": [
+        {
+          "benchmark": "Heritage macro (3)",
+          "official_base": 44.509548611111114,
+          "tuned": 43.532986111111114,
+          "delta": -0.9765625,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "OCR macro (3)",
+          "official_base": 32.46527777777778,
+          "tuned": 32.682291666666664,
+          "delta": 0.21701388888888573,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "heritage_multi_attr",
+          "official_base": 35.41666666666667,
+          "tuned": 35.546875,
+          "delta": 0.1302083333333286,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "heritage_reverse_mt",
+          "official_base": 97.0703125,
+          "tuned": 92.578125,
+          "delta": -4.4921875,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "heritage_simple",
+          "official_base": 1.0416666666666665,
+          "tuned": 2.473958333333333,
+          "delta": 1.4322916666666665,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "ocr_font",
+          "official_base": 20.963541666666664,
+          "tuned": 20.703125,
+          "delta": -0.2604166666666643,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "ocr_outdoor",
+          "official_base": 70.703125,
+          "tuned": 70.703125,
+          "delta": 0.0,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "ocr_public_exec",
+          "official_base": 5.729166666666666,
+          "tuned": 6.640625,
+          "delta": 0.9114583333333339,
+          "higher_is_better": true
+        }
+      ]
+    },
+    "mammoth_similarity": {
+      "title": "Mammoth normalized similarity",
+      "unit": "%",
+      "rows": [
+        {
+          "benchmark": "Heritage macro (3)",
+          "official_base": 45.67948751898416,
+          "tuned": 50.24511448020419,
+          "delta": 4.565626961220026,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "OCR macro (3)",
+          "official_base": 35.003311528557646,
+          "tuned": 38.594078228628504,
+          "delta": 3.5907667000708585,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "heritage_multi_attr",
+          "official_base": 39.138042044993455,
+          "tuned": 44.35905496747352,
+          "delta": 5.221012922480064,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "heritage_reverse_mt",
+          "official_base": 92.20145089285714,
+          "tuned": 90.4296875,
+          "delta": -1.7717633928571388,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "heritage_simple",
+          "official_base": 5.698969619101885,
+          "tuned": 15.946600973139038,
+          "delta": 10.247631354037154,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "ocr_font",
+          "official_base": 23.662692823251774,
+          "tuned": 24.11909867424004,
+          "delta": 0.4564058509882649,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "ocr_outdoor",
+          "official_base": 59.73377658609783,
+          "tuned": 64.95582126103372,
+          "delta": 5.222044674935887,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "ocr_public_exec",
+          "official_base": 21.613465176323324,
+          "tuned": 26.707314750611744,
+          "delta": 5.09384957428842,
+          "higher_is_better": true
+        }
+      ]
+    },
+    "mammoth_cer": {
+      "title": "Mammoth OCR CER",
+      "unit": "",
+      "rows": [
+        {
+          "benchmark": "Heritage macro (3)",
+          "official_base": 2.4568527335179042,
+          "tuned": 0.6780597172953706,
+          "delta": -1.7787930162225336,
+          "higher_is_better": false
+        },
+        {
+          "benchmark": "OCR macro (3)",
+          "official_base": 1.533748717968415,
+          "tuned": 1.1191604625458689,
+          "delta": -0.4145882554225462,
+          "higher_is_better": false
+        },
+        {
+          "benchmark": "heritage_multi_attr",
+          "official_base": 0.7850436990291016,
+          "tuned": 0.677648768732552,
+          "delta": -0.10739493029654967,
+          "higher_is_better": false
+        },
+        {
+          "benchmark": "heritage_reverse_mt",
+          "official_base": 0.1015625,
+          "tuned": 0.095703125,
+          "delta": -0.005859375,
+          "higher_is_better": false
+        },
+        {
+          "benchmark": "heritage_simple",
+          "official_base": 6.483952001524611,
+          "tuned": 1.2608272581535598,
+          "delta": -5.223124743371051,
+          "higher_is_better": false
+        },
+        {
+          "benchmark": "ocr_font",
+          "official_base": 1.4261008235083443,
+          "tuned": 1.0366419213313929,
+          "delta": -0.38945890217695145,
+          "higher_is_better": false
+        },
+        {
+          "benchmark": "ocr_outdoor",
+          "official_base": 1.4172236945053824,
+          "tuned": 0.9583278563673039,
+          "delta": -0.45889583813807855,
+          "higher_is_better": false
+        },
+        {
+          "benchmark": "ocr_public_exec",
+          "official_base": 1.7579216358915184,
+          "tuned": 1.3625116099389096,
+          "delta": -0.39541002595260877,
+          "higher_is_better": false
+        }
+      ]
+    },
+    "mammoth_line_recall": {
+      "title": "Mammoth OCR line recall",
+      "unit": "%",
+      "rows": [
+        {
+          "benchmark": "Heritage macro (3)",
+          "official_base": 44.509548611111114,
+          "tuned": 43.532986111111114,
+          "delta": -0.9765625,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "OCR macro (3)",
+          "official_base": 32.46527777777778,
+          "tuned": 32.682291666666664,
+          "delta": 0.21701388888888573,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "heritage_multi_attr",
+          "official_base": 35.41666666666667,
+          "tuned": 35.546875,
+          "delta": 0.1302083333333286,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "heritage_reverse_mt",
+          "official_base": 97.0703125,
+          "tuned": 92.578125,
+          "delta": -4.4921875,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "heritage_simple",
+          "official_base": 1.0416666666666665,
+          "tuned": 2.473958333333333,
+          "delta": 1.4322916666666665,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "ocr_font",
+          "official_base": 20.963541666666664,
+          "tuned": 20.703125,
+          "delta": -0.2604166666666643,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "ocr_outdoor",
+          "official_base": 70.703125,
+          "tuned": 70.703125,
+          "delta": 0.0,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "ocr_public_exec",
+          "official_base": 5.729166666666666,
+          "tuned": 6.640625,
+          "delta": 0.9114583333333339,
+          "higher_is_better": true
+        }
+      ]
+    },
+    "cultural_title": {
+      "title": "Cultural heritage title-clean",
+      "unit": "%",
+      "rows": [
+        {
+          "benchmark": "overall / exact",
+          "official_base": 0.1664816870144284,
+          "tuned": 2.6359600443951163,
+          "delta": 2.4694783573806878,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "overall / containment",
+          "official_base": 1.1098779134295227,
+          "tuned": 3.0521642619311873,
+          "delta": 1.9422863485016646,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "overall / similarity",
+          "official_base": 7.251778046465873,
+          "tuned": 11.112421536897164,
+          "delta": 3.8606434904312916,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "overall / identity-any exact",
+          "official_base": 0.3067484662576687,
+          "tuned": 4.192229038854806,
+          "delta": 3.885480572597137,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "identity / exact",
+          "official_base": 0.46475600309837334,
+          "tuned": 6.893880712625871,
+          "delta": 6.429124709527498,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "identity / containment",
+          "official_base": 0.69713400464756,
+          "tuned": 7.2811773818745165,
+          "delta": 6.584043377226957,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "identity / similarity",
+          "official_base": 13.157757278059714,
+          "tuned": 19.925856031131076,
+          "delta": 6.768098753071362,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "identity / identity-any exact",
+          "official_base": 0.6166495375128468,
+          "tuned": 7.810894141829394,
+          "delta": 7.194244604316547,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "view_caption / exact",
+          "official_base": 0.0,
+          "tuned": 0.25940337224383914,
+          "delta": 0.25940337224383914,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "view_caption / containment",
+          "official_base": 1.340250756593169,
+          "tuned": 0.6917423259835711,
+          "delta": -0.6485084306095978,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "view_caption / similarity",
+          "official_base": 3.955358164067407,
+          "tuned": 6.193206693812002,
+          "delta": 2.2378485297445945,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "view_caption / identity-any exact",
+          "official_base": 0.0,
+          "tuned": 0.40404040404040403,
+          "delta": 0.40404040404040403,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "national_treasure / exact",
+          "official_base": 0.0,
+          "tuned": 9.917355371900827,
+          "delta": 9.917355371900827,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "national_treasure / containment",
+          "official_base": 0.6198347107438017,
+          "tuned": 10.12396694214876,
+          "delta": 9.504132231404958,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "national_treasure / similarity",
+          "official_base": 11.473685220749182,
+          "tuned": 22.91465268948991,
+          "delta": 11.440967468740727,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "national_treasure / identity-any exact",
+          "official_base": 0.0,
+          "tuned": 12.103746397694524,
+          "delta": 12.103746397694524,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "other / exact",
+          "official_base": 0.19230769230769232,
+          "tuned": 1.5064102564102564,
+          "delta": 1.314102564102564,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "other / containment",
+          "official_base": 1.185897435897436,
+          "tuned": 1.955128205128205,
+          "delta": 0.7692307692307692,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "other / similarity",
+          "official_base": 6.59684116430141,
+          "tuned": 9.281562601687265,
+          "delta": 2.6847214373858543,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "other / identity-any exact",
+          "official_base": 0.3729024238657551,
+          "tuned": 2.4860161591050343,
+          "delta": 2.113113735239279,
+          "higher_is_better": true
+        }
+      ]
+    },
+    "heritage_targets": {
+      "title": "H400/HS100 target gates",
+      "unit": "%",
+      "rows": [
+        {
+          "benchmark": "H400 direct exact",
+          "official_base": 0.9174311926605505,
+          "tuned": 38.07339449541284,
+          "delta": 37.15596330275229,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "H400 hard choice",
+          "official_base": 26.452599388379205,
+          "tuned": 80.42813455657493,
+          "delta": 53.97553516819573,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "H400 knowledge image",
+          "official_base": 11.450948214601544,
+          "tuned": 25.301487976612254,
+          "delta": 13.85053976201071,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "H400 knowledge text",
+          "official_base": 5.974693580664485,
+          "tuned": 6.282716474660088,
+          "delta": 0.3080228939956031,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "HS100 train exact",
+          "official_base": 0.0,
+          "tuned": 12.0,
+          "delta": 12.0,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "HS100 unseen exact",
+          "official_base": 0.49504950495049505,
+          "tuned": 7.425742574257425,
+          "delta": 6.93069306930693,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "HS100 Simple exact",
+          "official_base": 0.0,
+          "tuned": 0.9803921568627451,
+          "delta": 0.9803921568627451,
+          "higher_is_better": true
+        }
+      ]
+    },
+    "opencompass_core": {
+      "title": "OpenCompass Core",
+      "unit": "%",
+      "rows": [
+        {
+          "benchmark": "core_average",
+          "official_base": 63.49,
+          "tuned": 64.8,
+          "delta": 1.3099999999999952,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "IFEval",
+          "official_base": 85.58,
+          "tuned": 85.21,
+          "delta": -0.37000000000000455,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "aime2024",
+          "official_base": 30.0,
+          "tuned": 26.67,
+          "delta": -3.3299999999999983,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "aime2025",
+          "official_base": 60.0,
+          "tuned": 73.33,
+          "delta": 13.329999999999998,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "math_prm800k_500",
+          "official_base": 86.8,
+          "tuned": 89.0,
+          "delta": 2.200000000000003,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "bbh",
+          "official_base": 47.56,
+          "tuned": 46.84,
+          "delta": -0.7199999999999989,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "GPQA_diamond",
+          "official_base": 82.83,
+          "tuned": 84.85,
+          "delta": 2.019999999999996,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "mmlu_pro",
+          "official_base": 85.55,
+          "tuned": 85.57,
+          "delta": 0.01999999999999602,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "openai_humaneval",
+          "official_base": 96.95,
+          "tuned": 96.34,
+          "delta": -0.6099999999999994,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "lcb_code_generation",
+          "official_base": 74.5,
+          "tuned": 76.0,
+          "delta": 1.5,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "leval",
+          "official_base": 14.88,
+          "tuned": 15.0,
+          "delta": 0.11999999999999922,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "longbench",
+          "official_base": 6.81,
+          "tuned": 6.89,
+          "delta": 0.08000000000000007,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "LongBenchv2",
+          "official_base": 54.47,
+          "tuned": 57.46,
+          "delta": 2.990000000000002,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "keti_long_ctx_gutenberg",
+          "official_base": 99.38,
+          "tuned": 99.25,
+          "delta": -0.12999999999999545,
+          "higher_is_better": true
+        }
+      ]
+    },
+    "opencompass_extra": {
+      "title": "OpenCompass Extra",
+      "unit": "%",
+      "rows": [
+        {
+          "benchmark": "extra_registered_average",
+          "official_base": 57.26,
+          "tuned": 57.61,
+          "delta": 0.3500000000000014,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "extra_registered_mc_average",
+          "official_base": 88.46,
+          "tuned": 89.37,
+          "delta": 0.9100000000000108,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "extra_registered_math_average",
+          "official_base": 53.57,
+          "tuned": 54.12,
+          "delta": 0.5499999999999972,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "ARC-c",
+          "official_base": 73.56,
+          "tuned": 80.34,
+          "delta": 6.780000000000001,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "ARC-e",
+          "official_base": 83.07,
+          "tuned": 85.01,
+          "delta": 1.940000000000012,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "BoolQ",
+          "official_base": 90.55,
+          "tuned": 90.24,
+          "delta": -0.3100000000000023,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "COPA",
+          "official_base": 100.0,
+          "tuned": 100.0,
+          "delta": 0.0,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "commonsense_qa",
+          "official_base": 88.45,
+          "tuned": 87.96,
+          "delta": -0.4900000000000091,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "hellaswag",
+          "official_base": 94.28,
+          "tuned": 94.12,
+          "delta": -0.1599999999999966,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "openbookqa",
+          "official_base": 89.8,
+          "tuned": 90.0,
+          "delta": 0.20000000000000284,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "piqa",
+          "official_base": 95.43,
+          "tuned": 95.81,
+          "delta": 0.37999999999999545,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "siqa",
+          "official_base": 76.51,
+          "tuned": 76.77,
+          "delta": 0.2599999999999909,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "winogrande",
+          "official_base": 92.9,
+          "tuned": 93.45,
+          "delta": 0.5499999999999972,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "mmlu",
+          "official_base": 92.0,
+          "tuned": 92.13,
+          "delta": 0.12999999999999545,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "mmlu-stem",
+          "official_base": 94.9,
+          "tuned": 94.71,
+          "delta": -0.19000000000001194,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "mmlu-humanities",
+          "official_base": 91.56,
+          "tuned": 91.64,
+          "delta": 0.0799999999999983,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "mmlu-social-science",
+          "official_base": 91.96,
+          "tuned": 92.64,
+          "delta": 0.6800000000000068,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "mmlu-other",
+          "official_base": 88.27,
+          "tuned": 88.41,
+          "delta": 0.14000000000000057,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "gsm8k",
+          "official_base": 9.86,
+          "tuned": 10.69,
+          "delta": 0.8300000000000001,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "math",
+          "official_base": 97.28,
+          "tuned": 97.56,
+          "delta": 0.28000000000000114,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "mbpp",
+          "official_base": 42.4,
+          "tuned": 43.0,
+          "delta": 0.6000000000000014,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "lambada",
+          "official_base": 0.0,
+          "tuned": 0.0,
+          "delta": 0.0,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "drop",
+          "official_base": 91.89,
+          "tuned": 92.0,
+          "delta": 0.10999999999999943,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "nq",
+          "official_base": 32.52,
+          "tuned": 32.66,
+          "delta": 0.13999999999999346,
+          "higher_is_better": true
+        }
+      ]
+    },
+    "opencompass_korean": {
+      "title": "OpenCompass Korean",
+      "unit": "%",
+      "rows": [
+        {
+          "benchmark": "korean_hf_average",
+          "official_base": 17.18,
+          "tuned": 16.77,
+          "delta": -0.41000000000000014,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "kmmlu",
+          "official_base": 1.97,
+          "tuned": 1.33,
+          "delta": -0.6399999999999999,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "csatqa",
+          "official_base": 19.23,
+          "tuned": 18.7,
+          "delta": -0.5300000000000011,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "haerae",
+          "official_base": 19.21,
+          "tuned": 19.21,
+          "delta": 0.0,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "k2_eval",
+          "official_base": 17.36,
+          "tuned": 16.67,
+          "delta": -0.6899999999999977,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "kobest",
+          "official_base": 46.49,
+          "tuned": 46.61,
+          "delta": 0.11999999999999744,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "kobest_boolq",
+          "official_base": 53.43,
+          "tuned": 53.43,
+          "delta": 0.0,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "kobest_copa",
+          "official_base": 49.6,
+          "tuned": 50.0,
+          "delta": 0.3999999999999986,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "kobest_hellaswag",
+          "official_base": 22.2,
+          "tuned": 22.4,
+          "delta": 0.1999999999999993,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "kobest_sentineg",
+          "official_base": 50.0,
+          "tuned": 50.0,
+          "delta": 0.0,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "kobest_wic",
+          "official_base": 57.21,
+          "tuned": 57.21,
+          "delta": 0.0,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "kobalt",
+          "official_base": 9.71,
+          "tuned": 9.71,
+          "delta": 0.0,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "kr_clinical_qa",
+          "official_base": 6.31,
+          "tuned": 5.18,
+          "delta": -1.13,
+          "higher_is_better": true
+        }
+      ]
+    },
+    "bfcl": {
+      "title": "BFCL V4",
+      "unit": "%",
+      "rows": [
+        {
+          "benchmark": "Overall Acc",
+          "official_base": 32.77,
+          "tuned": 32.11,
+          "delta": -0.6600000000000037,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "Non-Live AST Acc",
+          "official_base": 89.6,
+          "tuned": 89.44,
+          "delta": -0.1599999999999966,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "Non-Live Simple AST",
+          "official_base": 79.42,
+          "tuned": 79.25,
+          "delta": -0.1700000000000017,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "Non-Live Multiple AST",
+          "official_base": 95.5,
+          "tuned": 95.5,
+          "delta": 0.0,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "Non-Live Parallel AST",
+          "official_base": 91.5,
+          "tuned": 91.0,
+          "delta": -0.5,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "Non-Live Parallel Multiple AST",
+          "official_base": 92.0,
+          "tuned": 92.0,
+          "delta": 0.0,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "Multi Turn Acc",
+          "official_base": 66.25,
+          "tuned": 64.5,
+          "delta": -1.75,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "Multi Turn Base",
+          "official_base": 76.5,
+          "tuned": 76.0,
+          "delta": -0.5,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "Multi Turn Miss Func",
+          "official_base": 66.0,
+          "tuned": 64.0,
+          "delta": -2.0,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "Multi Turn Miss Param",
+          "official_base": 53.0,
+          "tuned": 52.0,
+          "delta": -1.0,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "Multi Turn Long Context",
+          "official_base": 69.5,
+          "tuned": 66.0,
+          "delta": -3.5,
+          "higher_is_better": true
+        }
+      ]
+    },
+    "toolsandbox": {
+      "title": "ToolSandbox",
+      "unit": "",
+      "rows": [
+        {
+          "benchmark": "ToolSandbox similarity (n=32)",
+          "official_base": 0.6077163945543648,
+          "tuned": 0.6042844985146748,
+          "delta": -0.0034318960396899634,
+          "higher_is_better": true
+        }
+      ]
+    },
+    "tau2": {
+      "title": "Tau2",
+      "unit": "%",
+      "rows": [
+        {
+          "benchmark": "Tau2 airline (n=32)",
+          "official_base": 65.625,
+          "tuned": 71.875,
+          "delta": 6.25,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "Tau2 retail (n=32)",
+          "official_base": 56.25,
+          "tuned": 65.625,
+          "delta": 9.375,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "Tau2 telecom (n=32)",
+          "official_base": 87.5,
+          "tuned": 78.125,
+          "delta": -9.375,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "Weighted overall (n=96)",
+          "official_base": 69.79166666666667,
+          "tuned": 71.875,
+          "delta": 2.0833333333333286,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "Domain macro",
+          "official_base": 69.79166666666667,
+          "tuned": 71.875,
+          "delta": 2.0833333333333286,
+          "higher_is_better": true
+        }
+      ]
+    },
+    "tau3": {
+      "title": "Tau3",
+      "unit": "%",
+      "rows": [
+        {
+          "benchmark": "Tau3 airline (n=200)",
+          "official_base": 67.0,
+          "tuned": 64.5,
+          "delta": -2.5,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "Tau3 retail (n=456)",
+          "official_base": 50.6578947368421,
+          "tuned": 44.078947368421055,
+          "delta": -6.578947368421048,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "Tau3 telecom (n=456)",
+          "official_base": 50.6578947368421,
+          "tuned": 51.53508771929825,
+          "delta": 0.877192982456144,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "Tau3 banking knowledge (n=388)",
+          "official_base": 7.474226804123711,
+          "tuned": 9.02061855670103,
+          "delta": 1.5463917525773194,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "Weighted overall (n=1500)",
+          "official_base": 41.666666666666664,
+          "tuned": 40.0,
+          "delta": -1.6666666666666643,
+          "higher_is_better": true
+        },
+        {
+          "benchmark": "Domain macro",
+          "official_base": 43.94750406945198,
+          "tuned": 42.28366341110508,
+          "delta": -1.6638406583468992,
+          "higher_is_better": true
+        }
+      ]
+    }
+  }
+}
