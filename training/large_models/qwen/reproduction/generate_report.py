@@ -161,3 +161,12 @@ def comparison_table(
             f"{('-' if change is None else f'{change:+.{digits}f}')}{delta_unit} | {direction} |"
         )
     return lines
+
+
+def section(
+    lines: list[str],
+    title: str,
+    rows: list[tuple[str, float | None, float | None]],
+    **kwargs,
+) -> None:
+    lines.extend((f"## {title}", "", *comparison_table(rows, **kwargs), ""))
