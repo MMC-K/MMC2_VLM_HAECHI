@@ -106,3 +106,7 @@ def kubectl(*args: str) -> str:
         *args,
     ]
     return subprocess.run(command, check=True, text=True, capture_output=True).stdout
+
+
+def remote_text(path: str) -> str:
+    return kubectl("cat", path)
