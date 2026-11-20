@@ -146,3 +146,7 @@ VL_DATASETS = [
 def read_jsonl(path: str) -> list[dict[str, Any]]:
     with open(path, encoding="utf-8") as stream:
         return [json.loads(line) for line in stream if line.strip()]
+
+
+def keyed(rows: Iterable[dict[str, Any]]) -> dict[str, dict[str, Any]]:
+    return {str(row.get("sample_id", row.get("id", row.get("row_index")))): row for row in rows}
