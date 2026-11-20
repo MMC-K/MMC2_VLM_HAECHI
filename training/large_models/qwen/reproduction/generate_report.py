@@ -133,3 +133,7 @@ def number(value: str):
         return float(value)
     except ValueError:
         return None
+
+
+def fmt(value: float | None, digits: int = 2) -> str:
+    return "-" if value is None else f"{value:.{digits}f}"
