@@ -336,3 +336,37 @@ def compact_vl(row: dict[str, str]) -> dict[str, str]:
         "answer", "prediction", "score", "judge", "res",
     )
     return {key: str(row[key])[:5000] for key in aliases if key in row and str(row[key]).strip()}
+
+
+def collect_vl(roots: list[list[str]]) -> dict[str, Any]:
+    output = {}
+    for dataset in VL_DATASETS:
+        paths = [f"{root}/{prefix}_{dataset}.xlsx" for root, prefix in roots]
+        if not all(Path(path).is_file() for path in paths):
+            continue
+        rows = [xlsx_rows(path) for path in paths]
+        if not rows[0] or not rows[1]:
+            continue
+        key_name = "index" if "index" in rows[0][0] else None
+        if key_name:
+            left = {str(row.get(key_name)): row for row in rows[0]}
+            right = {str(row.get(key_name)): row for row in rows[1]}
+            common = sorted(left.keys() & right.keys())
+            key = next(
+                (item for item in common if left[item].get("prediction") != right[item].get("prediction")),
+                common[0],
+            )
+            base_row, tuned_row = left[key], right[key]
+        else:
+            index = next(
+                (i for i, (left, right) in enumerate(zip(*rows)) if left.get("prediction") != right.get("prediction")),
+                0,
+            )
+            key = str(index)
+            base_row, tuned_row = rows[0][index], rows[1][index]
+        output[dataset] = {
+            "sample_key": key,
+            "base": compact_vl(base_row),
+            "tuned": compact_vl(tuned_row),
+        }
+    return output
