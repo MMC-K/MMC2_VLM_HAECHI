@@ -1,0 +1,1 @@
+{"sample_id": "h400-001-h400_direct", "task": "h400_direct", "prediction": "보물 제163호 용문사지 8각 5층 석탑", "generated_tokens": 20, "input_tokens": 210, "generation_seconds": 9.453556186985224, "preprocess_seconds": 0.0193449929356575, "peak_allocated_gib": 51.17619705200195, "peak_reserved_gib": 51.2109375, "hit_token_budget": false, "error": null}
