@@ -133,3 +133,11 @@ def main():
         print(directory)
     else:
         run(args, directory)
+
+
+if __name__ == '__main__':
+    try:
+        main()
+    except (ValueError, RuntimeError) as error:
+        print(f'Error: {error}', file=sys.stderr)
+        sys.exit(1)
