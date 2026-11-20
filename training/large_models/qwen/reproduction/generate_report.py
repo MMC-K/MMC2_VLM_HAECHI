@@ -125,3 +125,11 @@ def remote_find(root: str, name: str) -> str:
     if len(paths) != 1:
         raise RuntimeError(f"Expected one {name} below {root}, found {paths}")
     return paths[0]
+
+
+def number(value: str):
+    value = value.strip().removesuffix("%")
+    try:
+        return float(value)
+    except ValueError:
+        return None
