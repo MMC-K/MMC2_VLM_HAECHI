@@ -170,3 +170,24 @@ def sanitize_source(value: Any) -> Any:
         if len(value) > 10_000:
             return value[:2_000] + f"... <{len(value) - 2_000} characters omitted>"
     return value
+
+
+def compact(row: dict[str, Any]) -> dict[str, Any]:
+    wanted = (
+        "sample_id", "task_type", "question_category", "question", "gold_response",
+        "gold_target", "prediction", "predicted_target", "exact", "normalized_exact",
+        "contains", "similarity", "choice_correct", "finish_reason", "source_file",
+        "line_offset", "row_index",
+    )
+    result = {key: row[key] for key in wanted if key in row}
+    source_file = row.get("source_file")
+    offset = row.get("line_offset")
+    if source_file and offset is not None and Path(source_file).is_file():
+        try:
+            with open(source_file, "rb") as stream:
+                stream.seek(int(offset))
+                source = json.loads(stream.readline().decode("utf-8"))
+            result["source_record"] = sanitize_source(source)
+        except Exception as exc:  # source offsets are provenance aids, not required data
+            result["source_record_error"] = repr(exc)
+    return result
