@@ -525,3 +525,7 @@ def main() -> None:
     print(OUTPUT)
     print(JSON_OUTPUT)
     print(CSV_OUTPUT)
+
+
+if __name__ == "__main__":
+    main()
