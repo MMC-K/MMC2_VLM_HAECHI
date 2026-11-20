@@ -1,0 +1,37 @@
+{
+  "model": "qwen",
+  "stage": "base",
+  "source": "/mnt/nfs5/byunggill/2026_llm_data_generation/__kubeflow-training-snippets/downloaded_models/Qwen3.5-27B",
+  "runtime_and_processor": "/mnt/nfs5/byunggill/mmc2_year5/haechi_runner/models/qwen",
+  "torch": "2.9.1+cu128",
+  "transformers": "5.17.0.dev0",
+  "physical_gpu": 3,
+  "gpu_name": "NVIDIA A100-SXM4-80GB",
+  "load_seconds": 19.87055904790759,
+  "dtype": "bfloat16",
+  "thinking": false,
+  "sampling": false,
+  "max_image_edge": 512,
+  "min_pixels": 65536,
+  "max_pixels": 262144,
+  "cpu_threads": 8,
+  "budgets": {
+    "h400_direct": 64,
+    "h400_knowledge_image": 128,
+    "ocr": 128
+  },
+  "inputs_sha256": "21f6a6f83e20f07c9f334cce596102e2cbeca89d45f53dbae6e9853980a124f0",
+  "started": "2026-11-16T14:50:19.254853+09:00",
+  "status": "completed",
+  "patch_projection": "equivalent_linear; unchanged weights; BF16 equivalence validated",
+  "flash_linear_attention": "0.6.0",
+  "causal_conv1d": "1.7.0",
+  "config_sha256": "f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c",
+  "download_config_metadata": [
+    "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "bde2be7f34a16fcdf78b9050319cdb330a15fecd"
+  ],
+  "warmup_seconds": 2.070343086961657,
+  "finished": "2026-11-16T14:59:02.611149+09:00",
+  "expected_count": 300
+}
