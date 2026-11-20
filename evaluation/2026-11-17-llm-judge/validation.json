@@ -1,0 +1,48 @@
+{
+  "checks": {
+    "400_unique_judgments": true,
+    "no_api_errors": true,
+    "lightweight_judge_only": true,
+    "complete_api_outputs": true,
+    "source_unchanged": true,
+    "four_groups_100": true,
+    "expected_rates": true,
+    "repeatability_39_of_40": true,
+    "old_metrics_removed": true,
+    "new_method_present": true,
+    "version_unchanged": true,
+    "example_text_and_colors_unchanged": true,
+    "qwen_other_metrics_unchanged": true,
+    "hyperclova_other_metrics_unchanged": true,
+    "zip_integrity": true,
+    "xml_valid": true,
+    "styles_preserved": true,
+    "headers_footers_preserved": true,
+    "only_chart_media_changed": true,
+    "section_geometry_preserved": true,
+    "toc_correct": true,
+    "pdf_old_metrics_removed": true
+  },
+  "heading_pages": {
+    "1": 4,
+    "2": 4,
+    "3": 4,
+    "3.1": 4,
+    "3.2": 5,
+    "3.3": 6,
+    "4": 6,
+    "4.1": 6,
+    "4.2": 7,
+    "4.3": 9,
+    "5": 9,
+    "6": 10,
+    "6.1": 11,
+    "6.2": 12,
+    "7": 14
+  },
+  "output_sha256": {
+    "[기술문서] 거대 언어-시각 통합 이해_생성 모델 성능 분석서 2 V2.0.docx": "35bded4eb7c3dd2682a239bcf27c8b25cb400e4c23d2bfc81f4995012ccbb645",
+    "[기술문서] 거대 언어-시각 통합 이해_생성 모델 성능 분석서 2 V2.0.pdf": "7a9b3dce75631199760e3a599a65e6f27dc8b90e3c64ac997457d47374c293b7"
+  },
+  "review_note": "Judge scores are automatic judgments, not independently verified human correctness. First valid judgments retained despite repeat disagreements."
+}
