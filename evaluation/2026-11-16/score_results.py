@@ -19,3 +19,6 @@ def edit(a,b):
 def quantile(x,q):
  x=sorted(x);pos=(len(x)-1)*q;i=int(pos)
  return x[i]+(x[min(i+1,len(x)-1)]-x[i])*(pos-i)
+def wilson(k,n):
+ z=1.959963984540054;mid=(k/n+z*z/(2*n))/(1+z*z/n);half=z*math.sqrt((k/n)*(1-k/n)/n+z*z/(4*n*n))/(1+z*z/n)
+ return [max(0,mid-half),min(1,mid+half)]
