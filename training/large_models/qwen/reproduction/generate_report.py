@@ -257,3 +257,21 @@ def title_rows():
                     (f"{group} / {label}", 100 * base[group][metric], 100 * tuned[group][metric])
                 )
     return rows
+
+
+def target_rows():
+    base = remote_json(TARGET_ROOTS[0])
+    tuned = remote_json(TARGET_ROOTS[1])
+    specs = (
+        ("h400_direct", "H400 direct exact", "exact_accuracy"),
+        ("h400_hard", "H400 hard choice", "choice_accuracy"),
+        ("h400_knowledge_image", "H400 knowledge image", "mean_similarity"),
+        ("h400_knowledge_text", "H400 knowledge text", "mean_similarity"),
+        ("hs100_train", "HS100 train exact", "exact_accuracy"),
+        ("hs100_unseen", "HS100 unseen exact", "exact_accuracy"),
+        ("hs100_simple", "HS100 Simple exact", "exact_accuracy"),
+    )
+    return [
+        (label, 100 * base[key][metric], 100 * tuned[key][metric])
+        for key, label, metric in specs
+    ]
