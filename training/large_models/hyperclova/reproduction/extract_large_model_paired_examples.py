@@ -157,3 +157,16 @@ def correctness(row: dict[str, Any]) -> float:
         if key in row:
             return float(bool(row[key]))
     return float(row.get("similarity", 0.0))
+
+
+def sanitize_source(value: Any) -> Any:
+    if isinstance(value, dict):
+        return {key: sanitize_source(item) for key, item in value.items()}
+    if isinstance(value, list):
+        return [sanitize_source(item) for item in value]
+    if isinstance(value, str):
+        if value.startswith("data:image/"):
+            return "<embedded image omitted; packaged sample image is provided separately>"
+        if len(value) > 10_000:
+            return value[:2_000] + f"... <{len(value) - 2_000} characters omitted>"
+    return value
