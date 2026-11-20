@@ -1,0 +1,59 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: merge-q35-27b-v28cl-hsm-t015
+  namespace: p-keti-airc-h200-128
+spec:
+  backoffLimit: 1
+  template:
+    metadata:
+      annotations:
+        sidecar.istio.io/inject: "false"
+    spec:
+      restartPolicy: Never
+      nodeSelector:
+        mlx.navercorp.com/zone: private-h200-keti-airc-0
+      imagePullSecrets:
+        - name: ketiair-registry-secret
+      containers:
+        - name: merger
+          image: ketiair.com:10004/2.8.0-cuda12.6-cudnn9-long-san-ib-fla-cu126-20260610
+          imagePullPolicy: IfNotPresent
+          workingDir: /data/workspace
+          command: ["bash", "-lc"]
+          args:
+            - |
+              set -euo pipefail
+              BASE=/data/workspace/post-training/outputs/qwen35-27b-official-heritage-title-acq-step1000-hf
+              TUNED=/data/workspace/post-training/outputs/qwen35-27b-v28cl-hsm-step3000-hf
+              SCRIPT=/data/workspace/eval_models/scripts/merge_multimodal_task_vector.py
+              ROOT=/data/workspace/post-training/outputs
+
+              merge_candidate() {
+                local slug=$1 text_alpha=$2
+                python "${SCRIPT}" \
+                  --base "${BASE}" \
+                  --delta-parent "${BASE}" \
+                  --tuned "${TUNED}" \
+                  --output "${ROOT}/qwen35-27b-v28cl-hsm-s3000-tv-${slug}" \
+                  --text-alpha "${text_alpha}" \
+                  --merger-alpha 1.00 \
+                  --vision-alpha 0.00
+              }
+
+              # Reproduce the coefficient selected by the successful 9B lineage.
+              merge_candidate t015-m100 0.15
+          resources:
+            requests:
+              cpu: "32"
+              memory: 512Gi
+            limits:
+              cpu: "64"
+              memory: 900Gi
+          volumeMounts:
+            - name: ddn
+              mountPath: /data
+      volumes:
+        - name: ddn
+          persistentVolumeClaim:
+            claimName: ddn-pvc-test-san1
