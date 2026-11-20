@@ -1,0 +1,10 @@
+{
+  "predictions": 1200,
+  "runtime_errors": 0,
+  "same_inputs_per_pair": true,
+  "same_runtime_per_pair": true,
+  "image_checksums_verified": 300,
+  "reference_and_input_manifests_unchanged": true,
+  "docx_structure": "passed",
+  "document": "/mnt/nfs5/byunggill/mmc2_papering/[기술문서] 거대 언어-시각 통합 이해_생성 모델 성능 분석서 2 V1.0.docx"
+}
