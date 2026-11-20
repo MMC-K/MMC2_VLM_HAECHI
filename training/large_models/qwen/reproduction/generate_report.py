@@ -294,3 +294,16 @@ def bfcl_rows():
         "Multi Turn Long Context",
     )
     return [(name, number(base.get(name, "")), number(tuned.get(name, ""))) for name in wanted]
+
+
+def toolsandbox_rows():
+    scores = []
+    counts = []
+    for root in STATEFUL_ROOTS:
+        path = remote_find(f"{root}/toolsandbox32", "result_summary.json")
+        data = remote_json(path)
+        scores.append(data["category_aggregated_results"]["ALL_CATEGORIES"]["similarity"])
+        counts.append(len(data["per_scenario_results"]))
+    if counts[0] != counts[1]:
+        raise RuntimeError(f"ToolSandbox count mismatch: {counts}")
+    return [(f"ToolSandbox similarity (n={counts[0]})", *scores)]
