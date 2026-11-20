@@ -79,3 +79,71 @@ def inspect_checkpoint(root: Path) -> dict[str, object]:
         "weight_bytes": total_bytes,
         "keys": keys,
     }
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--source", required=True, type=Path)
+    parser.add_argument("--destination", required=True, type=Path)
+    parser.add_argument(
+        "--resume-existing",
+        action="store_true",
+        help="Keep already converted destination shards and finish index/verification.",
+    )
+    args = parser.parse_args()
+
+    source = args.source.resolve()
+    destination = args.destination.resolve()
+    if not source.is_dir():
+        raise SystemExit(f"Missing source directory: {source}")
+    if destination.exists() and any(destination.iterdir()) and not args.resume_existing:
+        raise SystemExit(f"Destination is not empty: {destination}")
+    destination.mkdir(parents=True, exist_ok=True)
+    copy_metadata(source, destination)
+
+    source_files = weight_files(source)
+    for index, path in enumerate(source_files, start=1):
+        target = destination / path.name
+        if args.resume_existing and target.is_file():
+            print(f"[{index}/{len(source_files)}] {path.name}: existing shard retained", flush=True)
+            continue
+        count, converted = convert_shard(path, target)
+        print(
+            f"[{index}/{len(source_files)}] {path.name}: "
+            f"{count} tensors, {converted} converted to BF16",
+            flush=True,
+        )
+
+    source_index = source / "model.safetensors.index.json"
+    if source_index.is_file():
+        index = json.loads(source_index.read_text(encoding="utf-8"))
+        index.setdefault("metadata", {})["total_size"] = sum(
+            (destination / path.name).stat().st_size for path in source_files
+        )
+        (destination / source_index.name).write_text(
+            json.dumps(index, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        )
+
+    source_info = inspect_checkpoint(source)
+    target_info = inspect_checkpoint(destination)
+    if source_info["keys"] != target_info["keys"]:
+        raise SystemExit("Tensor-key verification failed")
+    if target_info["dtypes"] != {"BF16": target_info["tensors"]}:
+        raise SystemExit(f"Unexpected destination dtypes: {target_info['dtypes']}")
+
+    provenance = {
+        "conversion": "floating tensors converted to torch.bfloat16 shard by shard",
+        "source": str(source),
+        "destination": str(destination),
+        "source_shards": source_info["shards"],
+        "destination_shards": target_info["shards"],
+        "tensor_count": target_info["tensors"],
+        "source_dtypes": source_info["dtypes"],
+        "destination_dtypes": target_info["dtypes"],
+        "source_weight_bytes": source_info["weight_bytes"],
+        "destination_weight_bytes": target_info["weight_bytes"],
+    }
+    (destination / "BF16_CONVERSION_PROVENANCE.json").write_text(
+        json.dumps(provenance, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
+    print(json.dumps(provenance, indent=2, ensure_ascii=False), flush=True)
