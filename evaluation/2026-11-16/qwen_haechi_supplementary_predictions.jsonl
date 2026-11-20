@@ -1,0 +1,1 @@
+{"sample_id": "supplementary_cheomseongdae", "task": "h400_direct", "prediction": "경주 첨성대", "generated_tokens": 6, "input_tokens": 210, "generation_seconds": 0.43647554493509233, "preprocess_seconds": 0.009587279055267572, "peak_allocated_gib": 51.176196575164795, "peak_reserved_gib": 51.2109375, "hit_token_budget": false, "error": null}
