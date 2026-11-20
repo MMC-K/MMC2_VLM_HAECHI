@@ -91,3 +91,18 @@ TAU3_ROOTS = (
 )
 
 
+def kubectl(*args: str) -> str:
+    command = [
+        "kubectl",
+        "--kubeconfig",
+        KUBECONFIG,
+        "-n",
+        NAMESPACE,
+        "exec",
+        POD,
+        "-c",
+        CONTAINER,
+        "--",
+        *args,
+    ]
+    return subprocess.run(command, check=True, text=True, capture_output=True).stdout
