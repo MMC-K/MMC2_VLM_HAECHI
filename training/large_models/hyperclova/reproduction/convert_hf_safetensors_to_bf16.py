@@ -54,3 +54,28 @@ def convert_shard(source: Path, destination: Path) -> tuple[int, int]:
             tensors[key] = tensor.contiguous()
     save_file(tensors, destination, metadata=metadata)
     return len(tensors), converted
+
+
+def inspect_checkpoint(root: Path) -> dict[str, object]:
+    files = weight_files(root)
+    dtypes: dict[str, int] = {}
+    tensor_count = 0
+    keys: set[str] = set()
+    total_bytes = 0
+    for path in files:
+        total_bytes += path.stat().st_size
+        with safe_open(path, framework="pt", device="cpu") as handle:
+            for key in handle.keys():
+                if key in keys:
+                    raise RuntimeError(f"Duplicate tensor key: {key}")
+                keys.add(key)
+                tensor_count += 1
+                dtype = str(handle.get_slice(key).get_dtype())
+                dtypes[dtype] = dtypes.get(dtype, 0) + 1
+    return {
+        "shards": len(files),
+        "tensors": tensor_count,
+        "dtypes": dtypes,
+        "weight_bytes": total_bytes,
+        "keys": keys,
+    }
