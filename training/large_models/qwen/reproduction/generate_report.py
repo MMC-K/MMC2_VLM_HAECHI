@@ -275,3 +275,22 @@ def target_rows():
         (label, 100 * base[key][metric], 100 * tuned[key][metric])
         for key, label, metric in specs
     ]
+
+
+def bfcl_rows():
+    base = csv_rows(f"{BFCL_ROOTS[0]}/data_overall.csv")[0]
+    tuned = csv_rows(f"{BFCL_ROOTS[1]}/data_overall.csv")[0]
+    wanted = (
+        "Overall Acc",
+        "Non-Live AST Acc",
+        "Non-Live Simple AST",
+        "Non-Live Multiple AST",
+        "Non-Live Parallel AST",
+        "Non-Live Parallel Multiple AST",
+        "Multi Turn Acc",
+        "Multi Turn Base",
+        "Multi Turn Miss Func",
+        "Multi Turn Miss Param",
+        "Multi Turn Long Context",
+    )
+    return [(name, number(base.get(name, "")), number(tuned.get(name, ""))) for name in wanted]
