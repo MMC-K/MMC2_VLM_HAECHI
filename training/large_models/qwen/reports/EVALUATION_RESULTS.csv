@@ -1,0 +1,149 @@
+section,benchmark,official_base,tuned,delta,unit,higher_is_better
+General multimodal,General-VL macro (6),45.435692508090355,77.59746683442907,32.161774326338715,%,True
+General multimodal,MMBench_DEV_EN_V11,30.41795665634675,90.63467492260062,60.21671826625388,%,True
+General multimodal,MMStar,39.4,77.33333333333333,37.93333333333333,%,True
+General multimodal,MMStar_KO,45.2,72.33333333333334,27.13333333333334,%,True
+General multimodal,KRETA,48.544819557625146,86.14668218859138,37.60186263096624,%,True
+General multimodal,MMMU_Pro_10c,44.27745664739884,61.849710982658955,17.572254335260112,%,True
+General multimodal,HallusionBench aAcc,64.7739221871714,77.28706624605678,12.513144058885388,%,True
+Mammoth exact accuracy,Heritage macro (3),38.064236111111114,40.212673611111114,2.1484375,%,True
+Mammoth exact accuracy,OCR macro (3),19.986979166666668,22.09201388888889,2.1050347222222214,%,True
+Mammoth exact accuracy,heritage_multi_attr,22.005208333333336,28.255208333333332,6.2499999999999964,%,True
+Mammoth exact accuracy,heritage_reverse_mt,92.1875,90.4296875,-1.7578125,%,True
+Mammoth exact accuracy,heritage_simple,0.0,1.953125,1.953125,%,True
+Mammoth exact accuracy,ocr_font,19.661458333333336,19.661458333333336,0.0,%,True
+Mammoth exact accuracy,ocr_outdoor,36.1328125,41.40625,5.2734375,%,True
+Mammoth exact accuracy,ocr_public_exec,4.166666666666666,5.208333333333334,1.0416666666666679,%,True
+Mammoth target containment,Heritage macro (3),44.509548611111114,43.532986111111114,-0.9765625,%,True
+Mammoth target containment,OCR macro (3),32.46527777777778,32.682291666666664,0.21701388888888573,%,True
+Mammoth target containment,heritage_multi_attr,35.41666666666667,35.546875,0.1302083333333286,%,True
+Mammoth target containment,heritage_reverse_mt,97.0703125,92.578125,-4.4921875,%,True
+Mammoth target containment,heritage_simple,1.0416666666666665,2.473958333333333,1.4322916666666665,%,True
+Mammoth target containment,ocr_font,20.963541666666664,20.703125,-0.2604166666666643,%,True
+Mammoth target containment,ocr_outdoor,70.703125,70.703125,0.0,%,True
+Mammoth target containment,ocr_public_exec,5.729166666666666,6.640625,0.9114583333333339,%,True
+Mammoth normalized similarity,Heritage macro (3),45.67948751898416,50.24511448020419,4.565626961220026,%,True
+Mammoth normalized similarity,OCR macro (3),35.003311528557646,38.594078228628504,3.5907667000708585,%,True
+Mammoth normalized similarity,heritage_multi_attr,39.138042044993455,44.35905496747352,5.221012922480064,%,True
+Mammoth normalized similarity,heritage_reverse_mt,92.20145089285714,90.4296875,-1.7717633928571388,%,True
+Mammoth normalized similarity,heritage_simple,5.698969619101885,15.946600973139038,10.247631354037154,%,True
+Mammoth normalized similarity,ocr_font,23.662692823251774,24.11909867424004,0.4564058509882649,%,True
+Mammoth normalized similarity,ocr_outdoor,59.73377658609783,64.95582126103372,5.222044674935887,%,True
+Mammoth normalized similarity,ocr_public_exec,21.613465176323324,26.707314750611744,5.09384957428842,%,True
+Mammoth OCR CER,Heritage macro (3),2.4568527335179042,0.6780597172953706,-1.7787930162225336,,False
+Mammoth OCR CER,OCR macro (3),1.533748717968415,1.1191604625458689,-0.4145882554225462,,False
+Mammoth OCR CER,heritage_multi_attr,0.7850436990291016,0.677648768732552,-0.10739493029654967,,False
+Mammoth OCR CER,heritage_reverse_mt,0.1015625,0.095703125,-0.005859375,,False
+Mammoth OCR CER,heritage_simple,6.483952001524611,1.2608272581535598,-5.223124743371051,,False
+Mammoth OCR CER,ocr_font,1.4261008235083443,1.0366419213313929,-0.38945890217695145,,False
+Mammoth OCR CER,ocr_outdoor,1.4172236945053824,0.9583278563673039,-0.45889583813807855,,False
+Mammoth OCR CER,ocr_public_exec,1.7579216358915184,1.3625116099389096,-0.39541002595260877,,False
+Mammoth OCR line recall,Heritage macro (3),44.509548611111114,43.532986111111114,-0.9765625,%,True
+Mammoth OCR line recall,OCR macro (3),32.46527777777778,32.682291666666664,0.21701388888888573,%,True
+Mammoth OCR line recall,heritage_multi_attr,35.41666666666667,35.546875,0.1302083333333286,%,True
+Mammoth OCR line recall,heritage_reverse_mt,97.0703125,92.578125,-4.4921875,%,True
+Mammoth OCR line recall,heritage_simple,1.0416666666666665,2.473958333333333,1.4322916666666665,%,True
+Mammoth OCR line recall,ocr_font,20.963541666666664,20.703125,-0.2604166666666643,%,True
+Mammoth OCR line recall,ocr_outdoor,70.703125,70.703125,0.0,%,True
+Mammoth OCR line recall,ocr_public_exec,5.729166666666666,6.640625,0.9114583333333339,%,True
+Cultural heritage title-clean,overall / exact,0.1664816870144284,2.6359600443951163,2.4694783573806878,%,True
+Cultural heritage title-clean,overall / containment,1.1098779134295227,3.0521642619311873,1.9422863485016646,%,True
+Cultural heritage title-clean,overall / similarity,7.251778046465873,11.112421536897164,3.8606434904312916,%,True
+Cultural heritage title-clean,overall / identity-any exact,0.3067484662576687,4.192229038854806,3.885480572597137,%,True
+Cultural heritage title-clean,identity / exact,0.46475600309837334,6.893880712625871,6.429124709527498,%,True
+Cultural heritage title-clean,identity / containment,0.69713400464756,7.2811773818745165,6.584043377226957,%,True
+Cultural heritage title-clean,identity / similarity,13.157757278059714,19.925856031131076,6.768098753071362,%,True
+Cultural heritage title-clean,identity / identity-any exact,0.6166495375128468,7.810894141829394,7.194244604316547,%,True
+Cultural heritage title-clean,view_caption / exact,0.0,0.25940337224383914,0.25940337224383914,%,True
+Cultural heritage title-clean,view_caption / containment,1.340250756593169,0.6917423259835711,-0.6485084306095978,%,True
+Cultural heritage title-clean,view_caption / similarity,3.955358164067407,6.193206693812002,2.2378485297445945,%,True
+Cultural heritage title-clean,view_caption / identity-any exact,0.0,0.40404040404040403,0.40404040404040403,%,True
+Cultural heritage title-clean,national_treasure / exact,0.0,9.917355371900827,9.917355371900827,%,True
+Cultural heritage title-clean,national_treasure / containment,0.6198347107438017,10.12396694214876,9.504132231404958,%,True
+Cultural heritage title-clean,national_treasure / similarity,11.473685220749182,22.91465268948991,11.440967468740727,%,True
+Cultural heritage title-clean,national_treasure / identity-any exact,0.0,12.103746397694524,12.103746397694524,%,True
+Cultural heritage title-clean,other / exact,0.19230769230769232,1.5064102564102564,1.314102564102564,%,True
+Cultural heritage title-clean,other / containment,1.185897435897436,1.955128205128205,0.7692307692307692,%,True
+Cultural heritage title-clean,other / similarity,6.59684116430141,9.281562601687265,2.6847214373858543,%,True
+Cultural heritage title-clean,other / identity-any exact,0.3729024238657551,2.4860161591050343,2.113113735239279,%,True
+H400/HS100 target gates,H400 direct exact,0.9174311926605505,38.07339449541284,37.15596330275229,%,True
+H400/HS100 target gates,H400 hard choice,26.452599388379205,80.42813455657493,53.97553516819573,%,True
+H400/HS100 target gates,H400 knowledge image,11.450948214601544,25.301487976612254,13.85053976201071,%,True
+H400/HS100 target gates,H400 knowledge text,5.974693580664485,6.282716474660088,0.3080228939956031,%,True
+H400/HS100 target gates,HS100 train exact,0.0,12.0,12.0,%,True
+H400/HS100 target gates,HS100 unseen exact,0.49504950495049505,7.425742574257425,6.93069306930693,%,True
+H400/HS100 target gates,HS100 Simple exact,0.0,0.9803921568627451,0.9803921568627451,%,True
+OpenCompass Core,core_average,63.49,64.8,1.3099999999999952,%,True
+OpenCompass Core,IFEval,85.58,85.21,-0.37000000000000455,%,True
+OpenCompass Core,aime2024,30.0,26.67,-3.3299999999999983,%,True
+OpenCompass Core,aime2025,60.0,73.33,13.329999999999998,%,True
+OpenCompass Core,math_prm800k_500,86.8,89.0,2.200000000000003,%,True
+OpenCompass Core,bbh,47.56,46.84,-0.7199999999999989,%,True
+OpenCompass Core,GPQA_diamond,82.83,84.85,2.019999999999996,%,True
+OpenCompass Core,mmlu_pro,85.55,85.57,0.01999999999999602,%,True
+OpenCompass Core,openai_humaneval,96.95,96.34,-0.6099999999999994,%,True
+OpenCompass Core,lcb_code_generation,74.5,76.0,1.5,%,True
+OpenCompass Core,leval,14.88,15.0,0.11999999999999922,%,True
+OpenCompass Core,longbench,6.81,6.89,0.08000000000000007,%,True
+OpenCompass Core,LongBenchv2,54.47,57.46,2.990000000000002,%,True
+OpenCompass Core,keti_long_ctx_gutenberg,99.38,99.25,-0.12999999999999545,%,True
+OpenCompass Extra,extra_registered_average,57.26,57.61,0.3500000000000014,%,True
+OpenCompass Extra,extra_registered_mc_average,88.46,89.37,0.9100000000000108,%,True
+OpenCompass Extra,extra_registered_math_average,53.57,54.12,0.5499999999999972,%,True
+OpenCompass Extra,ARC-c,73.56,80.34,6.780000000000001,%,True
+OpenCompass Extra,ARC-e,83.07,85.01,1.940000000000012,%,True
+OpenCompass Extra,BoolQ,90.55,90.24,-0.3100000000000023,%,True
+OpenCompass Extra,COPA,100.0,100.0,0.0,%,True
+OpenCompass Extra,commonsense_qa,88.45,87.96,-0.4900000000000091,%,True
+OpenCompass Extra,hellaswag,94.28,94.12,-0.1599999999999966,%,True
+OpenCompass Extra,openbookqa,89.8,90.0,0.20000000000000284,%,True
+OpenCompass Extra,piqa,95.43,95.81,0.37999999999999545,%,True
+OpenCompass Extra,siqa,76.51,76.77,0.2599999999999909,%,True
+OpenCompass Extra,winogrande,92.9,93.45,0.5499999999999972,%,True
+OpenCompass Extra,mmlu,92.0,92.13,0.12999999999999545,%,True
+OpenCompass Extra,mmlu-stem,94.9,94.71,-0.19000000000001194,%,True
+OpenCompass Extra,mmlu-humanities,91.56,91.64,0.0799999999999983,%,True
+OpenCompass Extra,mmlu-social-science,91.96,92.64,0.6800000000000068,%,True
+OpenCompass Extra,mmlu-other,88.27,88.41,0.14000000000000057,%,True
+OpenCompass Extra,gsm8k,9.86,10.69,0.8300000000000001,%,True
+OpenCompass Extra,math,97.28,97.56,0.28000000000000114,%,True
+OpenCompass Extra,mbpp,42.4,43.0,0.6000000000000014,%,True
+OpenCompass Extra,lambada,0.0,0.0,0.0,%,True
+OpenCompass Extra,drop,91.89,92.0,0.10999999999999943,%,True
+OpenCompass Extra,nq,32.52,32.66,0.13999999999999346,%,True
+OpenCompass Korean,korean_hf_average,17.18,16.77,-0.41000000000000014,%,True
+OpenCompass Korean,kmmlu,1.97,1.33,-0.6399999999999999,%,True
+OpenCompass Korean,csatqa,19.23,18.7,-0.5300000000000011,%,True
+OpenCompass Korean,haerae,19.21,19.21,0.0,%,True
+OpenCompass Korean,k2_eval,17.36,16.67,-0.6899999999999977,%,True
+OpenCompass Korean,kobest,46.49,46.61,0.11999999999999744,%,True
+OpenCompass Korean,kobest_boolq,53.43,53.43,0.0,%,True
+OpenCompass Korean,kobest_copa,49.6,50.0,0.3999999999999986,%,True
+OpenCompass Korean,kobest_hellaswag,22.2,22.4,0.1999999999999993,%,True
+OpenCompass Korean,kobest_sentineg,50.0,50.0,0.0,%,True
+OpenCompass Korean,kobest_wic,57.21,57.21,0.0,%,True
+OpenCompass Korean,kobalt,9.71,9.71,0.0,%,True
+OpenCompass Korean,kr_clinical_qa,6.31,5.18,-1.13,%,True
+BFCL V4,Overall Acc,32.77,32.11,-0.6600000000000037,%,True
+BFCL V4,Non-Live AST Acc,89.6,89.44,-0.1599999999999966,%,True
+BFCL V4,Non-Live Simple AST,79.42,79.25,-0.1700000000000017,%,True
+BFCL V4,Non-Live Multiple AST,95.5,95.5,0.0,%,True
+BFCL V4,Non-Live Parallel AST,91.5,91.0,-0.5,%,True
+BFCL V4,Non-Live Parallel Multiple AST,92.0,92.0,0.0,%,True
+BFCL V4,Multi Turn Acc,66.25,64.5,-1.75,%,True
+BFCL V4,Multi Turn Base,76.5,76.0,-0.5,%,True
+BFCL V4,Multi Turn Miss Func,66.0,64.0,-2.0,%,True
+BFCL V4,Multi Turn Miss Param,53.0,52.0,-1.0,%,True
+BFCL V4,Multi Turn Long Context,69.5,66.0,-3.5,%,True
+ToolSandbox,ToolSandbox similarity (n=32),0.6077163945543648,0.6042844985146748,-0.0034318960396899634,,True
+Tau2,Tau2 airline (n=32),65.625,71.875,6.25,%,True
+Tau2,Tau2 retail (n=32),56.25,65.625,9.375,%,True
+Tau2,Tau2 telecom (n=32),87.5,78.125,-9.375,%,True
+Tau2,Weighted overall (n=96),69.79166666666667,71.875,2.0833333333333286,%,True
+Tau2,Domain macro,69.79166666666667,71.875,2.0833333333333286,%,True
+Tau3,Tau3 airline (n=200),67.0,64.5,-2.5,%,True
+Tau3,Tau3 retail (n=456),50.6578947368421,44.078947368421055,-6.578947368421048,%,True
+Tau3,Tau3 telecom (n=456),50.6578947368421,51.53508771929825,0.877192982456144,%,True
+Tau3,Tau3 banking knowledge (n=388),7.474226804123711,9.02061855670103,1.5463917525773194,%,True
+Tau3,Weighted overall (n=1500),41.666666666666664,40.0,-1.6666666666666643,%,True
+Tau3,Domain macro,43.94750406945198,42.28366341110508,-1.6638406583468992,%,True
