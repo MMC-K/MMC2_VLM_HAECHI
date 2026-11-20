@@ -111,3 +111,311 @@ OC_DESC = {
 }
 
 
+def clip(value: Any, limit: int = 1800) -> str:
+    text = str(value or "").strip()
+    if len(text) <= limit:
+        return text
+    head = int(limit * 0.65)
+    tail = limit - head
+    return f"{text[:head]}\n... <{len(text) - limit} chars omitted> ...\n{text[-tail:]}"
+
+
+def code_block(value: Any) -> list[str]:
+    return ["```text", clip(value) or "(empty)", "```", ""]
+
+
+def source_question(row: dict[str, Any]) -> str:
+    if row.get("question"):
+        return str(row["question"])
+    source = row.get("source_record", {})
+    messages = source.get("messages", []) if isinstance(source, dict) else []
+    for message in messages:
+        if message.get("role") != "user":
+            continue
+        content = message.get("content", "")
+        if isinstance(content, str):
+            return content
+        if isinstance(content, list):
+            texts = [item.get("text", "") for item in content if isinstance(item, dict) and item.get("type") == "text"]
+            if texts:
+                return "\n".join(texts)
+    return "(prompt text not repeated in prediction artifact)"
+
+
+def record_metrics(row: dict[str, Any]) -> str:
+    parts = []
+    for key in ("exact", "normalized_exact", "contains", "choice_correct", "similarity", "finish_reason"):
+        if key in row:
+            value = row[key]
+            if isinstance(value, float):
+                value = f"{value:.4f}"
+            parts.append(f"{key}={value}")
+    return ", ".join(parts) or "per-benchmark evaluator result"
+
+
+def render_pair(lines: list[str], title: str, description: str, pair: dict[str, Any]) -> None:
+    base, tuned = pair["base"], pair["tuned"]
+    lines.extend((f"### {title}", "", description, "", f"- Sample key: `{pair.get('pair_key', pair.get('sample_key', '-'))}`", "- Prompt:"))
+    lines.extend(code_block(source_question(base)))
+    gold = base.get("gold_target", base.get("gold_response", "(see benchmark reference)"))
+    lines.extend(("- Reference:", *code_block(gold), "- Official Base output:", *code_block(base.get("prediction", ""))))
+    lines.append(f"- Base scoring: `{record_metrics(base)}`")
+    lines.extend(("", "- Tuned output:", *code_block(tuned.get("prediction", ""))))
+    lines.append(f"- Tuned scoring: `{record_metrics(tuned)}`")
+    lines.extend(("", "판독: 이 예시는 동일 sample ID의 실제 평가 레코드이며, 선택된 예시는 가능한 경우 Base 실패/Tuned 성공을 우선한다.", ""))
+
+
+def render_vl(lines: list[str], name: str, pair: dict[str, Any]) -> None:
+    base, tuned = pair["base"], pair["tuned"]
+    lines.extend((f"### {name}", "", VL_DESC.get(name, "멀티모달 질의응답 벤치마크."), "", f"- Sample key: `{pair['sample_key']}`", "- Question:"))
+    prompt = base.get("question", "")
+    options = "\n".join(f"{key}. {base[key]}" for key in ("A", "B", "C", "D") if key in base)
+    lines.extend(code_block(f"{prompt}\n{options}".strip()))
+    lines.extend((f"- Reference: `{base.get('answer', '(judge-based)')}`", "", "- Official Base output:", *code_block(base.get("prediction", "")), "- Tuned output:", *code_block(tuned.get("prediction", ""))))
+
+
+def render_oc(lines: list[str], name: str, pair: dict[str, Any]) -> None:
+    short = name.split("/", 1)[1]
+    lines.extend((f"### OpenCompass {name}", "", OC_DESC.get(short, "OpenCompass 등록 데이터셋의 대표 문제."), "", f"- Prediction shard: `{pair['source_file']}`, sample `{pair['sample_key']}`", "- Prompt:"))
+    lines.extend(code_block(pair["base"].get("prompt", "")))
+    reference = next((pair["base"][key] for key in ("gold", "reference", "answer", "label") if key in pair["base"]), None)
+    if reference is not None:
+        lines.extend(("- Reference:", *code_block(reference)))
+    else:
+        lines.extend(("- Reference: evaluator dataset object에 보존되며 prediction shard에는 반복 저장되지 않음.", ""))
+    lines.extend(("- Official Base output:", *code_block(pair["base"].get("prediction", "")), "- Tuned output:", *code_block(pair["tuned"].get("prediction", ""))))
+
+
+def render_sim(lines: list[str], suite: str, domain: str, pair: dict[str, Any]) -> None:
+    lines.extend((f"### {suite} {domain}", "", "상태가 있는 도구 환경에서 정책 준수, 올바른 API 호출, DB 상태 변화와 최종 응답을 end-to-end reward로 평가한다.", "", "- User request:"))
+    lines.extend(code_block(pair["base"].get("user", "")))
+    for label, row in (("Official Base", pair["base"]), ("Tuned", pair["tuned"])):
+        lines.extend((f"- {label} final output:", *code_block(row.get("final_assistant", ""))))
+        lines.append(f"- {label} final tool calls: `{clip(row.get('tool_calls'), 1000)}`")
+        lines.append(f"- {label} reward: `{row.get('reward')}`, termination: `{row.get('termination_reason')}`")
+        lines.append("")
+
+
+def benchmark_guide() -> str:
+    return """# Benchmark Guide
+
+## Reading the numbers
+
+All percentage deltas in the model report are **Tuned minus that model's own official Base**, in absolute percentage points. Qwen and HCX raw scores must not be mixed into a single architecture ranking because their official checkpoints, chat templates, vision policies and pretraining histories differ.
+
+| Metric | Meaning | Direction | Important caveat |
+|---|---|:---:|---|
+| Exact / normalized exact | After evaluator normalization, prediction and canonical answer are identical | Higher | Correct content with extra prose can fail |
+| Containment | Canonical target occurs inside normalized output | Higher | More permissive than exact; hallucinated extra claims may still pass |
+| Format | Required answer wrapper/choice/short-answer form was parsed | Higher | Format success is not semantic correctness |
+| Similarity | Evaluator's normalized string/semantic similarity in [0,1] | Higher | Near-name answers can score partially without being canonical |
+| CER | Character edit distance divided by reference length | Lower | Can exceed 1 when insertion is heavy |
+| Line recall | Fraction of reference OCR lines recovered | Higher | Does not penalize all extra text |
+| Accuracy / aAcc | Correct rows divided by evaluated rows; Hallusion aAcc balances its paired structure | Higher | Compare only matched protocols |
+| pass@1 | First generated program passes hidden tests | Higher | Sensitive to code extraction and runtime |
+| ToolSandbox similarity | Milestone completion minus minefield penalties, aggregated by scenario | Higher | Continuous, not plain accuracy |
+| Tau reward | End-to-end task reward from actions, state checks and communication | Higher | Domain/trial weighting must match |
+
+## Benchmark families
+
+### General vision-language
+
+- **MMBench DEV EN v1.1**: English visual perception, relation, logic and knowledge multiple choice.
+- **MMStar / MMStar-KO**: leakage-reduced multimodal core skills in English and Korean.
+- **KRETA**: Korean-centric document, chart, scene and reasoning evaluation.
+- **MMMU-Pro 10c**: college-level multidisciplinary visual problems with ten choices.
+- **HallusionBench**: visual faithfulness and hallucination resistance; report `aAcc`.
+- **MathVista MINI**: visual mathematical reasoning. It is available in the HCX comparison; the Qwen run retained predictions but not an authoritative scored row.
+
+### Mammoth OCR and heritage
+
+- **Heritage Multi** asks attributes, **Reverse** selects the matching image, and **Simple** freely names a heritage object.
+- **OCR Font**, **Outdoor** and **Public** cover rendered fonts, signs/scenes and administrative documents.
+- Exact, containment, similarity, CER and line recall should be read together. Exact alone confounds recognition and output policy.
+
+### Cultural Focus and H400/HS100
+
+- **Cultural Focus identity** is exact official-title recognition; **view caption** is strict caption/year matching. `overall` aggregates both and is therefore much harder than identity alone.
+- **H400 Direct** is open-vocabulary held-out naming; **H400 Hard** is same-family multiple choice; **Knowledge Image/Text** test factual knowledge.
+- **HS100 Train** measures memorization/fit, **Unseen** measures new-view transfer, and **Simple** is only the 102-row intersection with the original Simple style. These are not aliases for full Mammoth Heritage Simple (768 rows).
+
+### OpenCompass language
+
+- **Core**: IFEval, AIME 2024/2025, PRM800K math, BBH, GPQA, MMLU-Pro, HumanEval, LiveCodeBench and long-context suites.
+- **Extra**: ARC, BoolQ, COPA, CommonsenseQA, HellaSwag, OpenBookQA, PIQA, SIQA, WinoGrande, MMLU, GSM8K, MATH, MBPP, LAMBADA, DROP and Natural Questions.
+- **Korean**: KMMLU, CSATQA, HAE-RAE, K2-Eval, KoBEST, KOBALT and Korean clinical QA.
+- The first row in each score table is the configured aggregate, not another dataset.
+
+### Tool use and agents
+
+- **BFCL V4** parses function calls into ASTs and tests simple, multiple, parallel and multi-turn calls, including missing-function/parameter and long-context cases.
+- **ToolSandbox** runs phone-like stateful scenarios with distractor tools, milestone goals and minefields.
+- **Tau2** evaluates airline, retail and telecom interactions. **Tau3** adds revised environments and banking knowledge with repeated trials.
+- BFCL's run directory retained score CSVs and diagnostic logs but not the raw generation corpus; paired output examples are therefore provided for Tau2/Tau3, while BFCL is documented with its category scores and observed empty-response diagnostics in the main report.
+"""
+
+
+def readme(spec: dict[str, Any]) -> str:
+    bullets = "\n".join(f"- {item}" for item in spec["headline"])
+    diagnosis = "\n".join(f"- {item}" for item in spec["diagnosis"])
+    return f"""# {spec['title']}
+
+This package contains a Hugging Face multimodal checkpoint, its official-base comparison, benchmark definitions, actual paired Base/Tuned outputs, selected sample images, raw compact example JSON and reproducibility metadata.
+
+## Identity
+
+- Official comparison base: `{spec['official']}`
+- Tuned HF source: `{spec['model_path']}`
+- Weight representation: {spec['weight_note']}
+- Selection checkpoint: step 2,500
+
+## Training contract
+
+- Hardware: 16 H200 nodes, 8 GPUs/node, 128 ranks.
+- Sequence: 4,096 packed tokens; text-only cap 3,584; image pixels 65,536 to 1,048,576.
+- Per-device batch 1, gradient accumulation 2, 2,500 optimizer steps.
+- Source supervised-token mix: Fable 10%, VisualWeb 10%, H400/HS100 target 80%.
+- Target lanes: H400 direct .32, multiview .10, hard .08, image knowledge .05, text knowledge .05; HS100 direct .25, multiview .10, hard .05.
+- Decoder LR 5e-7, visual merger LR 7.5e-7, constant schedule after 100-step warmup.
+- Heritage augmentation probability .60; light affine, brightness/contrast/saturation/sharpness, rare blur/JPEG; no flip.
+- {spec['vision_policy']}
+- BF16 training, TF32, non-reentrant gradient checkpointing and FSDP full-shard across groups of 16 ranks.
+
+## Result synopsis
+
+{bullets}
+
+## Analysis
+
+{diagnosis}
+
+## Package layout
+
+```text
+model/                              Hugging Face config, tokenizer, processor and safetensors
+reports/DETAILED_SCORE_REPORT.md    Every authoritative Base/Tuned score and delta
+reports/BENCHMARK_GUIDE.md          What each suite and metric measures
+reports/PAIRED_OUTPUT_EXAMPLES.md   Actual prompts and Base/Tuned outputs
+reports/TRAINING_CONFIG.yaml        Exact Kubernetes training manifest
+samples/images/                     Representative benchmark images
+samples/paired_examples.json        Machine-readable paired examples
+reproduction/                       Report/extraction/packaging scripts
+PACKAGE_MANIFEST.json               Model validation and package provenance
+SHA256SUMS                          SHA-256 for every packaged file
+```
+
+## Loading
+
+Use the model's bundled processor/tokenizer and enable remote model code for HCX. The exact class depends on the installed Transformers revision, so `AutoModelForImageTextToText` is the preferred entry point.
+
+```python
+import torch
+from transformers import AutoModelForImageTextToText, AutoProcessor
+
+path = "./model"
+processor = AutoProcessor.from_pretrained(path, trust_remote_code=True)
+model = AutoModelForImageTextToText.from_pretrained(
+    path,
+    torch_dtype=torch.bfloat16,
+    device_map="auto",
+    trust_remote_code=True,
+)
+```
+
+Read `reports/DETAILED_SCORE_REPORT.md` before promotion. Target-gate improvements do not imply a uniform general-purpose upgrade.
+"""
+
+
+def build_examples(spec: dict[str, Any], data: dict[str, Any]) -> str:
+    lines = [
+        f"# {spec['title']}: Paired Output Examples",
+        "",
+        "Every example below comes from the actual evaluation artifacts and uses the same sample key for official Base and Tuned. Examples are selected to be diagnostic, preferring Base-fail/Tuned-pass when available; they are not random estimates of overall accuracy.",
+        "",
+        "## Packaged Image Index",
+        "",
+        "The package includes actual benchmark images under `samples/images/`. The four contact sheets provide a quick visual index; individual files support closer inspection. The automatically selected paired records below can be different rows from these curated image examples.",
+        "",
+        "![Mammoth and OCR examples](../samples/images/01_mammoth_and_ocr.jpg)",
+        "",
+        "![Reverse-image candidates](../samples/images/02_reverse_candidates.jpg)",
+        "",
+        "![Cultural Focus examples](../samples/images/03_cultural_focus.jpg)",
+        "",
+        "![H400 and HS100 examples](../samples/images/04_h400_hs100.jpg)",
+        "",
+        "## Mammoth Heritage and OCR",
+        "",
+    ]
+    for key, pair in data["mammoth"].items():
+        title, description = MAMMOTH_DESC[key]
+        render_pair(lines, title, description, pair)
+    lines.extend(("## Cultural Focus", ""))
+    cultural_desc = {
+        "identity": "Held-out view에서 exact official title을 자유 생성한다.",
+        "view_caption": "문화재 view 설명과 촬영년도까지 포함한 canonical caption 일치를 본다.",
+        "national_treasure": "Cultural Focus identity 중 국보 subset의 exact-name 성능을 본다.",
+    }
+    for key, pair in data["cultural_focus"].items():
+        render_pair(lines, f"Cultural Focus {key}", cultural_desc[key], pair)
+    lines.extend(("## H400 and HS100", ""))
+    for key, pair in data["target"].items():
+        title, description = TARGET_DESC[key]
+        render_pair(lines, title, description, pair)
+    lines.extend(("## General Vision-Language", ""))
+    for key, pair in data["general_vl"].items():
+        render_vl(lines, key, pair)
+    lines.extend(("## OpenCompass Language", ""))
+    for key, pair in data["opencompass"].items():
+        render_oc(lines, key, pair)
+    lines.extend(("## Stateful Tool Use", ""))
+    for suite in ("tau2", "tau3"):
+        for domain, pair in data[suite].items():
+            render_sim(lines, suite.upper(), domain, pair)
+    lines.extend((
+        "## BFCL and ToolSandbox example retention note",
+        "",
+        "BFCL's retained run folder contains category score CSVs and logs, not the raw per-query generation files. Its log records empty outputs in some missing-parameter/missing-function multi-turn cases; the main report includes the resulting category scores. ToolSandbox retained scenario-level milestone/minefield mappings but not a compact human-readable conversation transcript in `result_summary.json`. Tau2/Tau3 above provide the auditable stateful conversation examples.",
+        "",
+    ))
+    return "\n".join(lines)
+
+
+def main() -> None:
+    guide = benchmark_guide()
+    for key, spec in SPECS.items():
+        target = RELEASE_ROOT / spec["slug"]
+        reports = target / "reports"
+        samples = target / "samples"
+        reproduction = target / "reproduction"
+        reports.mkdir(parents=True, exist_ok=True)
+        samples.mkdir(parents=True, exist_ok=True)
+        reproduction.mkdir(parents=True, exist_ok=True)
+
+        data = json.loads(spec["examples"].read_text(encoding="utf-8"))
+        (target / "README.md").write_text(readme(spec), encoding="utf-8")
+        shutil.copy2(spec["score_report"], reports / "DETAILED_SCORE_REPORT.md")
+        (reports / "BENCHMARK_GUIDE.md").write_text(guide, encoding="utf-8")
+        (reports / "PAIRED_OUTPUT_EXAMPLES.md").write_text(
+            build_examples(spec, data), encoding="utf-8"
+        )
+        shutil.copy2(spec["examples"], samples / "paired_examples.json")
+
+        training_yaml = (
+            ROOT.parent / "kubectl_yml/sft_qwen35_27b_official_h400_hs100_scaleup_2500steps_16nodes.yaml"
+            if key == "qwen27b"
+            else ROOT.parent / "kubectl_yml/sft_hyperclovax_seed_think_32b_h400_hs100_scaleup_2500steps_16nodes.yaml"
+        )
+        shutil.copy2(training_yaml, reports / "TRAINING_CONFIG.yaml")
+        for script in (
+            ROOT / "scripts/extract_large_model_paired_examples.py",
+            ROOT / "scripts/package_hf_release_v2.py",
+            ROOT / "scripts/convert_hf_safetensors_to_bf16.py",
+            Path(__file__),
+        ):
+            shutil.copy2(script, reproduction / script.name)
+        print(target)
+
+
+if __name__ == "__main__":
+    main()
