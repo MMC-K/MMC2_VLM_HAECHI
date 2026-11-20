@@ -1,0 +1,2837 @@
+{
+  "models": [
+    "27B",
+    "32B"
+  ],
+  "history": "150 commits reconstructed from existing source; commit dates are not backdated",
+  "files": [
+    {
+      "path": ".gitignore",
+      "published_sha256": "4191d37a4e8da5d8be426960c30034d9a20ddefaf904f2497d8542447244ca07",
+      "source": "publication documentation or portability helper"
+    },
+    {
+      "path": "README.md",
+      "published_sha256": "5877d9af5fa56cb51a070912278bbf6f0a8d1f289a96478e72ff9aefab0fe758",
+      "source": "publication documentation or portability helper"
+    },
+    {
+      "path": "docs/HISTORY.md",
+      "published_sha256": "2534c50bebb73545b8ba00f26d248de95c4667be5f84c191770467b4ff758847",
+      "source": "publication documentation or portability helper"
+    },
+    {
+      "path": "docs/LOCAL_INFERENCE.md",
+      "published_sha256": "0a3dd3bed478e715edca6c729d07fa61fb41fd41d4e4fa2a5b539c3b41010e84",
+      "source": "haechi_runner/README.md",
+      "source_sha256": "0a3dd3bed478e715edca6c729d07fa61fb41fd41d4e4fa2a5b539c3b41010e84",
+      "modified": false
+    },
+    {
+      "path": "docs/assets/training_comparison.png",
+      "published_sha256": "a0a681311c69199ff520b15660cfdcd786c631ca6cfe1700939546fab20ce36c",
+      "source": "haechi_runner/docs/technical_report/preview_v20/training_comparison_without_similarity.png",
+      "source_sha256": "a0a681311c69199ff520b15660cfdcd786c631ca6cfe1700939546fab20ce36c",
+      "modified": false
+    },
+    {
+      "path": "docs/reports/[기술문서] 거대 언어-시각 통합 이해_생성 모델 성능 분석서 2 V2.0.pdf",
+      "published_sha256": "d6ba1b083b121d4645af58ca2dedbc15902dfc386fbe2c6ee50ae264e53fed32",
+      "source": "[기술문서] 거대 언어-시각 통합 이해_생성 모델 성능 분석서 2 V2.0.pdf",
+      "source_sha256": "d6ba1b083b121d4645af58ca2dedbc15902dfc386fbe2c6ee50ae264e53fed32",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/answers.jsonl",
+      "published_sha256": "509c5e50b1118543b61790a34a1ba34127e194c24c38aeed30656e0856898227",
+      "source": "haechi_runner/evaluation/2026-11-16/answers.jsonl",
+      "source_sha256": "509c5e50b1118543b61790a34a1ba34127e194c24c38aeed30656e0856898227",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/base_weight_checksums.json",
+      "published_sha256": "2f123fcbdff1813f75658d6c8b2bcd5beb5fb68f2c18e7f431859cb1e261aa07",
+      "source": "haechi_runner/evaluation/2026-11-16/base_weight_checksums.json",
+      "source_sha256": "2f123fcbdff1813f75658d6c8b2bcd5beb5fb68f2c18e7f431859cb1e261aa07",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/before_after_comparison.csv",
+      "published_sha256": "b9edc3fec405f3ab25a735e6e202d10aaa5bf1203ab2890a0795bee50b683c75",
+      "source": "haechi_runner/evaluation/2026-11-16/before_after_comparison.csv",
+      "source_sha256": "b9edc3fec405f3ab25a735e6e202d10aaa5bf1203ab2890a0795bee50b683c75",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/dataset_manifest.json",
+      "published_sha256": "1bd40d620a880fd7dbdc887068b9b3550f8c956a95e5f293dda506a212dc19a8",
+      "source": "haechi_runner/evaluation/2026-11-16/dataset_manifest.json",
+      "source_sha256": "1bd40d620a880fd7dbdc887068b9b3550f8c956a95e5f293dda506a212dc19a8",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/final_validation.json",
+      "published_sha256": "98cf82518350990990297b507b58485a12f0f104a627868e33daf4698779c59c",
+      "source": "haechi_runner/evaluation/2026-11-16/final_validation.json",
+      "source_sha256": "98cf82518350990990297b507b58485a12f0f104a627868e33daf4698779c59c",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/hyperclova_base_predictions.jsonl",
+      "published_sha256": "e623d54e09930b3fb38c81f7ec1688efc4ddf8ff923c1139d15edb55769ecee5",
+      "source": "haechi_runner/evaluation/2026-11-16/hyperclova_base_predictions.jsonl",
+      "source_sha256": "e623d54e09930b3fb38c81f7ec1688efc4ddf8ff923c1139d15edb55769ecee5",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/hyperclova_base_run.json",
+      "published_sha256": "dd80d25ce1c18c8aa56877df7d85448f6c46cb34e4f54320dfe4943c7a47ec13",
+      "source": "haechi_runner/evaluation/2026-11-16/hyperclova_base_run.json",
+      "source_sha256": "dd80d25ce1c18c8aa56877df7d85448f6c46cb34e4f54320dfe4943c7a47ec13",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/hyperclova_base_scores.json",
+      "published_sha256": "64b61528e57c13432aa4b967b1932f0023c46d6069a66f5c2813e7b39f107413",
+      "source": "haechi_runner/evaluation/2026-11-16/hyperclova_base_scores.json",
+      "source_sha256": "64b61528e57c13432aa4b967b1932f0023c46d6069a66f5c2813e7b39f107413",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/hyperclova_haechi_predictions.jsonl",
+      "published_sha256": "e1cace9cf13f079c3742123894e9c8a13a1e3d9bddc183a9990fd42326d9d2c3",
+      "source": "haechi_runner/evaluation/2026-11-16/hyperclova_haechi_predictions.jsonl",
+      "source_sha256": "e1cace9cf13f079c3742123894e9c8a13a1e3d9bddc183a9990fd42326d9d2c3",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/hyperclova_haechi_run.json",
+      "published_sha256": "fc2ce88a0c16ada35bdea4be3ef72d40cba5396491e664270aec18d6b957c5a3",
+      "source": "haechi_runner/evaluation/2026-11-16/hyperclova_haechi_run.json",
+      "source_sha256": "fc2ce88a0c16ada35bdea4be3ef72d40cba5396491e664270aec18d6b957c5a3",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/hyperclova_haechi_scores.json",
+      "published_sha256": "1893c283d7ca834a1afccd3ff758d74096e2edda03b5bda5fadb2f4847019a63",
+      "source": "haechi_runner/evaluation/2026-11-16/hyperclova_haechi_scores.json",
+      "source_sha256": "1893c283d7ca834a1afccd3ff758d74096e2edda03b5bda5fadb2f4847019a63",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-001-h400_direct.png",
+      "published_sha256": "242a9e7799935f64558d1e76fcdb999c94c612add2462c2311230dbe9a4b6584",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-001-h400_direct.png",
+      "source_sha256": "242a9e7799935f64558d1e76fcdb999c94c612add2462c2311230dbe9a4b6584",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-001-h400_knowledge_image.png",
+      "published_sha256": "0c35ca371cf3258fb5025901cca07ddfd31ef72487057e0ef887f49f04962aa9",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-001-h400_knowledge_image.png",
+      "source_sha256": "0c35ca371cf3258fb5025901cca07ddfd31ef72487057e0ef887f49f04962aa9",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-002-h400_direct.png",
+      "published_sha256": "8173108e24ad8dd451b11d85ff4d6eaacac36f10d58e0953807ab73c0ed3a70d",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-002-h400_direct.png",
+      "source_sha256": "8173108e24ad8dd451b11d85ff4d6eaacac36f10d58e0953807ab73c0ed3a70d",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-002-h400_knowledge_image.png",
+      "published_sha256": "8173108e24ad8dd451b11d85ff4d6eaacac36f10d58e0953807ab73c0ed3a70d",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-002-h400_knowledge_image.png",
+      "source_sha256": "8173108e24ad8dd451b11d85ff4d6eaacac36f10d58e0953807ab73c0ed3a70d",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-003-h400_direct.png",
+      "published_sha256": "7c639a331c4b0631873ba7896a1315186f59a3bcfa8a80b940864ccbad4c5110",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-003-h400_direct.png",
+      "source_sha256": "7c639a331c4b0631873ba7896a1315186f59a3bcfa8a80b940864ccbad4c5110",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-003-h400_knowledge_image.png",
+      "published_sha256": "43c4381bb197abb73ebd18011f4b2c2443695620881f1a0b3249df7948cafc46",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-003-h400_knowledge_image.png",
+      "source_sha256": "43c4381bb197abb73ebd18011f4b2c2443695620881f1a0b3249df7948cafc46",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-004-h400_direct.png",
+      "published_sha256": "6da5babcfe77eaba8b8b5a4d1675c1797fb0b8e208b7c490ae4b4c96f0b47972",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-004-h400_direct.png",
+      "source_sha256": "6da5babcfe77eaba8b8b5a4d1675c1797fb0b8e208b7c490ae4b4c96f0b47972",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-004-h400_knowledge_image.png",
+      "published_sha256": "6da5babcfe77eaba8b8b5a4d1675c1797fb0b8e208b7c490ae4b4c96f0b47972",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-004-h400_knowledge_image.png",
+      "source_sha256": "6da5babcfe77eaba8b8b5a4d1675c1797fb0b8e208b7c490ae4b4c96f0b47972",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-005-h400_direct.png",
+      "published_sha256": "74740f543a09176d3fede680160abe33d967f9ee4eb721ef89c63cfa32f0ef28",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-005-h400_direct.png",
+      "source_sha256": "74740f543a09176d3fede680160abe33d967f9ee4eb721ef89c63cfa32f0ef28",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-005-h400_knowledge_image.png",
+      "published_sha256": "74740f543a09176d3fede680160abe33d967f9ee4eb721ef89c63cfa32f0ef28",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-005-h400_knowledge_image.png",
+      "source_sha256": "74740f543a09176d3fede680160abe33d967f9ee4eb721ef89c63cfa32f0ef28",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-006-h400_direct.png",
+      "published_sha256": "3387ba0b086477fcf7cbdbb282cee9c5b7b5260dc2e4e6d880961a86916f8c9c",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-006-h400_direct.png",
+      "source_sha256": "3387ba0b086477fcf7cbdbb282cee9c5b7b5260dc2e4e6d880961a86916f8c9c",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-006-h400_knowledge_image.png",
+      "published_sha256": "3387ba0b086477fcf7cbdbb282cee9c5b7b5260dc2e4e6d880961a86916f8c9c",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-006-h400_knowledge_image.png",
+      "source_sha256": "3387ba0b086477fcf7cbdbb282cee9c5b7b5260dc2e4e6d880961a86916f8c9c",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-007-h400_direct.png",
+      "published_sha256": "e96c95a8939898cee11d9e141220dbaf4b2bef2e11340500a747a644f2e02e4e",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-007-h400_direct.png",
+      "source_sha256": "e96c95a8939898cee11d9e141220dbaf4b2bef2e11340500a747a644f2e02e4e",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-007-h400_knowledge_image.png",
+      "published_sha256": "e96c95a8939898cee11d9e141220dbaf4b2bef2e11340500a747a644f2e02e4e",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-007-h400_knowledge_image.png",
+      "source_sha256": "e96c95a8939898cee11d9e141220dbaf4b2bef2e11340500a747a644f2e02e4e",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-008-h400_direct.png",
+      "published_sha256": "0a747dee3601ac64456c6ee247fc09fac6f51cddc4e86a01f5b9959b8212024d",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-008-h400_direct.png",
+      "source_sha256": "0a747dee3601ac64456c6ee247fc09fac6f51cddc4e86a01f5b9959b8212024d",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-008-h400_knowledge_image.png",
+      "published_sha256": "0a747dee3601ac64456c6ee247fc09fac6f51cddc4e86a01f5b9959b8212024d",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-008-h400_knowledge_image.png",
+      "source_sha256": "0a747dee3601ac64456c6ee247fc09fac6f51cddc4e86a01f5b9959b8212024d",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-009-h400_direct.png",
+      "published_sha256": "ab6133d3aa26d9b4d3b2e398426b77096bd0a37722df53332473c076c0f5d940",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-009-h400_direct.png",
+      "source_sha256": "ab6133d3aa26d9b4d3b2e398426b77096bd0a37722df53332473c076c0f5d940",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-009-h400_knowledge_image.png",
+      "published_sha256": "ab6133d3aa26d9b4d3b2e398426b77096bd0a37722df53332473c076c0f5d940",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-009-h400_knowledge_image.png",
+      "source_sha256": "ab6133d3aa26d9b4d3b2e398426b77096bd0a37722df53332473c076c0f5d940",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-010-h400_direct.png",
+      "published_sha256": "16e2f534c2ec535b476ff57f0b4df872a00877cc5ea88a973a969e8181432038",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-010-h400_direct.png",
+      "source_sha256": "16e2f534c2ec535b476ff57f0b4df872a00877cc5ea88a973a969e8181432038",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-010-h400_knowledge_image.png",
+      "published_sha256": "16e2f534c2ec535b476ff57f0b4df872a00877cc5ea88a973a969e8181432038",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-010-h400_knowledge_image.png",
+      "source_sha256": "16e2f534c2ec535b476ff57f0b4df872a00877cc5ea88a973a969e8181432038",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-011-h400_direct.png",
+      "published_sha256": "9241aee5643b2418f4c1f9a731c595ad49b7844b2a07598c068ee29b081c73bd",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-011-h400_direct.png",
+      "source_sha256": "9241aee5643b2418f4c1f9a731c595ad49b7844b2a07598c068ee29b081c73bd",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-011-h400_knowledge_image.png",
+      "published_sha256": "9241aee5643b2418f4c1f9a731c595ad49b7844b2a07598c068ee29b081c73bd",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-011-h400_knowledge_image.png",
+      "source_sha256": "9241aee5643b2418f4c1f9a731c595ad49b7844b2a07598c068ee29b081c73bd",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-012-h400_direct.png",
+      "published_sha256": "6e3d2c9b671ed57ae2aa1d37f3faf3fc71c98bab7769a90b2fcb17f7b3859b31",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-012-h400_direct.png",
+      "source_sha256": "6e3d2c9b671ed57ae2aa1d37f3faf3fc71c98bab7769a90b2fcb17f7b3859b31",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-012-h400_knowledge_image.png",
+      "published_sha256": "928c688d5b169019bf3e7e0b300c5d67527033c347fc0172b16a999ea13b9d4f",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-012-h400_knowledge_image.png",
+      "source_sha256": "928c688d5b169019bf3e7e0b300c5d67527033c347fc0172b16a999ea13b9d4f",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-013-h400_direct.png",
+      "published_sha256": "40679b87e5676456651d14de1bbc05c50a310f25058fdd503d294fb98206a417",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-013-h400_direct.png",
+      "source_sha256": "40679b87e5676456651d14de1bbc05c50a310f25058fdd503d294fb98206a417",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-013-h400_knowledge_image.png",
+      "published_sha256": "6e90e186c24a07f10d9e1ea109dc9a68ed382e2c6b707bfa6a636b23e15014d5",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-013-h400_knowledge_image.png",
+      "source_sha256": "6e90e186c24a07f10d9e1ea109dc9a68ed382e2c6b707bfa6a636b23e15014d5",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-014-h400_direct.png",
+      "published_sha256": "328c65298c0eee44558204ac6ba0e774b1c0e627c22c1926cc28180e7eb3c29d",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-014-h400_direct.png",
+      "source_sha256": "328c65298c0eee44558204ac6ba0e774b1c0e627c22c1926cc28180e7eb3c29d",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-014-h400_knowledge_image.png",
+      "published_sha256": "189b6a0f362087c26c8d26089505cd90bdde87c5b91a5358a0abe6248bad7c41",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-014-h400_knowledge_image.png",
+      "source_sha256": "189b6a0f362087c26c8d26089505cd90bdde87c5b91a5358a0abe6248bad7c41",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-015-h400_direct.png",
+      "published_sha256": "f13fa1b7ceb64346095307845cf83617a4a1c3c4264034ef0fdcbb37368ae7e6",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-015-h400_direct.png",
+      "source_sha256": "f13fa1b7ceb64346095307845cf83617a4a1c3c4264034ef0fdcbb37368ae7e6",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-015-h400_knowledge_image.png",
+      "published_sha256": "3228d31ef5677879b8cb1fad2ade7c80720b8c8e3a54d76a943615ef70a29e98",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-015-h400_knowledge_image.png",
+      "source_sha256": "3228d31ef5677879b8cb1fad2ade7c80720b8c8e3a54d76a943615ef70a29e98",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-016-h400_direct.png",
+      "published_sha256": "0b9af66e99447af5303aa10ac883ef31cfac57b036e0e19774cae1556b8898a0",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-016-h400_direct.png",
+      "source_sha256": "0b9af66e99447af5303aa10ac883ef31cfac57b036e0e19774cae1556b8898a0",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-016-h400_knowledge_image.png",
+      "published_sha256": "0b9af66e99447af5303aa10ac883ef31cfac57b036e0e19774cae1556b8898a0",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-016-h400_knowledge_image.png",
+      "source_sha256": "0b9af66e99447af5303aa10ac883ef31cfac57b036e0e19774cae1556b8898a0",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-017-h400_direct.png",
+      "published_sha256": "4569dd6eb1906669084726d59c0d63d7c33e5d7646d00147feee9c9e0634f3fd",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-017-h400_direct.png",
+      "source_sha256": "4569dd6eb1906669084726d59c0d63d7c33e5d7646d00147feee9c9e0634f3fd",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-017-h400_knowledge_image.png",
+      "published_sha256": "4569dd6eb1906669084726d59c0d63d7c33e5d7646d00147feee9c9e0634f3fd",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-017-h400_knowledge_image.png",
+      "source_sha256": "4569dd6eb1906669084726d59c0d63d7c33e5d7646d00147feee9c9e0634f3fd",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-018-h400_direct.png",
+      "published_sha256": "71a74ae03390804e919ef8ff41c82c6a3706443bed70b9e212358a721b3089c3",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-018-h400_direct.png",
+      "source_sha256": "71a74ae03390804e919ef8ff41c82c6a3706443bed70b9e212358a721b3089c3",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-018-h400_knowledge_image.png",
+      "published_sha256": "6de633cf7df762c83b3e0140457ae11fcd9c6dcf59bdde556aa6cd53f03f7f64",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-018-h400_knowledge_image.png",
+      "source_sha256": "6de633cf7df762c83b3e0140457ae11fcd9c6dcf59bdde556aa6cd53f03f7f64",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-019-h400_direct.png",
+      "published_sha256": "9aa910bd8f7f831797f50379d52b2390553c35ff7decb88bfbb8dc289f7b30fc",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-019-h400_direct.png",
+      "source_sha256": "9aa910bd8f7f831797f50379d52b2390553c35ff7decb88bfbb8dc289f7b30fc",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-019-h400_knowledge_image.png",
+      "published_sha256": "a68f691905b580554f2e7cc6311800c02a724c9ec471f59ee01c357fdd94b076",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-019-h400_knowledge_image.png",
+      "source_sha256": "a68f691905b580554f2e7cc6311800c02a724c9ec471f59ee01c357fdd94b076",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-020-h400_direct.png",
+      "published_sha256": "7cc3e12b48f8d6fcbdf5df982d0e7d1a574862d9975a4692115ee3c933ee7058",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-020-h400_direct.png",
+      "source_sha256": "7cc3e12b48f8d6fcbdf5df982d0e7d1a574862d9975a4692115ee3c933ee7058",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-020-h400_knowledge_image.png",
+      "published_sha256": "7cc3e12b48f8d6fcbdf5df982d0e7d1a574862d9975a4692115ee3c933ee7058",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-020-h400_knowledge_image.png",
+      "source_sha256": "7cc3e12b48f8d6fcbdf5df982d0e7d1a574862d9975a4692115ee3c933ee7058",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-021-h400_direct.png",
+      "published_sha256": "f7a482783682152251bf51352675349c25231db565aa98d47b56e786a590d116",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-021-h400_direct.png",
+      "source_sha256": "f7a482783682152251bf51352675349c25231db565aa98d47b56e786a590d116",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-021-h400_knowledge_image.png",
+      "published_sha256": "f7a482783682152251bf51352675349c25231db565aa98d47b56e786a590d116",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-021-h400_knowledge_image.png",
+      "source_sha256": "f7a482783682152251bf51352675349c25231db565aa98d47b56e786a590d116",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-022-h400_direct.png",
+      "published_sha256": "fc740a963a90cbb3f205b170b728404113e76d1ca92ce4d3e77e1fbda66a0f86",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-022-h400_direct.png",
+      "source_sha256": "fc740a963a90cbb3f205b170b728404113e76d1ca92ce4d3e77e1fbda66a0f86",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-022-h400_knowledge_image.png",
+      "published_sha256": "fc740a963a90cbb3f205b170b728404113e76d1ca92ce4d3e77e1fbda66a0f86",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-022-h400_knowledge_image.png",
+      "source_sha256": "fc740a963a90cbb3f205b170b728404113e76d1ca92ce4d3e77e1fbda66a0f86",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-023-h400_direct.png",
+      "published_sha256": "c973dc56bbd5355c647c2f0a68768c17229e7822419d70f7b81fbbf5f03d47a7",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-023-h400_direct.png",
+      "source_sha256": "c973dc56bbd5355c647c2f0a68768c17229e7822419d70f7b81fbbf5f03d47a7",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-023-h400_knowledge_image.png",
+      "published_sha256": "c973dc56bbd5355c647c2f0a68768c17229e7822419d70f7b81fbbf5f03d47a7",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-023-h400_knowledge_image.png",
+      "source_sha256": "c973dc56bbd5355c647c2f0a68768c17229e7822419d70f7b81fbbf5f03d47a7",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-024-h400_direct.png",
+      "published_sha256": "efaa60ff574a5a8ee0af9c9b8201d68958bae462eed2628bc16c36e0be41e76c",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-024-h400_direct.png",
+      "source_sha256": "efaa60ff574a5a8ee0af9c9b8201d68958bae462eed2628bc16c36e0be41e76c",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-024-h400_knowledge_image.png",
+      "published_sha256": "08adabdbc389e88dda3679a0b69ba1e425310acedab7bd4496dab917cfdba727",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-024-h400_knowledge_image.png",
+      "source_sha256": "08adabdbc389e88dda3679a0b69ba1e425310acedab7bd4496dab917cfdba727",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-025-h400_direct.png",
+      "published_sha256": "613d8bcbfc857c91ff6166da1cbf8173a84ac10f7f8d099df2e5a4ce9a755c0d",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-025-h400_direct.png",
+      "source_sha256": "613d8bcbfc857c91ff6166da1cbf8173a84ac10f7f8d099df2e5a4ce9a755c0d",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-025-h400_knowledge_image.png",
+      "published_sha256": "613d8bcbfc857c91ff6166da1cbf8173a84ac10f7f8d099df2e5a4ce9a755c0d",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-025-h400_knowledge_image.png",
+      "source_sha256": "613d8bcbfc857c91ff6166da1cbf8173a84ac10f7f8d099df2e5a4ce9a755c0d",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-026-h400_direct.png",
+      "published_sha256": "eae5a05169ba93d44af3b233a7aae5d53fc2b2683d178f774f80a21c51488f9e",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-026-h400_direct.png",
+      "source_sha256": "eae5a05169ba93d44af3b233a7aae5d53fc2b2683d178f774f80a21c51488f9e",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-026-h400_knowledge_image.png",
+      "published_sha256": "eae5a05169ba93d44af3b233a7aae5d53fc2b2683d178f774f80a21c51488f9e",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-026-h400_knowledge_image.png",
+      "source_sha256": "eae5a05169ba93d44af3b233a7aae5d53fc2b2683d178f774f80a21c51488f9e",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-027-h400_direct.png",
+      "published_sha256": "2bbb18071d787d3e40ee9339001aa949d45da651e5659c0de907ebd97493e871",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-027-h400_direct.png",
+      "source_sha256": "2bbb18071d787d3e40ee9339001aa949d45da651e5659c0de907ebd97493e871",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-027-h400_knowledge_image.png",
+      "published_sha256": "2bbb18071d787d3e40ee9339001aa949d45da651e5659c0de907ebd97493e871",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-027-h400_knowledge_image.png",
+      "source_sha256": "2bbb18071d787d3e40ee9339001aa949d45da651e5659c0de907ebd97493e871",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-028-h400_direct.png",
+      "published_sha256": "e02313fbf1e584837ab343ada7ff973c513a5f9955cd65c2da303b1330bbc3e5",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-028-h400_direct.png",
+      "source_sha256": "e02313fbf1e584837ab343ada7ff973c513a5f9955cd65c2da303b1330bbc3e5",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-028-h400_knowledge_image.png",
+      "published_sha256": "e02313fbf1e584837ab343ada7ff973c513a5f9955cd65c2da303b1330bbc3e5",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-028-h400_knowledge_image.png",
+      "source_sha256": "e02313fbf1e584837ab343ada7ff973c513a5f9955cd65c2da303b1330bbc3e5",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-029-h400_direct.png",
+      "published_sha256": "e5474a45782149389af211ca8973f85338d8bda0180f030dd38c4a04dbdf1d1a",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-029-h400_direct.png",
+      "source_sha256": "e5474a45782149389af211ca8973f85338d8bda0180f030dd38c4a04dbdf1d1a",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-029-h400_knowledge_image.png",
+      "published_sha256": "e5474a45782149389af211ca8973f85338d8bda0180f030dd38c4a04dbdf1d1a",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-029-h400_knowledge_image.png",
+      "source_sha256": "e5474a45782149389af211ca8973f85338d8bda0180f030dd38c4a04dbdf1d1a",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-030-h400_direct.png",
+      "published_sha256": "e37872ee6d8988b316d666441dbc439381aec4f3706000bf06035de787e72755",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-030-h400_direct.png",
+      "source_sha256": "e37872ee6d8988b316d666441dbc439381aec4f3706000bf06035de787e72755",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-030-h400_knowledge_image.png",
+      "published_sha256": "6dbafab640541d0c2bf7aa276aecd1648d984fa4f507758f1e517d869b986552",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-030-h400_knowledge_image.png",
+      "source_sha256": "6dbafab640541d0c2bf7aa276aecd1648d984fa4f507758f1e517d869b986552",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-031-h400_direct.png",
+      "published_sha256": "39ccdebd63e0df2bd72687c8b738df7833bf08f6b9eab83bd42531b8efb8e517",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-031-h400_direct.png",
+      "source_sha256": "39ccdebd63e0df2bd72687c8b738df7833bf08f6b9eab83bd42531b8efb8e517",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-031-h400_knowledge_image.png",
+      "published_sha256": "54960952e97bce50b48e4d237acdf36c1e369344979402a86a0fa8607de868d3",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-031-h400_knowledge_image.png",
+      "source_sha256": "54960952e97bce50b48e4d237acdf36c1e369344979402a86a0fa8607de868d3",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-032-h400_direct.png",
+      "published_sha256": "571afbd4e873b804c605d98009b8d88b4f01f6a2aa52b0b26ac170985337ea88",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-032-h400_direct.png",
+      "source_sha256": "571afbd4e873b804c605d98009b8d88b4f01f6a2aa52b0b26ac170985337ea88",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-032-h400_knowledge_image.png",
+      "published_sha256": "571afbd4e873b804c605d98009b8d88b4f01f6a2aa52b0b26ac170985337ea88",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-032-h400_knowledge_image.png",
+      "source_sha256": "571afbd4e873b804c605d98009b8d88b4f01f6a2aa52b0b26ac170985337ea88",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-033-h400_direct.png",
+      "published_sha256": "d20ed02e0ff81fb9692add19d49e160130412c48e68bc835243368dba52f8176",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-033-h400_direct.png",
+      "source_sha256": "d20ed02e0ff81fb9692add19d49e160130412c48e68bc835243368dba52f8176",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-033-h400_knowledge_image.png",
+      "published_sha256": "d20ed02e0ff81fb9692add19d49e160130412c48e68bc835243368dba52f8176",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-033-h400_knowledge_image.png",
+      "source_sha256": "d20ed02e0ff81fb9692add19d49e160130412c48e68bc835243368dba52f8176",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-034-h400_direct.png",
+      "published_sha256": "58edbf8ac9c7bab8b5965a509b1a519b379ed569a83320ed661178c185ef8644",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-034-h400_direct.png",
+      "source_sha256": "58edbf8ac9c7bab8b5965a509b1a519b379ed569a83320ed661178c185ef8644",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-034-h400_knowledge_image.png",
+      "published_sha256": "7c39b6dc0daebd6d689aacc3be6cd03b5a1cb9499d4a96b875d836a38bf8a647",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-034-h400_knowledge_image.png",
+      "source_sha256": "7c39b6dc0daebd6d689aacc3be6cd03b5a1cb9499d4a96b875d836a38bf8a647",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-035-h400_direct.png",
+      "published_sha256": "48c95b017d8c4f23b5401cea319c3d505182315c4b4c266637e868f091f6904b",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-035-h400_direct.png",
+      "source_sha256": "48c95b017d8c4f23b5401cea319c3d505182315c4b4c266637e868f091f6904b",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-035-h400_knowledge_image.png",
+      "published_sha256": "48c95b017d8c4f23b5401cea319c3d505182315c4b4c266637e868f091f6904b",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-035-h400_knowledge_image.png",
+      "source_sha256": "48c95b017d8c4f23b5401cea319c3d505182315c4b4c266637e868f091f6904b",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-036-h400_direct.png",
+      "published_sha256": "b9201eaba239eee4ce397c3cf55e632263441ee0449bf2d0763bf9a65268d202",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-036-h400_direct.png",
+      "source_sha256": "b9201eaba239eee4ce397c3cf55e632263441ee0449bf2d0763bf9a65268d202",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-036-h400_knowledge_image.png",
+      "published_sha256": "b9201eaba239eee4ce397c3cf55e632263441ee0449bf2d0763bf9a65268d202",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-036-h400_knowledge_image.png",
+      "source_sha256": "b9201eaba239eee4ce397c3cf55e632263441ee0449bf2d0763bf9a65268d202",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-037-h400_direct.png",
+      "published_sha256": "b21ea54e2ae64559252e32da1fad6922c4a2f5e070193efda0b95c91ec3ba8c5",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-037-h400_direct.png",
+      "source_sha256": "b21ea54e2ae64559252e32da1fad6922c4a2f5e070193efda0b95c91ec3ba8c5",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-037-h400_knowledge_image.png",
+      "published_sha256": "b21ea54e2ae64559252e32da1fad6922c4a2f5e070193efda0b95c91ec3ba8c5",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-037-h400_knowledge_image.png",
+      "source_sha256": "b21ea54e2ae64559252e32da1fad6922c4a2f5e070193efda0b95c91ec3ba8c5",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-038-h400_direct.png",
+      "published_sha256": "485f75e2bb139f4fbbd9715b60f99ee786aa8707071706d248e469dd7907985a",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-038-h400_direct.png",
+      "source_sha256": "485f75e2bb139f4fbbd9715b60f99ee786aa8707071706d248e469dd7907985a",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-038-h400_knowledge_image.png",
+      "published_sha256": "e4ac1337dd00cbdd001bae09dfed9a6cb25a0cb2d5ec5550c9f9f88ea01d26e5",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-038-h400_knowledge_image.png",
+      "source_sha256": "e4ac1337dd00cbdd001bae09dfed9a6cb25a0cb2d5ec5550c9f9f88ea01d26e5",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-039-h400_direct.png",
+      "published_sha256": "821473a68e93cfeae7352ef4aa87b200865c3c7aec5786bdc993008d891f8c80",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-039-h400_direct.png",
+      "source_sha256": "821473a68e93cfeae7352ef4aa87b200865c3c7aec5786bdc993008d891f8c80",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-039-h400_knowledge_image.png",
+      "published_sha256": "821473a68e93cfeae7352ef4aa87b200865c3c7aec5786bdc993008d891f8c80",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-039-h400_knowledge_image.png",
+      "source_sha256": "821473a68e93cfeae7352ef4aa87b200865c3c7aec5786bdc993008d891f8c80",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-040-h400_direct.png",
+      "published_sha256": "1cf27936f6b533e976ba5c01fcde5b69e9230c2c77efff4f757234986cede909",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-040-h400_direct.png",
+      "source_sha256": "1cf27936f6b533e976ba5c01fcde5b69e9230c2c77efff4f757234986cede909",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-040-h400_knowledge_image.png",
+      "published_sha256": "1cf27936f6b533e976ba5c01fcde5b69e9230c2c77efff4f757234986cede909",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-040-h400_knowledge_image.png",
+      "source_sha256": "1cf27936f6b533e976ba5c01fcde5b69e9230c2c77efff4f757234986cede909",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-041-h400_direct.png",
+      "published_sha256": "3b03310ebf61264459c8b84cf453e176bd5c4c6a633e6ae1d3a6ef7b6c0e72e8",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-041-h400_direct.png",
+      "source_sha256": "3b03310ebf61264459c8b84cf453e176bd5c4c6a633e6ae1d3a6ef7b6c0e72e8",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-041-h400_knowledge_image.png",
+      "published_sha256": "3b03310ebf61264459c8b84cf453e176bd5c4c6a633e6ae1d3a6ef7b6c0e72e8",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-041-h400_knowledge_image.png",
+      "source_sha256": "3b03310ebf61264459c8b84cf453e176bd5c4c6a633e6ae1d3a6ef7b6c0e72e8",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-042-h400_direct.png",
+      "published_sha256": "09bdbccf33ae7a6ce660ce5d795d46972a5068690215d6e7f9b0862bd7a69ad7",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-042-h400_direct.png",
+      "source_sha256": "09bdbccf33ae7a6ce660ce5d795d46972a5068690215d6e7f9b0862bd7a69ad7",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-042-h400_knowledge_image.png",
+      "published_sha256": "09bdbccf33ae7a6ce660ce5d795d46972a5068690215d6e7f9b0862bd7a69ad7",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-042-h400_knowledge_image.png",
+      "source_sha256": "09bdbccf33ae7a6ce660ce5d795d46972a5068690215d6e7f9b0862bd7a69ad7",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-043-h400_direct.png",
+      "published_sha256": "b7c316669027ff586ea46a5373bda25df70727f5d0cf45e596bd02e9512fddfd",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-043-h400_direct.png",
+      "source_sha256": "b7c316669027ff586ea46a5373bda25df70727f5d0cf45e596bd02e9512fddfd",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-043-h400_knowledge_image.png",
+      "published_sha256": "b7c316669027ff586ea46a5373bda25df70727f5d0cf45e596bd02e9512fddfd",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-043-h400_knowledge_image.png",
+      "source_sha256": "b7c316669027ff586ea46a5373bda25df70727f5d0cf45e596bd02e9512fddfd",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-044-h400_direct.png",
+      "published_sha256": "eec983e350b05d7a4bf92967d033aa04519d992bd00203b35201ea3c12e90939",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-044-h400_direct.png",
+      "source_sha256": "eec983e350b05d7a4bf92967d033aa04519d992bd00203b35201ea3c12e90939",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-044-h400_knowledge_image.png",
+      "published_sha256": "eec983e350b05d7a4bf92967d033aa04519d992bd00203b35201ea3c12e90939",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-044-h400_knowledge_image.png",
+      "source_sha256": "eec983e350b05d7a4bf92967d033aa04519d992bd00203b35201ea3c12e90939",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-045-h400_direct.png",
+      "published_sha256": "58acc4d8fcd2a6957b12b106d135db1d17ac3e65149a60c7536fe0f4d26f9bd3",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-045-h400_direct.png",
+      "source_sha256": "58acc4d8fcd2a6957b12b106d135db1d17ac3e65149a60c7536fe0f4d26f9bd3",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-045-h400_knowledge_image.png",
+      "published_sha256": "58acc4d8fcd2a6957b12b106d135db1d17ac3e65149a60c7536fe0f4d26f9bd3",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-045-h400_knowledge_image.png",
+      "source_sha256": "58acc4d8fcd2a6957b12b106d135db1d17ac3e65149a60c7536fe0f4d26f9bd3",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-046-h400_direct.png",
+      "published_sha256": "162ee60b3cfb32785edf900236986288e3a7659ce31505bc048270f4935a65f9",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-046-h400_direct.png",
+      "source_sha256": "162ee60b3cfb32785edf900236986288e3a7659ce31505bc048270f4935a65f9",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-046-h400_knowledge_image.png",
+      "published_sha256": "162ee60b3cfb32785edf900236986288e3a7659ce31505bc048270f4935a65f9",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-046-h400_knowledge_image.png",
+      "source_sha256": "162ee60b3cfb32785edf900236986288e3a7659ce31505bc048270f4935a65f9",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-047-h400_direct.png",
+      "published_sha256": "ed0830aed46a0bfea61744e8cf7e9fb7dfc9c61f9732fdbef32ed737934c7899",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-047-h400_direct.png",
+      "source_sha256": "ed0830aed46a0bfea61744e8cf7e9fb7dfc9c61f9732fdbef32ed737934c7899",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-047-h400_knowledge_image.png",
+      "published_sha256": "ed0830aed46a0bfea61744e8cf7e9fb7dfc9c61f9732fdbef32ed737934c7899",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-047-h400_knowledge_image.png",
+      "source_sha256": "ed0830aed46a0bfea61744e8cf7e9fb7dfc9c61f9732fdbef32ed737934c7899",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-048-h400_direct.png",
+      "published_sha256": "2d83d3559149ecd3670fd240ed202f783542b288b41a37023a76d04bb9fe4d1c",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-048-h400_direct.png",
+      "source_sha256": "2d83d3559149ecd3670fd240ed202f783542b288b41a37023a76d04bb9fe4d1c",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-048-h400_knowledge_image.png",
+      "published_sha256": "2d83d3559149ecd3670fd240ed202f783542b288b41a37023a76d04bb9fe4d1c",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-048-h400_knowledge_image.png",
+      "source_sha256": "2d83d3559149ecd3670fd240ed202f783542b288b41a37023a76d04bb9fe4d1c",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-049-h400_direct.png",
+      "published_sha256": "ff4b0096bfab15b963b1b4ace6238d1a1fe3b4b2158d818dd08cf6fcc78c39ca",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-049-h400_direct.png",
+      "source_sha256": "ff4b0096bfab15b963b1b4ace6238d1a1fe3b4b2158d818dd08cf6fcc78c39ca",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-049-h400_knowledge_image.png",
+      "published_sha256": "555ff53f2f17210feddbe020e09379c5ef0d52e6377d18a2c60fbc41aef9e75e",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-049-h400_knowledge_image.png",
+      "source_sha256": "555ff53f2f17210feddbe020e09379c5ef0d52e6377d18a2c60fbc41aef9e75e",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-050-h400_direct.png",
+      "published_sha256": "37df64d8b0c62bf7a3774c13a995ec2cdfceaee94c84d28cfc4d657f10d2edb5",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-050-h400_direct.png",
+      "source_sha256": "37df64d8b0c62bf7a3774c13a995ec2cdfceaee94c84d28cfc4d657f10d2edb5",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-050-h400_knowledge_image.png",
+      "published_sha256": "37df64d8b0c62bf7a3774c13a995ec2cdfceaee94c84d28cfc4d657f10d2edb5",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-050-h400_knowledge_image.png",
+      "source_sha256": "37df64d8b0c62bf7a3774c13a995ec2cdfceaee94c84d28cfc4d657f10d2edb5",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-051-h400_direct.png",
+      "published_sha256": "942aa02be8b9d4620ebc2909a041afa074a57d08dd4f1faeb8c88186349c2ec5",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-051-h400_direct.png",
+      "source_sha256": "942aa02be8b9d4620ebc2909a041afa074a57d08dd4f1faeb8c88186349c2ec5",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-051-h400_knowledge_image.png",
+      "published_sha256": "942aa02be8b9d4620ebc2909a041afa074a57d08dd4f1faeb8c88186349c2ec5",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-051-h400_knowledge_image.png",
+      "source_sha256": "942aa02be8b9d4620ebc2909a041afa074a57d08dd4f1faeb8c88186349c2ec5",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-052-h400_direct.png",
+      "published_sha256": "9bfa999261092b2240a3afc3200a54c7062c0cabbd9bd65a713aef6fb13ce5d6",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-052-h400_direct.png",
+      "source_sha256": "9bfa999261092b2240a3afc3200a54c7062c0cabbd9bd65a713aef6fb13ce5d6",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-052-h400_knowledge_image.png",
+      "published_sha256": "9bfa999261092b2240a3afc3200a54c7062c0cabbd9bd65a713aef6fb13ce5d6",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-052-h400_knowledge_image.png",
+      "source_sha256": "9bfa999261092b2240a3afc3200a54c7062c0cabbd9bd65a713aef6fb13ce5d6",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-053-h400_direct.png",
+      "published_sha256": "794e4ae1d1e980e7b89a13c1164e843cd5162ed4cee714d0f508fbfb2710dcbb",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-053-h400_direct.png",
+      "source_sha256": "794e4ae1d1e980e7b89a13c1164e843cd5162ed4cee714d0f508fbfb2710dcbb",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-053-h400_knowledge_image.png",
+      "published_sha256": "794e4ae1d1e980e7b89a13c1164e843cd5162ed4cee714d0f508fbfb2710dcbb",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-053-h400_knowledge_image.png",
+      "source_sha256": "794e4ae1d1e980e7b89a13c1164e843cd5162ed4cee714d0f508fbfb2710dcbb",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-054-h400_direct.png",
+      "published_sha256": "b2f0cf0333aba5fa3c361f37e824cea079c3745a263c207100dadb082688a887",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-054-h400_direct.png",
+      "source_sha256": "b2f0cf0333aba5fa3c361f37e824cea079c3745a263c207100dadb082688a887",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-054-h400_knowledge_image.png",
+      "published_sha256": "2d78bc9a18d295e6daef16c7a3c069d0289074e63961e8265672a0b96dd63426",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-054-h400_knowledge_image.png",
+      "source_sha256": "2d78bc9a18d295e6daef16c7a3c069d0289074e63961e8265672a0b96dd63426",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-055-h400_direct.png",
+      "published_sha256": "9c3f56f593c6eb1c0686fdd828746aeeca126c99da74bfbab859a33b345993ba",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-055-h400_direct.png",
+      "source_sha256": "9c3f56f593c6eb1c0686fdd828746aeeca126c99da74bfbab859a33b345993ba",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-055-h400_knowledge_image.png",
+      "published_sha256": "9c3f56f593c6eb1c0686fdd828746aeeca126c99da74bfbab859a33b345993ba",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-055-h400_knowledge_image.png",
+      "source_sha256": "9c3f56f593c6eb1c0686fdd828746aeeca126c99da74bfbab859a33b345993ba",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-056-h400_direct.png",
+      "published_sha256": "0d700a9d497c48f237617d40943cd8d980938d16b8f282ecec17af65618eb46c",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-056-h400_direct.png",
+      "source_sha256": "0d700a9d497c48f237617d40943cd8d980938d16b8f282ecec17af65618eb46c",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-056-h400_knowledge_image.png",
+      "published_sha256": "0d700a9d497c48f237617d40943cd8d980938d16b8f282ecec17af65618eb46c",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-056-h400_knowledge_image.png",
+      "source_sha256": "0d700a9d497c48f237617d40943cd8d980938d16b8f282ecec17af65618eb46c",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-057-h400_direct.png",
+      "published_sha256": "7e97f889bb0cbe1dfdddc7aeefbdd992a8f8d37d6b0abba3e76742ea94ef1d61",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-057-h400_direct.png",
+      "source_sha256": "7e97f889bb0cbe1dfdddc7aeefbdd992a8f8d37d6b0abba3e76742ea94ef1d61",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-057-h400_knowledge_image.png",
+      "published_sha256": "dc2b44bd3389e6f39f0ef905d488dfc86f3adf3c094a5b4e7f95e3a8f180ee5c",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-057-h400_knowledge_image.png",
+      "source_sha256": "dc2b44bd3389e6f39f0ef905d488dfc86f3adf3c094a5b4e7f95e3a8f180ee5c",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-058-h400_direct.png",
+      "published_sha256": "18e959b2a756638eca9e8dd90f09c4a93675c3cefccf67dda9107b7fea81451e",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-058-h400_direct.png",
+      "source_sha256": "18e959b2a756638eca9e8dd90f09c4a93675c3cefccf67dda9107b7fea81451e",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-058-h400_knowledge_image.png",
+      "published_sha256": "18e959b2a756638eca9e8dd90f09c4a93675c3cefccf67dda9107b7fea81451e",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-058-h400_knowledge_image.png",
+      "source_sha256": "18e959b2a756638eca9e8dd90f09c4a93675c3cefccf67dda9107b7fea81451e",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-059-h400_direct.png",
+      "published_sha256": "cc9f003c2a7af3c597700125961365d5005ff69a2d644e6f3382ee490b4e22a3",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-059-h400_direct.png",
+      "source_sha256": "cc9f003c2a7af3c597700125961365d5005ff69a2d644e6f3382ee490b4e22a3",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-059-h400_knowledge_image.png",
+      "published_sha256": "cc9f003c2a7af3c597700125961365d5005ff69a2d644e6f3382ee490b4e22a3",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-059-h400_knowledge_image.png",
+      "source_sha256": "cc9f003c2a7af3c597700125961365d5005ff69a2d644e6f3382ee490b4e22a3",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-060-h400_direct.png",
+      "published_sha256": "7f6d36448d261d973d0eeac4d384e3b2c7d9ee65581288a7750df25372d31bb2",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-060-h400_direct.png",
+      "source_sha256": "7f6d36448d261d973d0eeac4d384e3b2c7d9ee65581288a7750df25372d31bb2",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-060-h400_knowledge_image.png",
+      "published_sha256": "a74235c3037df57e31a32c7bb2bd9bbf621e3bf552a51ef905daf6eb3f01a5e2",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-060-h400_knowledge_image.png",
+      "source_sha256": "a74235c3037df57e31a32c7bb2bd9bbf621e3bf552a51ef905daf6eb3f01a5e2",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-061-h400_direct.png",
+      "published_sha256": "20cfa3e2d039ce69692c508a6be89b275922fa16d45afc0ce7f7424d0f868ebb",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-061-h400_direct.png",
+      "source_sha256": "20cfa3e2d039ce69692c508a6be89b275922fa16d45afc0ce7f7424d0f868ebb",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-061-h400_knowledge_image.png",
+      "published_sha256": "dc6a540ffed538208ce0d7f657d636d63d0026b4998aa4ab0e9ba4f129fd1537",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-061-h400_knowledge_image.png",
+      "source_sha256": "dc6a540ffed538208ce0d7f657d636d63d0026b4998aa4ab0e9ba4f129fd1537",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-062-h400_direct.png",
+      "published_sha256": "717af806b1a6f7776483f07506dbb07ae30784fe8bc41ead0b02a70e3a6e94fe",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-062-h400_direct.png",
+      "source_sha256": "717af806b1a6f7776483f07506dbb07ae30784fe8bc41ead0b02a70e3a6e94fe",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-062-h400_knowledge_image.png",
+      "published_sha256": "717af806b1a6f7776483f07506dbb07ae30784fe8bc41ead0b02a70e3a6e94fe",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-062-h400_knowledge_image.png",
+      "source_sha256": "717af806b1a6f7776483f07506dbb07ae30784fe8bc41ead0b02a70e3a6e94fe",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-063-h400_direct.png",
+      "published_sha256": "7498a62fa1bd543dd63edc35f7ba92a9cc927bc809758c08f4ab89116439fd6c",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-063-h400_direct.png",
+      "source_sha256": "7498a62fa1bd543dd63edc35f7ba92a9cc927bc809758c08f4ab89116439fd6c",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-063-h400_knowledge_image.png",
+      "published_sha256": "c3532841d3cabd75847b3de64faf3915bc0f587a07e3427966249566542916a5",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-063-h400_knowledge_image.png",
+      "source_sha256": "c3532841d3cabd75847b3de64faf3915bc0f587a07e3427966249566542916a5",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-064-h400_direct.png",
+      "published_sha256": "3b2116447f7764f890d91fd41b443549218afce4ce195808c376b793618cbc78",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-064-h400_direct.png",
+      "source_sha256": "3b2116447f7764f890d91fd41b443549218afce4ce195808c376b793618cbc78",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-064-h400_knowledge_image.png",
+      "published_sha256": "3b2116447f7764f890d91fd41b443549218afce4ce195808c376b793618cbc78",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-064-h400_knowledge_image.png",
+      "source_sha256": "3b2116447f7764f890d91fd41b443549218afce4ce195808c376b793618cbc78",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-065-h400_direct.png",
+      "published_sha256": "967e43b5d9b2b13cc3122a577d2abdb1627b14e1907962d7a4a95ea69dd43de8",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-065-h400_direct.png",
+      "source_sha256": "967e43b5d9b2b13cc3122a577d2abdb1627b14e1907962d7a4a95ea69dd43de8",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-065-h400_knowledge_image.png",
+      "published_sha256": "0ee818d7e86f7a5fb2d29ea880db84bd68cd3737a94b2e2134cc3e68fbdba6cb",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-065-h400_knowledge_image.png",
+      "source_sha256": "0ee818d7e86f7a5fb2d29ea880db84bd68cd3737a94b2e2134cc3e68fbdba6cb",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-066-h400_direct.png",
+      "published_sha256": "804ed64cd49171a1c33cebaa02a3947edad0be57611b0fc63aa2df7ab8854af6",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-066-h400_direct.png",
+      "source_sha256": "804ed64cd49171a1c33cebaa02a3947edad0be57611b0fc63aa2df7ab8854af6",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-066-h400_knowledge_image.png",
+      "published_sha256": "b42931500f2119babfe913e495bb1abd12ebf25e4b352c5364efa4f743dee8db",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-066-h400_knowledge_image.png",
+      "source_sha256": "b42931500f2119babfe913e495bb1abd12ebf25e4b352c5364efa4f743dee8db",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-067-h400_direct.png",
+      "published_sha256": "a9458065ec22f0525abc4c184d49cbb7c23d76cdaed25830b3202e8e3047ff80",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-067-h400_direct.png",
+      "source_sha256": "a9458065ec22f0525abc4c184d49cbb7c23d76cdaed25830b3202e8e3047ff80",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-067-h400_knowledge_image.png",
+      "published_sha256": "a9458065ec22f0525abc4c184d49cbb7c23d76cdaed25830b3202e8e3047ff80",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-067-h400_knowledge_image.png",
+      "source_sha256": "a9458065ec22f0525abc4c184d49cbb7c23d76cdaed25830b3202e8e3047ff80",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-068-h400_direct.png",
+      "published_sha256": "5aa7985cb29fc54ceee3da8ba84ff9278155d1513570ff5cd43ddcf593b89ee9",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-068-h400_direct.png",
+      "source_sha256": "5aa7985cb29fc54ceee3da8ba84ff9278155d1513570ff5cd43ddcf593b89ee9",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-068-h400_knowledge_image.png",
+      "published_sha256": "0ae6a39f87fa80ccd09c7206797a2aa70a5140c3577f0c1b1334aa6123aa2d62",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-068-h400_knowledge_image.png",
+      "source_sha256": "0ae6a39f87fa80ccd09c7206797a2aa70a5140c3577f0c1b1334aa6123aa2d62",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-069-h400_direct.png",
+      "published_sha256": "4f061149806c0158d9c8f166e667b73df189aefab6864bbbe8008e4c5f5daa28",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-069-h400_direct.png",
+      "source_sha256": "4f061149806c0158d9c8f166e667b73df189aefab6864bbbe8008e4c5f5daa28",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-069-h400_knowledge_image.png",
+      "published_sha256": "4f061149806c0158d9c8f166e667b73df189aefab6864bbbe8008e4c5f5daa28",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-069-h400_knowledge_image.png",
+      "source_sha256": "4f061149806c0158d9c8f166e667b73df189aefab6864bbbe8008e4c5f5daa28",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-070-h400_direct.png",
+      "published_sha256": "044bb8f5389e8d6ba0d3bc3773790528189e056d827a3cf2ea89a8d5d4c58ecf",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-070-h400_direct.png",
+      "source_sha256": "044bb8f5389e8d6ba0d3bc3773790528189e056d827a3cf2ea89a8d5d4c58ecf",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-070-h400_knowledge_image.png",
+      "published_sha256": "044bb8f5389e8d6ba0d3bc3773790528189e056d827a3cf2ea89a8d5d4c58ecf",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-070-h400_knowledge_image.png",
+      "source_sha256": "044bb8f5389e8d6ba0d3bc3773790528189e056d827a3cf2ea89a8d5d4c58ecf",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-071-h400_direct.png",
+      "published_sha256": "bcd4ddc8390db0dc256efe521f309c71c3f46872d2f6f5abb39b64e19b8ccf33",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-071-h400_direct.png",
+      "source_sha256": "bcd4ddc8390db0dc256efe521f309c71c3f46872d2f6f5abb39b64e19b8ccf33",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-071-h400_knowledge_image.png",
+      "published_sha256": "dbbe505247382c3bc67505794980d6d9a46b60fcb089c02ce35c9008590e79a4",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-071-h400_knowledge_image.png",
+      "source_sha256": "dbbe505247382c3bc67505794980d6d9a46b60fcb089c02ce35c9008590e79a4",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-072-h400_direct.png",
+      "published_sha256": "9e7ff02b95f7cafcf59cb28ecda2c02f7ade9662f48352efb309d130ed3f14fe",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-072-h400_direct.png",
+      "source_sha256": "9e7ff02b95f7cafcf59cb28ecda2c02f7ade9662f48352efb309d130ed3f14fe",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-072-h400_knowledge_image.png",
+      "published_sha256": "9e7ff02b95f7cafcf59cb28ecda2c02f7ade9662f48352efb309d130ed3f14fe",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-072-h400_knowledge_image.png",
+      "source_sha256": "9e7ff02b95f7cafcf59cb28ecda2c02f7ade9662f48352efb309d130ed3f14fe",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-073-h400_direct.png",
+      "published_sha256": "14567e0eb2e79ad11192c3684eb997f71ce71c5f06b71a8e8f02f19b23986ced",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-073-h400_direct.png",
+      "source_sha256": "14567e0eb2e79ad11192c3684eb997f71ce71c5f06b71a8e8f02f19b23986ced",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-073-h400_knowledge_image.png",
+      "published_sha256": "14567e0eb2e79ad11192c3684eb997f71ce71c5f06b71a8e8f02f19b23986ced",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-073-h400_knowledge_image.png",
+      "source_sha256": "14567e0eb2e79ad11192c3684eb997f71ce71c5f06b71a8e8f02f19b23986ced",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-074-h400_direct.png",
+      "published_sha256": "322565e6a47f3ceeb686072b022824eef1d867b3b090ab49b9fcfec1094f3bc2",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-074-h400_direct.png",
+      "source_sha256": "322565e6a47f3ceeb686072b022824eef1d867b3b090ab49b9fcfec1094f3bc2",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-074-h400_knowledge_image.png",
+      "published_sha256": "322565e6a47f3ceeb686072b022824eef1d867b3b090ab49b9fcfec1094f3bc2",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-074-h400_knowledge_image.png",
+      "source_sha256": "322565e6a47f3ceeb686072b022824eef1d867b3b090ab49b9fcfec1094f3bc2",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-075-h400_direct.png",
+      "published_sha256": "59d8f26d67bcc05be4860d22686d748b79ab53ef6729c94bfb64d91d2aec0013",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-075-h400_direct.png",
+      "source_sha256": "59d8f26d67bcc05be4860d22686d748b79ab53ef6729c94bfb64d91d2aec0013",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-075-h400_knowledge_image.png",
+      "published_sha256": "4c0717f5f2455387fc3deebc9272ea537d1ca9ce8e63d9ce9ef1dba006bd191b",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-075-h400_knowledge_image.png",
+      "source_sha256": "4c0717f5f2455387fc3deebc9272ea537d1ca9ce8e63d9ce9ef1dba006bd191b",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-076-h400_direct.png",
+      "published_sha256": "da78124cd1d627a54ebf303a812758fb1106adf0654cc1c47d82b5a7f83886d2",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-076-h400_direct.png",
+      "source_sha256": "da78124cd1d627a54ebf303a812758fb1106adf0654cc1c47d82b5a7f83886d2",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-076-h400_knowledge_image.png",
+      "published_sha256": "da78124cd1d627a54ebf303a812758fb1106adf0654cc1c47d82b5a7f83886d2",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-076-h400_knowledge_image.png",
+      "source_sha256": "da78124cd1d627a54ebf303a812758fb1106adf0654cc1c47d82b5a7f83886d2",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-077-h400_direct.png",
+      "published_sha256": "700ecdb5089a5525940d92ee9b6edc0d6d965f029e2b3880c73650d5168097ed",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-077-h400_direct.png",
+      "source_sha256": "700ecdb5089a5525940d92ee9b6edc0d6d965f029e2b3880c73650d5168097ed",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-077-h400_knowledge_image.png",
+      "published_sha256": "700ecdb5089a5525940d92ee9b6edc0d6d965f029e2b3880c73650d5168097ed",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-077-h400_knowledge_image.png",
+      "source_sha256": "700ecdb5089a5525940d92ee9b6edc0d6d965f029e2b3880c73650d5168097ed",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-078-h400_direct.png",
+      "published_sha256": "874bea28ad7690de1d257411d0ad165f743bd4acdb7e3a98a0667f7c593e8ebd",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-078-h400_direct.png",
+      "source_sha256": "874bea28ad7690de1d257411d0ad165f743bd4acdb7e3a98a0667f7c593e8ebd",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-078-h400_knowledge_image.png",
+      "published_sha256": "5adf04699da8e42ee08dad7e3a6da4b28298065ebee824c28d2455a36494ed1a",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-078-h400_knowledge_image.png",
+      "source_sha256": "5adf04699da8e42ee08dad7e3a6da4b28298065ebee824c28d2455a36494ed1a",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-079-h400_direct.png",
+      "published_sha256": "af32e2d6e972d7b236e2870d47f63422cf9481d2d21e0aa2decb1d13059903a4",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-079-h400_direct.png",
+      "source_sha256": "af32e2d6e972d7b236e2870d47f63422cf9481d2d21e0aa2decb1d13059903a4",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-079-h400_knowledge_image.png",
+      "published_sha256": "af32e2d6e972d7b236e2870d47f63422cf9481d2d21e0aa2decb1d13059903a4",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-079-h400_knowledge_image.png",
+      "source_sha256": "af32e2d6e972d7b236e2870d47f63422cf9481d2d21e0aa2decb1d13059903a4",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-080-h400_direct.png",
+      "published_sha256": "107162c13670c5afa4496c23a738e877d2b3e4abb44a8e8512dd606065fb36bb",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-080-h400_direct.png",
+      "source_sha256": "107162c13670c5afa4496c23a738e877d2b3e4abb44a8e8512dd606065fb36bb",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-080-h400_knowledge_image.png",
+      "published_sha256": "107162c13670c5afa4496c23a738e877d2b3e4abb44a8e8512dd606065fb36bb",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-080-h400_knowledge_image.png",
+      "source_sha256": "107162c13670c5afa4496c23a738e877d2b3e4abb44a8e8512dd606065fb36bb",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-081-h400_direct.png",
+      "published_sha256": "606a73412a5cefe02f09b0446392a044d14cc61315e79b25e8b683f55b505df5",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-081-h400_direct.png",
+      "source_sha256": "606a73412a5cefe02f09b0446392a044d14cc61315e79b25e8b683f55b505df5",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-081-h400_knowledge_image.png",
+      "published_sha256": "606a73412a5cefe02f09b0446392a044d14cc61315e79b25e8b683f55b505df5",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-081-h400_knowledge_image.png",
+      "source_sha256": "606a73412a5cefe02f09b0446392a044d14cc61315e79b25e8b683f55b505df5",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-082-h400_direct.png",
+      "published_sha256": "9ff6add30de9001197dcf6386fac90282c0010fac72ea927f97df3c74b7ca729",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-082-h400_direct.png",
+      "source_sha256": "9ff6add30de9001197dcf6386fac90282c0010fac72ea927f97df3c74b7ca729",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-082-h400_knowledge_image.png",
+      "published_sha256": "9ff6add30de9001197dcf6386fac90282c0010fac72ea927f97df3c74b7ca729",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-082-h400_knowledge_image.png",
+      "source_sha256": "9ff6add30de9001197dcf6386fac90282c0010fac72ea927f97df3c74b7ca729",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-083-h400_direct.png",
+      "published_sha256": "e95714c25dbf82b7ffbca2cb7df629a24cb1df5c6ad2e2d9d1c741306bacf74e",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-083-h400_direct.png",
+      "source_sha256": "e95714c25dbf82b7ffbca2cb7df629a24cb1df5c6ad2e2d9d1c741306bacf74e",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-083-h400_knowledge_image.png",
+      "published_sha256": "e95714c25dbf82b7ffbca2cb7df629a24cb1df5c6ad2e2d9d1c741306bacf74e",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-083-h400_knowledge_image.png",
+      "source_sha256": "e95714c25dbf82b7ffbca2cb7df629a24cb1df5c6ad2e2d9d1c741306bacf74e",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-084-h400_direct.png",
+      "published_sha256": "4cdf63386661d3e7b012c663775d7d009e2b3d10afd926bacae1198b7b65ecfe",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-084-h400_direct.png",
+      "source_sha256": "4cdf63386661d3e7b012c663775d7d009e2b3d10afd926bacae1198b7b65ecfe",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-084-h400_knowledge_image.png",
+      "published_sha256": "db4e14506ee84c04036428534c227d63fc5813a626d50a8eab2400d18e9c8187",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-084-h400_knowledge_image.png",
+      "source_sha256": "db4e14506ee84c04036428534c227d63fc5813a626d50a8eab2400d18e9c8187",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-085-h400_direct.png",
+      "published_sha256": "2500dd2bd43075a30992dbbc2e05e042981267282292399c6900d2e3a7afdaf5",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-085-h400_direct.png",
+      "source_sha256": "2500dd2bd43075a30992dbbc2e05e042981267282292399c6900d2e3a7afdaf5",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-085-h400_knowledge_image.png",
+      "published_sha256": "c9730d2b6aeb2fd8ce411b7bb99f855c3bea77b6724a1e8c0b140b8538e37f90",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-085-h400_knowledge_image.png",
+      "source_sha256": "c9730d2b6aeb2fd8ce411b7bb99f855c3bea77b6724a1e8c0b140b8538e37f90",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-086-h400_direct.png",
+      "published_sha256": "e72adc80206acce24689d3612c8c35ee76ddb7ca413dd9852ffc75aeb5511b71",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-086-h400_direct.png",
+      "source_sha256": "e72adc80206acce24689d3612c8c35ee76ddb7ca413dd9852ffc75aeb5511b71",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-086-h400_knowledge_image.png",
+      "published_sha256": "89f947f03865f3def13feea9cf39feece728ff0727a122f0f4861a9aa195e4e3",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-086-h400_knowledge_image.png",
+      "source_sha256": "89f947f03865f3def13feea9cf39feece728ff0727a122f0f4861a9aa195e4e3",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-087-h400_direct.png",
+      "published_sha256": "d47e6d5fed3589ba2f2540687a0330c635302460eb46987cafed5e3d107007ed",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-087-h400_direct.png",
+      "source_sha256": "d47e6d5fed3589ba2f2540687a0330c635302460eb46987cafed5e3d107007ed",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-087-h400_knowledge_image.png",
+      "published_sha256": "d47e6d5fed3589ba2f2540687a0330c635302460eb46987cafed5e3d107007ed",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-087-h400_knowledge_image.png",
+      "source_sha256": "d47e6d5fed3589ba2f2540687a0330c635302460eb46987cafed5e3d107007ed",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-088-h400_direct.png",
+      "published_sha256": "41b3376771831c90494e72e949edae3d342477e5c7f6e40e6fe17e6e7185d3f9",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-088-h400_direct.png",
+      "source_sha256": "41b3376771831c90494e72e949edae3d342477e5c7f6e40e6fe17e6e7185d3f9",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-088-h400_knowledge_image.png",
+      "published_sha256": "a5680c055c1759fdbf533c289f203df0f43d4ff50f12c3513d283d3ccc38748d",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-088-h400_knowledge_image.png",
+      "source_sha256": "a5680c055c1759fdbf533c289f203df0f43d4ff50f12c3513d283d3ccc38748d",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-089-h400_direct.png",
+      "published_sha256": "714a1b1a28f5270891400e7426692406b95476ec08f5e3611069148c551066da",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-089-h400_direct.png",
+      "source_sha256": "714a1b1a28f5270891400e7426692406b95476ec08f5e3611069148c551066da",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-089-h400_knowledge_image.png",
+      "published_sha256": "714a1b1a28f5270891400e7426692406b95476ec08f5e3611069148c551066da",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-089-h400_knowledge_image.png",
+      "source_sha256": "714a1b1a28f5270891400e7426692406b95476ec08f5e3611069148c551066da",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-090-h400_direct.png",
+      "published_sha256": "a87fc6e8fc64000f8c18aa8d814558958b80f6e0b2c15f9989da3e730848503e",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-090-h400_direct.png",
+      "source_sha256": "a87fc6e8fc64000f8c18aa8d814558958b80f6e0b2c15f9989da3e730848503e",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-090-h400_knowledge_image.png",
+      "published_sha256": "a87fc6e8fc64000f8c18aa8d814558958b80f6e0b2c15f9989da3e730848503e",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-090-h400_knowledge_image.png",
+      "source_sha256": "a87fc6e8fc64000f8c18aa8d814558958b80f6e0b2c15f9989da3e730848503e",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-091-h400_direct.png",
+      "published_sha256": "b76e723806a48493f2c10672bed54567db330b12a9e3fc83b125ba01f1b3b547",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-091-h400_direct.png",
+      "source_sha256": "b76e723806a48493f2c10672bed54567db330b12a9e3fc83b125ba01f1b3b547",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-091-h400_knowledge_image.png",
+      "published_sha256": "b76e723806a48493f2c10672bed54567db330b12a9e3fc83b125ba01f1b3b547",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-091-h400_knowledge_image.png",
+      "source_sha256": "b76e723806a48493f2c10672bed54567db330b12a9e3fc83b125ba01f1b3b547",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-092-h400_direct.png",
+      "published_sha256": "8ad8d83cc52e717b747a5366c5df88b75a3bbbdcf8acd20afe002f07b9d14e15",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-092-h400_direct.png",
+      "source_sha256": "8ad8d83cc52e717b747a5366c5df88b75a3bbbdcf8acd20afe002f07b9d14e15",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-092-h400_knowledge_image.png",
+      "published_sha256": "8ad8d83cc52e717b747a5366c5df88b75a3bbbdcf8acd20afe002f07b9d14e15",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-092-h400_knowledge_image.png",
+      "source_sha256": "8ad8d83cc52e717b747a5366c5df88b75a3bbbdcf8acd20afe002f07b9d14e15",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-093-h400_direct.png",
+      "published_sha256": "5191c637a6d1adf017b80ae31bcbc1e352b2cfc233038ddc53822a89c7a65a8d",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-093-h400_direct.png",
+      "source_sha256": "5191c637a6d1adf017b80ae31bcbc1e352b2cfc233038ddc53822a89c7a65a8d",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-093-h400_knowledge_image.png",
+      "published_sha256": "5191c637a6d1adf017b80ae31bcbc1e352b2cfc233038ddc53822a89c7a65a8d",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-093-h400_knowledge_image.png",
+      "source_sha256": "5191c637a6d1adf017b80ae31bcbc1e352b2cfc233038ddc53822a89c7a65a8d",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-094-h400_direct.png",
+      "published_sha256": "63c0fb24724c7abc0d5d13f4f0022942ad3c7d341db59d46c2907af77b520ea3",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-094-h400_direct.png",
+      "source_sha256": "63c0fb24724c7abc0d5d13f4f0022942ad3c7d341db59d46c2907af77b520ea3",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-094-h400_knowledge_image.png",
+      "published_sha256": "63c0fb24724c7abc0d5d13f4f0022942ad3c7d341db59d46c2907af77b520ea3",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-094-h400_knowledge_image.png",
+      "source_sha256": "63c0fb24724c7abc0d5d13f4f0022942ad3c7d341db59d46c2907af77b520ea3",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-095-h400_direct.png",
+      "published_sha256": "8ad6ef5d3fad6afbe694e4d07a7f421dcfb8e18c663e1963fb60583a2fd2f32b",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-095-h400_direct.png",
+      "source_sha256": "8ad6ef5d3fad6afbe694e4d07a7f421dcfb8e18c663e1963fb60583a2fd2f32b",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-095-h400_knowledge_image.png",
+      "published_sha256": "8ad6ef5d3fad6afbe694e4d07a7f421dcfb8e18c663e1963fb60583a2fd2f32b",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-095-h400_knowledge_image.png",
+      "source_sha256": "8ad6ef5d3fad6afbe694e4d07a7f421dcfb8e18c663e1963fb60583a2fd2f32b",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-096-h400_direct.png",
+      "published_sha256": "36c495efb66e5171bb9aaa689cb172d9e7e4fde4643ef98f414152b9ec214029",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-096-h400_direct.png",
+      "source_sha256": "36c495efb66e5171bb9aaa689cb172d9e7e4fde4643ef98f414152b9ec214029",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-096-h400_knowledge_image.png",
+      "published_sha256": "36c495efb66e5171bb9aaa689cb172d9e7e4fde4643ef98f414152b9ec214029",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-096-h400_knowledge_image.png",
+      "source_sha256": "36c495efb66e5171bb9aaa689cb172d9e7e4fde4643ef98f414152b9ec214029",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-097-h400_direct.png",
+      "published_sha256": "4e9417ceab7ab65c9758445537645c9e3d606337da4eac02d83e920ac2a71913",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-097-h400_direct.png",
+      "source_sha256": "4e9417ceab7ab65c9758445537645c9e3d606337da4eac02d83e920ac2a71913",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-097-h400_knowledge_image.png",
+      "published_sha256": "35b865d0ad479c1c24c23b593098a0f290e2334f403e2662021e0a0d45e94e62",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-097-h400_knowledge_image.png",
+      "source_sha256": "35b865d0ad479c1c24c23b593098a0f290e2334f403e2662021e0a0d45e94e62",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-098-h400_direct.png",
+      "published_sha256": "5a6e614fbc5243e7927200c7d22ab7fb3d505363644354f8be6208aca880b1b8",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-098-h400_direct.png",
+      "source_sha256": "5a6e614fbc5243e7927200c7d22ab7fb3d505363644354f8be6208aca880b1b8",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-098-h400_knowledge_image.png",
+      "published_sha256": "f6fc4a032ba6689c396514f7aaf46891fc9204bdc4611efc6f6008f2fe7c29a8",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-098-h400_knowledge_image.png",
+      "source_sha256": "f6fc4a032ba6689c396514f7aaf46891fc9204bdc4611efc6f6008f2fe7c29a8",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-099-h400_direct.png",
+      "published_sha256": "1cbbf7f61e6aba36a00d741a84cb79cb9b74c9b7ee608fd089a4f7794f9e1933",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-099-h400_direct.png",
+      "source_sha256": "1cbbf7f61e6aba36a00d741a84cb79cb9b74c9b7ee608fd089a4f7794f9e1933",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-099-h400_knowledge_image.png",
+      "published_sha256": "1cbbf7f61e6aba36a00d741a84cb79cb9b74c9b7ee608fd089a4f7794f9e1933",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-099-h400_knowledge_image.png",
+      "source_sha256": "1cbbf7f61e6aba36a00d741a84cb79cb9b74c9b7ee608fd089a4f7794f9e1933",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-100-h400_direct.png",
+      "published_sha256": "1a9734c359945b68accf58ae8de8cfed7d8a9400ec9d26742b942e476d6470ff",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-100-h400_direct.png",
+      "source_sha256": "1a9734c359945b68accf58ae8de8cfed7d8a9400ec9d26742b942e476d6470ff",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/h400-100-h400_knowledge_image.png",
+      "published_sha256": "1a9734c359945b68accf58ae8de8cfed7d8a9400ec9d26742b942e476d6470ff",
+      "source": "haechi_runner/evaluation/2026-11-16/images/h400-100-h400_knowledge_image.png",
+      "source_sha256": "1a9734c359945b68accf58ae8de8cfed7d8a9400ec9d26742b942e476d6470ff",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0000.png",
+      "published_sha256": "1f5b6a8f4a3766eca6faec47d222db19298a3f8da9625b52ed9ede3ed1719129",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0000.png",
+      "source_sha256": "1f5b6a8f4a3766eca6faec47d222db19298a3f8da9625b52ed9ede3ed1719129",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0001.png",
+      "published_sha256": "07a5a143b4bfa60bab982c3a5b648ec89992b72e8fc795624c8dd04ef60f07d2",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0001.png",
+      "source_sha256": "07a5a143b4bfa60bab982c3a5b648ec89992b72e8fc795624c8dd04ef60f07d2",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0002.png",
+      "published_sha256": "7f1e30b924f2581d01c668ab01f73e481629c758e3e483addf933d20def91b6d",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0002.png",
+      "source_sha256": "7f1e30b924f2581d01c668ab01f73e481629c758e3e483addf933d20def91b6d",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0003.png",
+      "published_sha256": "8a9edc959b227a9b4062001fd3cf588e93693c3ecbf34d9394aedcd8e8ba1636",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0003.png",
+      "source_sha256": "8a9edc959b227a9b4062001fd3cf588e93693c3ecbf34d9394aedcd8e8ba1636",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0004.png",
+      "published_sha256": "636f9cddceb3fde78f6e0aeadf2a1111fa4bed30809ec0f2e9921623c5c032fe",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0004.png",
+      "source_sha256": "636f9cddceb3fde78f6e0aeadf2a1111fa4bed30809ec0f2e9921623c5c032fe",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0005.png",
+      "published_sha256": "a0692c6d2058f6cf8467b9819bae7acd32a1da57ab98c9b0b2a7143c520cd22a",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0005.png",
+      "source_sha256": "a0692c6d2058f6cf8467b9819bae7acd32a1da57ab98c9b0b2a7143c520cd22a",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0006.png",
+      "published_sha256": "924a05ddb12254ce748934c00e854ccde889885c2b6db9ea23dc6d4e3ec93056",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0006.png",
+      "source_sha256": "924a05ddb12254ce748934c00e854ccde889885c2b6db9ea23dc6d4e3ec93056",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0007.png",
+      "published_sha256": "dc5a03bc608258725297f5bc4f61d79110dd0e479aa60ceda64772e1eb21ca7d",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0007.png",
+      "source_sha256": "dc5a03bc608258725297f5bc4f61d79110dd0e479aa60ceda64772e1eb21ca7d",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0008.png",
+      "published_sha256": "5fa1c027a6b486560069f7449007905a16df80642abe9f32e2a857f60da5b495",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0008.png",
+      "source_sha256": "5fa1c027a6b486560069f7449007905a16df80642abe9f32e2a857f60da5b495",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0009.png",
+      "published_sha256": "942a1f3819c6d8a9d9ccea6fbc1fd1b06763674359a973c910a0b135ec97040d",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0009.png",
+      "source_sha256": "942a1f3819c6d8a9d9ccea6fbc1fd1b06763674359a973c910a0b135ec97040d",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0010.png",
+      "published_sha256": "d854c8cc208dec27e8c689d64290b8fe75e9437f84f7730c945e6bfc225bf7eb",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0010.png",
+      "source_sha256": "d854c8cc208dec27e8c689d64290b8fe75e9437f84f7730c945e6bfc225bf7eb",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0011.png",
+      "published_sha256": "85cd8f469014d22459e2d1a9fac9ca93a17b871939072b5f8496cb3a468b6388",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0011.png",
+      "source_sha256": "85cd8f469014d22459e2d1a9fac9ca93a17b871939072b5f8496cb3a468b6388",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0012.png",
+      "published_sha256": "6fff35418a34db04b7f9bdf2b59ead0c39130314cfeba549d612754300f36a64",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0012.png",
+      "source_sha256": "6fff35418a34db04b7f9bdf2b59ead0c39130314cfeba549d612754300f36a64",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0013.png",
+      "published_sha256": "8d7c66ff3d16037298acfc6a78ff501b0f835faf96e09d7cb9e519a9ac59c83c",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0013.png",
+      "source_sha256": "8d7c66ff3d16037298acfc6a78ff501b0f835faf96e09d7cb9e519a9ac59c83c",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0014.png",
+      "published_sha256": "0c79f0c37eecc25283a86fd633bf5e55fddde03bfcdc35525f588c71714b9b55",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0014.png",
+      "source_sha256": "0c79f0c37eecc25283a86fd633bf5e55fddde03bfcdc35525f588c71714b9b55",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0015.png",
+      "published_sha256": "32d3bf82a8b3023c1e24131c1f076320649a56a5dcf031e0dd448157f2f65b0f",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0015.png",
+      "source_sha256": "32d3bf82a8b3023c1e24131c1f076320649a56a5dcf031e0dd448157f2f65b0f",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0016.png",
+      "published_sha256": "35d368a81764c317e881fc6819705d56d068e1ca5f883b7226b32b89fc7f28da",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0016.png",
+      "source_sha256": "35d368a81764c317e881fc6819705d56d068e1ca5f883b7226b32b89fc7f28da",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0017.png",
+      "published_sha256": "81c0feb2c74515355a221c01c5f4a998f71fa5abd1dc2c4a5050090e8bddafc5",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0017.png",
+      "source_sha256": "81c0feb2c74515355a221c01c5f4a998f71fa5abd1dc2c4a5050090e8bddafc5",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0018.png",
+      "published_sha256": "110f369e5c74c04b3185dbc02d38a881f650d63db10a81b54e5bd487162e7e4c",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0018.png",
+      "source_sha256": "110f369e5c74c04b3185dbc02d38a881f650d63db10a81b54e5bd487162e7e4c",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0019.png",
+      "published_sha256": "e8f547f1c54fbdec6f340bf42fac191e563be2dc5fc50d14ab9c5a98f0ac31f9",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0019.png",
+      "source_sha256": "e8f547f1c54fbdec6f340bf42fac191e563be2dc5fc50d14ab9c5a98f0ac31f9",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0020.png",
+      "published_sha256": "8648bf2ef1b45c142bef48fa1d7ba33154085a72ab9a4c0d3cd20dbe263f187d",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0020.png",
+      "source_sha256": "8648bf2ef1b45c142bef48fa1d7ba33154085a72ab9a4c0d3cd20dbe263f187d",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0021.png",
+      "published_sha256": "023ed84abe344ddd889d64752fc6eaa9d73eab809be7b1d8d9f00ac817b97b08",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0021.png",
+      "source_sha256": "023ed84abe344ddd889d64752fc6eaa9d73eab809be7b1d8d9f00ac817b97b08",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0022.png",
+      "published_sha256": "6082e33669bc875ebd0e7c73eead8eef00e92169cab43ee43d4a76f420ed08c7",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0022.png",
+      "source_sha256": "6082e33669bc875ebd0e7c73eead8eef00e92169cab43ee43d4a76f420ed08c7",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0023.png",
+      "published_sha256": "eab2dc6297c056180a87d5a0dc47737ad59419eed8b4721dd7e081cde8d7719b",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0023.png",
+      "source_sha256": "eab2dc6297c056180a87d5a0dc47737ad59419eed8b4721dd7e081cde8d7719b",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0024.png",
+      "published_sha256": "faa2c07014f32cc05c00e2828ad5f4f9312faf1490893da59d4c1483bdcc030f",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0024.png",
+      "source_sha256": "faa2c07014f32cc05c00e2828ad5f4f9312faf1490893da59d4c1483bdcc030f",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0025.png",
+      "published_sha256": "7477d65447ad800b8cfa38d0aada2bad4b05c78cdd25b661eeb39f4c05f45bd2",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0025.png",
+      "source_sha256": "7477d65447ad800b8cfa38d0aada2bad4b05c78cdd25b661eeb39f4c05f45bd2",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0026.png",
+      "published_sha256": "8ea84c77b0d73f0f1d1d36124e69ff6872607d3669d6e7098b52948666e7339a",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0026.png",
+      "source_sha256": "8ea84c77b0d73f0f1d1d36124e69ff6872607d3669d6e7098b52948666e7339a",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0027.png",
+      "published_sha256": "1aab9a8c2ebbd5af4fbd0fc5613812157b9d6ec66e591396ab2335496a360c89",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0027.png",
+      "source_sha256": "1aab9a8c2ebbd5af4fbd0fc5613812157b9d6ec66e591396ab2335496a360c89",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0028.png",
+      "published_sha256": "bbdc60951f96993d8151e3e1dc76a939be88bee3bdbbc51b658db7bac8a46304",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0028.png",
+      "source_sha256": "bbdc60951f96993d8151e3e1dc76a939be88bee3bdbbc51b658db7bac8a46304",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0029.png",
+      "published_sha256": "788eb2aa67e3d8feefb7f410e00f8d39b7e79a4567f64ee5c80edf34367c0588",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0029.png",
+      "source_sha256": "788eb2aa67e3d8feefb7f410e00f8d39b7e79a4567f64ee5c80edf34367c0588",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0030.png",
+      "published_sha256": "ea264a17f83826d8f3d8fb998e492d5542e4e89e74aba1e66af798c433bb0b65",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0030.png",
+      "source_sha256": "ea264a17f83826d8f3d8fb998e492d5542e4e89e74aba1e66af798c433bb0b65",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0031.png",
+      "published_sha256": "b24f9a0a51ce98b351c5dca8c18ffdb6e72a33942369c551e5ea5532a5245782",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0031.png",
+      "source_sha256": "b24f9a0a51ce98b351c5dca8c18ffdb6e72a33942369c551e5ea5532a5245782",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0032.png",
+      "published_sha256": "015428ad1eba2a7aa39af407382afc13d344abc06944040da72ee7c9237c55c9",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0032.png",
+      "source_sha256": "015428ad1eba2a7aa39af407382afc13d344abc06944040da72ee7c9237c55c9",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0033.png",
+      "published_sha256": "6c42d4bced86c4c887ad602c2cb6331d8f77477ec1e2794645d3948a04b53eac",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0033.png",
+      "source_sha256": "6c42d4bced86c4c887ad602c2cb6331d8f77477ec1e2794645d3948a04b53eac",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0034.png",
+      "published_sha256": "bdd012075e95469e54201421acb17e67452d334c45c07ad5eae7c7e1c528a774",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0034.png",
+      "source_sha256": "bdd012075e95469e54201421acb17e67452d334c45c07ad5eae7c7e1c528a774",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0035.png",
+      "published_sha256": "aca8f98b3d2458cca5887ecc5f477654a7d056a4f93558670081ca5fe39ed7de",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0035.png",
+      "source_sha256": "aca8f98b3d2458cca5887ecc5f477654a7d056a4f93558670081ca5fe39ed7de",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0036.png",
+      "published_sha256": "890135bd58b9932736ccd9e2c3f07c6036770c13c76aaef0a251b9634242f6e8",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0036.png",
+      "source_sha256": "890135bd58b9932736ccd9e2c3f07c6036770c13c76aaef0a251b9634242f6e8",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0037.png",
+      "published_sha256": "65124302c14972966fbcedaa88493c6a465722e11853f60fef08442732129c2a",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0037.png",
+      "source_sha256": "65124302c14972966fbcedaa88493c6a465722e11853f60fef08442732129c2a",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0038.png",
+      "published_sha256": "ba84eac2fa8753249605f6218c4b9bd5676a247055571000feaa9b7b16182848",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0038.png",
+      "source_sha256": "ba84eac2fa8753249605f6218c4b9bd5676a247055571000feaa9b7b16182848",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0039.png",
+      "published_sha256": "69b49cfe15e9a7a635f471a23c21c9db3db6951575e2162bffd19c9710545dae",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0039.png",
+      "source_sha256": "69b49cfe15e9a7a635f471a23c21c9db3db6951575e2162bffd19c9710545dae",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0040.png",
+      "published_sha256": "a99a554e6987f8cf7355739ea4283f48fa816dc35a48882814ca2d6337752ba3",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0040.png",
+      "source_sha256": "a99a554e6987f8cf7355739ea4283f48fa816dc35a48882814ca2d6337752ba3",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0041.png",
+      "published_sha256": "d92a3a92581d32796a06734f6a2272fcb45f354c00b9a5f42c698f1a888c2cf1",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0041.png",
+      "source_sha256": "d92a3a92581d32796a06734f6a2272fcb45f354c00b9a5f42c698f1a888c2cf1",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0042.png",
+      "published_sha256": "5b79664d8ce7f6eadee48d157ae32f502050bc80bcd44a95e48eb9f9d4d76f42",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0042.png",
+      "source_sha256": "5b79664d8ce7f6eadee48d157ae32f502050bc80bcd44a95e48eb9f9d4d76f42",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0043.png",
+      "published_sha256": "f5c3c19119d72eaa7034804a41c20a0b000fdda9a6cbdcba81bd8bf32ff6b0aa",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0043.png",
+      "source_sha256": "f5c3c19119d72eaa7034804a41c20a0b000fdda9a6cbdcba81bd8bf32ff6b0aa",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0044.png",
+      "published_sha256": "9960ac459ac659ce6455467b04d357c92882c4864aceae6eebe55658f15398c3",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0044.png",
+      "source_sha256": "9960ac459ac659ce6455467b04d357c92882c4864aceae6eebe55658f15398c3",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0045.png",
+      "published_sha256": "812f22682693a1aec2ce35d343c039ef8af432bdedc20f3faaa42fade3ed9da9",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0045.png",
+      "source_sha256": "812f22682693a1aec2ce35d343c039ef8af432bdedc20f3faaa42fade3ed9da9",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0046.png",
+      "published_sha256": "00906f77d28ad164c98f754c9d7cadf18154e2e8ba850e68ec4846b8b556c142",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0046.png",
+      "source_sha256": "00906f77d28ad164c98f754c9d7cadf18154e2e8ba850e68ec4846b8b556c142",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0047.png",
+      "published_sha256": "4d4ba33d872143feb2595a5504aff48a5a94707d1494ab81eac275234bf998b8",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0047.png",
+      "source_sha256": "4d4ba33d872143feb2595a5504aff48a5a94707d1494ab81eac275234bf998b8",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0048.png",
+      "published_sha256": "9609f4097493aace57bd9adebbc634eac03f6d35656bfcc7208569bf916afb31",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0048.png",
+      "source_sha256": "9609f4097493aace57bd9adebbc634eac03f6d35656bfcc7208569bf916afb31",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0049.png",
+      "published_sha256": "e5de6acbf61df511590b5b78d06c596faf2afdecb5ecf66344013ed4172ac684",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0049.png",
+      "source_sha256": "e5de6acbf61df511590b5b78d06c596faf2afdecb5ecf66344013ed4172ac684",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0050.png",
+      "published_sha256": "8117c7783d4bb10cb03351bbc8aecab7f79890cc323c28356259a936be4b8a66",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0050.png",
+      "source_sha256": "8117c7783d4bb10cb03351bbc8aecab7f79890cc323c28356259a936be4b8a66",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0051.png",
+      "published_sha256": "901e2a0f1dac814fa5abd051a389292d56a38180b65da89465652f6e8f0b5da9",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0051.png",
+      "source_sha256": "901e2a0f1dac814fa5abd051a389292d56a38180b65da89465652f6e8f0b5da9",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0052.png",
+      "published_sha256": "a5cd3801ad7fd4ecdc3438eaafede1ba8a20586a4bad239989e9ae2781ee709d",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0052.png",
+      "source_sha256": "a5cd3801ad7fd4ecdc3438eaafede1ba8a20586a4bad239989e9ae2781ee709d",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0053.png",
+      "published_sha256": "01859c8ae5e6660c4df0ee0e83ae7a1c5b7283206de539edd21ab9c48fc1641c",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0053.png",
+      "source_sha256": "01859c8ae5e6660c4df0ee0e83ae7a1c5b7283206de539edd21ab9c48fc1641c",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0054.png",
+      "published_sha256": "3aedfedd9e44ecd70ca98b1bfacf0419ba89d49bb913d1dc993c56bf595441da",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0054.png",
+      "source_sha256": "3aedfedd9e44ecd70ca98b1bfacf0419ba89d49bb913d1dc993c56bf595441da",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0055.png",
+      "published_sha256": "d6ac3e702284e627e9c20b745ccdbd4c60c7a133fe2a5622e6f2bd0a6848b2ac",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0055.png",
+      "source_sha256": "d6ac3e702284e627e9c20b745ccdbd4c60c7a133fe2a5622e6f2bd0a6848b2ac",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0056.png",
+      "published_sha256": "a437127222d785a699cebe5afd7e9dc7d019a08f31b9676ca5db5e1957c2f8d1",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0056.png",
+      "source_sha256": "a437127222d785a699cebe5afd7e9dc7d019a08f31b9676ca5db5e1957c2f8d1",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0057.png",
+      "published_sha256": "9c953e1f338ad6b0338ac2c28c76c9ef3143deff555db87b26c47fb0b8870c9a",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0057.png",
+      "source_sha256": "9c953e1f338ad6b0338ac2c28c76c9ef3143deff555db87b26c47fb0b8870c9a",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0058.png",
+      "published_sha256": "9a2a45dabba409e86a4dfd9c3f60e8d5ef9558e8a287670faa2d6e99974e5eca",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0058.png",
+      "source_sha256": "9a2a45dabba409e86a4dfd9c3f60e8d5ef9558e8a287670faa2d6e99974e5eca",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0059.png",
+      "published_sha256": "b28464852c7f06bd63ad8725b391b5083b07604efe4d00478ded6cd11c3d5e82",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0059.png",
+      "source_sha256": "b28464852c7f06bd63ad8725b391b5083b07604efe4d00478ded6cd11c3d5e82",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0060.png",
+      "published_sha256": "ba4a1770d549961f6fa77bd7dae83391a674b608ad6224dbcb5ca627f36447b8",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0060.png",
+      "source_sha256": "ba4a1770d549961f6fa77bd7dae83391a674b608ad6224dbcb5ca627f36447b8",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0061.png",
+      "published_sha256": "606e622bb3a7095559859d34080406d4644dee7f851604b4bcc41bd3fea60bbc",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0061.png",
+      "source_sha256": "606e622bb3a7095559859d34080406d4644dee7f851604b4bcc41bd3fea60bbc",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0062.png",
+      "published_sha256": "ff99862f421ba5e716848f78b502fa9db44540926965402e645beb3c4ff324b2",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0062.png",
+      "source_sha256": "ff99862f421ba5e716848f78b502fa9db44540926965402e645beb3c4ff324b2",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0063.png",
+      "published_sha256": "3cc86f88df1cc5fb949fd14992eb4d504f305a946d285f1b22bdcf31ea5cf234",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0063.png",
+      "source_sha256": "3cc86f88df1cc5fb949fd14992eb4d504f305a946d285f1b22bdcf31ea5cf234",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0064.png",
+      "published_sha256": "0522ff47aa1a3a8586dddd0ceb11cfe027820f3a9006c8e3396ea03f96a18201",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0064.png",
+      "source_sha256": "0522ff47aa1a3a8586dddd0ceb11cfe027820f3a9006c8e3396ea03f96a18201",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0065.png",
+      "published_sha256": "988717692f860a857190e82e604e585e20b4ed264f99b86631251ccf85ce0dcc",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0065.png",
+      "source_sha256": "988717692f860a857190e82e604e585e20b4ed264f99b86631251ccf85ce0dcc",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0066.png",
+      "published_sha256": "d55d1c1ea65ab9ab26a5df71d90dc2a0a8bfedf7a73ee9ea9351bb459bf70a31",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0066.png",
+      "source_sha256": "d55d1c1ea65ab9ab26a5df71d90dc2a0a8bfedf7a73ee9ea9351bb459bf70a31",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0067.png",
+      "published_sha256": "86ac7c75b4626a17711e826808e7239f8baa815a564effe6af5cecdbef8a2f15",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0067.png",
+      "source_sha256": "86ac7c75b4626a17711e826808e7239f8baa815a564effe6af5cecdbef8a2f15",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0068.png",
+      "published_sha256": "90d42703b3dadc31ca082640b306712869b513ff942d9ad9a7d7ef312dd6106f",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0068.png",
+      "source_sha256": "90d42703b3dadc31ca082640b306712869b513ff942d9ad9a7d7ef312dd6106f",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0069.png",
+      "published_sha256": "488239f9051b312210ab6948dde2e79ce3ce726e18315e5bf727e710d5211695",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0069.png",
+      "source_sha256": "488239f9051b312210ab6948dde2e79ce3ce726e18315e5bf727e710d5211695",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0070.png",
+      "published_sha256": "5609f8833335e3ebf9b6e7fd6bdb08ad5f8a7b5e2be24bbb07371d304157a089",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0070.png",
+      "source_sha256": "5609f8833335e3ebf9b6e7fd6bdb08ad5f8a7b5e2be24bbb07371d304157a089",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0071.png",
+      "published_sha256": "100c18a0ea50865a18295e5cadfb282b9cd541f73ecc99eac3ad3e472b93d231",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0071.png",
+      "source_sha256": "100c18a0ea50865a18295e5cadfb282b9cd541f73ecc99eac3ad3e472b93d231",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0072.png",
+      "published_sha256": "871e8f1c1a5a76516d9c50d77d4592b81485981aaa2f9d6bf50ac6f3b7d6fd4b",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0072.png",
+      "source_sha256": "871e8f1c1a5a76516d9c50d77d4592b81485981aaa2f9d6bf50ac6f3b7d6fd4b",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0073.png",
+      "published_sha256": "cd5d55691b6b270a8e143109dce6e25905d2b9fc01451f1c661a77655f441af4",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0073.png",
+      "source_sha256": "cd5d55691b6b270a8e143109dce6e25905d2b9fc01451f1c661a77655f441af4",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0074.png",
+      "published_sha256": "3ac772ca2321e87a057f703377740e778f48f2b813baf1712df356a45d41f1eb",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0074.png",
+      "source_sha256": "3ac772ca2321e87a057f703377740e778f48f2b813baf1712df356a45d41f1eb",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0075.png",
+      "published_sha256": "8630aa5fa55814cbdbfd07ce0a1ef352eb5103b761083ef7d2d30a4c9f59b62e",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0075.png",
+      "source_sha256": "8630aa5fa55814cbdbfd07ce0a1ef352eb5103b761083ef7d2d30a4c9f59b62e",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0076.png",
+      "published_sha256": "1c616f141871aaf946f2c0dade4059ff0198849137aa123b3fc7d40e8d063594",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0076.png",
+      "source_sha256": "1c616f141871aaf946f2c0dade4059ff0198849137aa123b3fc7d40e8d063594",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0077.png",
+      "published_sha256": "d65edbe8b558fd1ed8dd33550162f86123de6eb6f3e8e1fb14a9232c50ed2b54",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0077.png",
+      "source_sha256": "d65edbe8b558fd1ed8dd33550162f86123de6eb6f3e8e1fb14a9232c50ed2b54",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0078.png",
+      "published_sha256": "0b118f4c796dcb63527b2dac5ea86133158c614685c0f0952db93e2017c0696f",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0078.png",
+      "source_sha256": "0b118f4c796dcb63527b2dac5ea86133158c614685c0f0952db93e2017c0696f",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0079.png",
+      "published_sha256": "c4aa13cc0d71f5a0ab076ca5db930075b40dc45fe7d74bd0b6c1abc5f1cea193",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0079.png",
+      "source_sha256": "c4aa13cc0d71f5a0ab076ca5db930075b40dc45fe7d74bd0b6c1abc5f1cea193",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0080.png",
+      "published_sha256": "45600ae3e3b172dfcb00638de14f5ba3f087e8738e5f765e056451a7d2977429",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0080.png",
+      "source_sha256": "45600ae3e3b172dfcb00638de14f5ba3f087e8738e5f765e056451a7d2977429",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0081.png",
+      "published_sha256": "2cd21a5431c4db66675013dc0f4df83d1929e9b78ea5819624edccabb5e0124c",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0081.png",
+      "source_sha256": "2cd21a5431c4db66675013dc0f4df83d1929e9b78ea5819624edccabb5e0124c",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0082.png",
+      "published_sha256": "d4c8967151e3bfc3e74856080f0980dd1206d08020aac8651f3f33b5cc69ae28",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0082.png",
+      "source_sha256": "d4c8967151e3bfc3e74856080f0980dd1206d08020aac8651f3f33b5cc69ae28",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0083.png",
+      "published_sha256": "1be3d744d78c6f60cbde69681a7a4471f18d034fb049114126065d785b074ae8",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0083.png",
+      "source_sha256": "1be3d744d78c6f60cbde69681a7a4471f18d034fb049114126065d785b074ae8",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0084.png",
+      "published_sha256": "5fd3bfecbb8bd7049727ef7d34516c55cf45ecadc1bbacfb8c069c11fc518aa8",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0084.png",
+      "source_sha256": "5fd3bfecbb8bd7049727ef7d34516c55cf45ecadc1bbacfb8c069c11fc518aa8",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0085.png",
+      "published_sha256": "f85512fefffb45cbb810c04358b70d584326ce0c262ee0882e9c90532e633168",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0085.png",
+      "source_sha256": "f85512fefffb45cbb810c04358b70d584326ce0c262ee0882e9c90532e633168",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0086.png",
+      "published_sha256": "2ecf05e9d4cfddf3448779d48b29ed463fe0520d3780f38398fc3cb869abe499",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0086.png",
+      "source_sha256": "2ecf05e9d4cfddf3448779d48b29ed463fe0520d3780f38398fc3cb869abe499",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0087.png",
+      "published_sha256": "3d58b5f295cafe184dbf0c3d8f2adacf89296416f3f44c5b9458e18c5ef1580a",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0087.png",
+      "source_sha256": "3d58b5f295cafe184dbf0c3d8f2adacf89296416f3f44c5b9458e18c5ef1580a",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0088.png",
+      "published_sha256": "d9908b61e7240ceae77e2b7bf1e38054dcb1c92920385c2e1c26b892fd1e72f7",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0088.png",
+      "source_sha256": "d9908b61e7240ceae77e2b7bf1e38054dcb1c92920385c2e1c26b892fd1e72f7",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0089.png",
+      "published_sha256": "55de54f21a9a91ea4ba0416f61abfcf8b71319cafa2515838c25cfd3b3643a2f",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0089.png",
+      "source_sha256": "55de54f21a9a91ea4ba0416f61abfcf8b71319cafa2515838c25cfd3b3643a2f",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0090.png",
+      "published_sha256": "e926a6aff8ea9f7ba0263da05a9af7f1338291f1823535daca72552b8b840f2a",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0090.png",
+      "source_sha256": "e926a6aff8ea9f7ba0263da05a9af7f1338291f1823535daca72552b8b840f2a",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0091.png",
+      "published_sha256": "a28a7248e15ca33972d125deb32654c423f10d1842ba64f9e8c99ca88c44d822",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0091.png",
+      "source_sha256": "a28a7248e15ca33972d125deb32654c423f10d1842ba64f9e8c99ca88c44d822",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0092.png",
+      "published_sha256": "8054a5f9fb4e82d2fa52c113d6feaff31a0e4072316fefb9b90566946f4ea8d3",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0092.png",
+      "source_sha256": "8054a5f9fb4e82d2fa52c113d6feaff31a0e4072316fefb9b90566946f4ea8d3",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0093.png",
+      "published_sha256": "49e580d33a0c000ce1e7684d3c2de819b70f48bdd3404bbe034426c8d4d2c9fd",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0093.png",
+      "source_sha256": "49e580d33a0c000ce1e7684d3c2de819b70f48bdd3404bbe034426c8d4d2c9fd",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0094.png",
+      "published_sha256": "dca5105e9a881486250e7ee4b1e21698c474b7ae90f523cf58c4855c888f4460",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0094.png",
+      "source_sha256": "dca5105e9a881486250e7ee4b1e21698c474b7ae90f523cf58c4855c888f4460",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0095.png",
+      "published_sha256": "a3d4f689eb9fc9d29d719b6aee6a5c37ee764cd20a84bfb3eb6c9c185d952407",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0095.png",
+      "source_sha256": "a3d4f689eb9fc9d29d719b6aee6a5c37ee764cd20a84bfb3eb6c9c185d952407",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0096.png",
+      "published_sha256": "5d25a8bf8892530b2b74c2f835a19d39051f11df9430c8152f9a34a286596461",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0096.png",
+      "source_sha256": "5d25a8bf8892530b2b74c2f835a19d39051f11df9430c8152f9a34a286596461",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0097.png",
+      "published_sha256": "3b86845d1e10409e81497096f44ae5a1455668e192d544943c675b046cc511b8",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0097.png",
+      "source_sha256": "3b86845d1e10409e81497096f44ae5a1455668e192d544943c675b046cc511b8",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0098.png",
+      "published_sha256": "975f463413f5a2e5bd89ea55409ac1eb66de968a6b363aaef4ff156048058817",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0098.png",
+      "source_sha256": "975f463413f5a2e5bd89ea55409ac1eb66de968a6b363aaef4ff156048058817",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/ocr_quick_test_0099.png",
+      "published_sha256": "bda73eadc7b94d7e9a5c1a6587aa911c2aa4688f4b2a4290fa5ac367e6dd71c4",
+      "source": "haechi_runner/evaluation/2026-11-16/images/ocr_quick_test_0099.png",
+      "source_sha256": "bda73eadc7b94d7e9a5c1a6587aa911c2aa4688f4b2a4290fa5ac367e6dd71c4",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/images/supplementary_cheomseongdae.png",
+      "published_sha256": "daf4394594fae2ef50839b46cabcacbe6d942e8fc738239a5b50934914cfe27a",
+      "source": "haechi_runner/evaluation/2026-11-16/images/supplementary_cheomseongdae.png",
+      "source_sha256": "daf4394594fae2ef50839b46cabcacbe6d942e8fc738239a5b50934914cfe27a",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/inputs.jsonl",
+      "published_sha256": "21f6a6f83e20f07c9f334cce596102e2cbeca89d45f53dbae6e9853980a124f0",
+      "source": "haechi_runner/evaluation/2026-11-16/inputs.jsonl",
+      "source_sha256": "21f6a6f83e20f07c9f334cce596102e2cbeca89d45f53dbae6e9853980a124f0",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/patch_projection_equivalence.json",
+      "published_sha256": "fc42a980d2353f194d1affc88282815901fac82c824d6159fbb88273296d5a1a",
+      "source": "haechi_runner/evaluation/2026-11-16/patch_projection_equivalence.json",
+      "source_sha256": "fc42a980d2353f194d1affc88282815901fac82c824d6159fbb88273296d5a1a",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/plot_results.py",
+      "published_sha256": "fc52a265aadea649fc208635e3859e5c8592786d2c1bf1cbba19980b24b41072",
+      "source": "haechi_runner/evaluation/2026-11-16/plot_results.py",
+      "source_sha256": "fc52a265aadea649fc208635e3859e5c8592786d2c1bf1cbba19980b24b41072",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/prepare_dataset.py",
+      "published_sha256": "276065b7f6604fda399f560b616a82f5c6a3fb6de7717e50cb594d27d51fff67",
+      "source": "haechi_runner/evaluation/2026-11-16/prepare_dataset.py",
+      "source_sha256": "f670acc1a8ce32f4a1599286761733b9ba066478fd2b10d5e163cce87aaeb4ce",
+      "modified": true
+    },
+    {
+      "path": "evaluation/2026-11-16/qwen_base_predictions.jsonl",
+      "published_sha256": "7a11dbd2551e817a76a90fdcb18624baca9e6f336ce83804e22f3faf26810a20",
+      "source": "haechi_runner/evaluation/2026-11-16/qwen_base_predictions.jsonl",
+      "source_sha256": "7a11dbd2551e817a76a90fdcb18624baca9e6f336ce83804e22f3faf26810a20",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/qwen_base_run.json",
+      "published_sha256": "669cabc5a0a8624df6d67e06457df58b582af9703a2f7129928444a521a600f2",
+      "source": "haechi_runner/evaluation/2026-11-16/qwen_base_run.json",
+      "source_sha256": "669cabc5a0a8624df6d67e06457df58b582af9703a2f7129928444a521a600f2",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/qwen_base_scores.json",
+      "published_sha256": "15fd16848d12cf15eb5c3e9c6ef79437a1bedca31eb72a2dd180cf8e3ca045c9",
+      "source": "haechi_runner/evaluation/2026-11-16/qwen_base_scores.json",
+      "source_sha256": "15fd16848d12cf15eb5c3e9c6ef79437a1bedca31eb72a2dd180cf8e3ca045c9",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/qwen_base_smoke_predictions.jsonl",
+      "published_sha256": "e01e5ae2361a01dd8c296bf370b085a0cecc29024e51c5a3c89b362122ed9e81",
+      "source": "haechi_runner/evaluation/2026-11-16/qwen_base_smoke_predictions.jsonl",
+      "source_sha256": "e01e5ae2361a01dd8c296bf370b085a0cecc29024e51c5a3c89b362122ed9e81",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/qwen_base_smoke_run.json",
+      "published_sha256": "2b8b15981f9f8db98ea2f20f38ab07fd2142c2fdbdf455136649b1e39ed6b37d",
+      "source": "haechi_runner/evaluation/2026-11-16/qwen_base_smoke_run.json",
+      "source_sha256": "2b8b15981f9f8db98ea2f20f38ab07fd2142c2fdbdf455136649b1e39ed6b37d",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/qwen_base_supplementary_predictions.jsonl",
+      "published_sha256": "224258929221476e51cc17e66a63afcbb61108800898acb3a08079c749c768cc",
+      "source": "haechi_runner/evaluation/2026-11-16/qwen_base_supplementary_predictions.jsonl",
+      "source_sha256": "224258929221476e51cc17e66a63afcbb61108800898acb3a08079c749c768cc",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/qwen_base_supplementary_run.json",
+      "published_sha256": "c8205e68c463ede7116d548f4848713445448e218be206fbe3cd6f0bb41fd675",
+      "source": "haechi_runner/evaluation/2026-11-16/qwen_base_supplementary_run.json",
+      "source_sha256": "c8205e68c463ede7116d548f4848713445448e218be206fbe3cd6f0bb41fd675",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/qwen_haechi_predictions.jsonl",
+      "published_sha256": "ed38ad9ac30cd84c43dfdf7e83c4711590ea1392cd54a985c61684527b495a77",
+      "source": "haechi_runner/evaluation/2026-11-16/qwen_haechi_predictions.jsonl",
+      "source_sha256": "ed38ad9ac30cd84c43dfdf7e83c4711590ea1392cd54a985c61684527b495a77",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/qwen_haechi_run.json",
+      "published_sha256": "bc9e88510abe9487fd35fa4ee232e357e221b3bddf0098c7ee51cf55125c7a4e",
+      "source": "haechi_runner/evaluation/2026-11-16/qwen_haechi_run.json",
+      "source_sha256": "bc9e88510abe9487fd35fa4ee232e357e221b3bddf0098c7ee51cf55125c7a4e",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/qwen_haechi_scores.json",
+      "published_sha256": "74b62eb3eb23ae74147e46c56f4e8417d781826ae57561e0e00998c6fa1fd85e",
+      "source": "haechi_runner/evaluation/2026-11-16/qwen_haechi_scores.json",
+      "source_sha256": "74b62eb3eb23ae74147e46c56f4e8417d781826ae57561e0e00998c6fa1fd85e",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/qwen_haechi_supplementary_predictions.jsonl",
+      "published_sha256": "0d11397c0e779bf0614c9c8bd02b7a64e11bb7996be5f4fe1c399ae2d1e9592b",
+      "source": "haechi_runner/evaluation/2026-11-16/qwen_haechi_supplementary_predictions.jsonl",
+      "source_sha256": "0d11397c0e779bf0614c9c8bd02b7a64e11bb7996be5f4fe1c399ae2d1e9592b",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/qwen_haechi_supplementary_run.json",
+      "published_sha256": "ceb0a2225c5fcd2229b73b0cb1cc66a55dde607ae50209ec38dff78cbc0d1137",
+      "source": "haechi_runner/evaluation/2026-11-16/qwen_haechi_supplementary_run.json",
+      "source_sha256": "ceb0a2225c5fcd2229b73b0cb1cc66a55dde607ae50209ec38dff78cbc0d1137",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/requirements-hyperclova-eval.lock.txt",
+      "published_sha256": "f6044049c0de37863c7607c3d114ce67b696520b4628dbf03f9f14d8bebc6fb1",
+      "source": "haechi_runner/evaluation/2026-11-16/requirements-hyperclova-eval.lock.txt",
+      "source_sha256": "f6044049c0de37863c7607c3d114ce67b696520b4628dbf03f9f14d8bebc6fb1",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/requirements-qwen-eval.lock.txt",
+      "published_sha256": "0abc94e298d97eb3ab37d3b7ea80414772f3465c9c5f021bda2ed00f5fd8e909",
+      "source": "haechi_runner/evaluation/2026-11-16/requirements-qwen-eval.lock.txt",
+      "source_sha256": "0abc94e298d97eb3ab37d3b7ea80414772f3465c9c5f021bda2ed00f5fd8e909",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/run_benchmark.py",
+      "published_sha256": "ab385f6fc95190e07beb0e9e1758948e33d8228bcc483172092c1a1a0cf0b9cc",
+      "source": "haechi_runner/evaluation/2026-11-16/run_benchmark.py",
+      "source_sha256": "345c5fa1872bf8bf5d7bcb86426fcff395df452dbee6431ad12ef3fdfd4ffb41",
+      "modified": true
+    },
+    {
+      "path": "evaluation/2026-11-16/score_results.py",
+      "published_sha256": "fa06899adfe85cd381235e7dd40c80d613cc2736842493b1362a7e335e0a7f1b",
+      "source": "haechi_runner/evaluation/2026-11-16/score_results.py",
+      "source_sha256": "fa06899adfe85cd381235e7dd40c80d613cc2736842493b1362a7e335e0a7f1b",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/summary.json",
+      "published_sha256": "e0725af60855980206f026cddad1e697893eb06d1b89acd857064746c01fa1ae",
+      "source": "haechi_runner/evaluation/2026-11-16/summary.json",
+      "source_sha256": "e0725af60855980206f026cddad1e697893eb06d1b89acd857064746c01fa1ae",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/supplementary_answers.json",
+      "published_sha256": "f61798da885ba500cb2ab5107bb6a67b459b2651b3ea53e495aba65f58aa3aff",
+      "source": "haechi_runner/evaluation/2026-11-16/supplementary_answers.json",
+      "source_sha256": "f61798da885ba500cb2ab5107bb6a67b459b2651b3ea53e495aba65f58aa3aff",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/supplementary_inputs.jsonl",
+      "published_sha256": "c7d7f0ac38212d6b8eb1c379e0c8ca7f59c6eec1a33fc6fbb6295cfbb7c6b99e",
+      "source": "haechi_runner/evaluation/2026-11-16/supplementary_inputs.jsonl",
+      "source_sha256": "c7d7f0ac38212d6b8eb1c379e0c8ca7f59c6eec1a33fc6fbb6295cfbb7c6b99e",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-16/verify_patch_projection.py",
+      "published_sha256": "ff85265b00cc75c46aaf040f15f5ba5152b3dad2e1b162fd481de0b167e6918c",
+      "source": "haechi_runner/evaluation/2026-11-16/verify_patch_projection.py",
+      "source_sha256": "ff85265b00cc75c46aaf040f15f5ba5152b3dad2e1b162fd481de0b167e6918c",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-17-llm-judge/README.md",
+      "published_sha256": "fa69163406429ee9160c7c73a3bd7f584e997f94bf05833da4ea3ed0caf24f35",
+      "source": "haechi_runner/evaluation/2026-11-17-llm-judge/README.md",
+      "source_sha256": "fa69163406429ee9160c7c73a3bd7f584e997f94bf05833da4ea3ed0caf24f35",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-17-llm-judge/blind_inputs.jsonl",
+      "published_sha256": "23cedb3b55adb68effdff9d73759e9cc358c3c220fd70063476a925a0a4f18bb",
+      "source": "haechi_runner/evaluation/2026-11-17-llm-judge/blind_inputs.jsonl",
+      "source_sha256": "23cedb3b55adb68effdff9d73759e9cc358c3c220fd70063476a925a0a4f18bb",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-17-llm-judge/calibration_manifest.json",
+      "published_sha256": "3cf551b47f6584701a4b0f7214bbf32be3be38be8cb08701c6db61ba54aa01ec",
+      "source": "haechi_runner/evaluation/2026-11-17-llm-judge/calibration_manifest.json",
+      "source_sha256": "3cf551b47f6584701a4b0f7214bbf32be3be38be8cb08701c6db61ba54aa01ec",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-17-llm-judge/calibration_results.jsonl",
+      "published_sha256": "c6b1023ea7c7adca77dc387db2f8689e28cd4c6380ac836d4a3ecb50d27004eb",
+      "source": "haechi_runner/evaluation/2026-11-17-llm-judge/calibration_results.jsonl",
+      "source_sha256": "c6b1023ea7c7adca77dc387db2f8689e28cd4c6380ac836d4a3ecb50d27004eb",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-17-llm-judge/judgments_joined.jsonl",
+      "published_sha256": "10444225d6485fba50d3d288606735b372305e56493289635f8979d3383bbc74",
+      "source": "haechi_runner/evaluation/2026-11-17-llm-judge/judgments_joined.jsonl",
+      "source_sha256": "10444225d6485fba50d3d288606735b372305e56493289635f8979d3383bbc74",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-17-llm-judge/main_manifest.json",
+      "published_sha256": "f7528c33a531e3ab1065590e6b09f2f2fabd40a2bbf458eafe82846994b9b6d4",
+      "source": "haechi_runner/evaluation/2026-11-17-llm-judge/main_manifest.json",
+      "source_sha256": "f7528c33a531e3ab1065590e6b09f2f2fabd40a2bbf458eafe82846994b9b6d4",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-17-llm-judge/main_results.jsonl",
+      "published_sha256": "6bac530de6f2ecfd4a61195ba66d33ecf6f0821891ebc41c1dc632190159eed4",
+      "source": "haechi_runner/evaluation/2026-11-17-llm-judge/main_results.jsonl",
+      "source_sha256": "6bac530de6f2ecfd4a61195ba66d33ecf6f0821891ebc41c1dc632190159eed4",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-17-llm-judge/private_mapping.json",
+      "published_sha256": "8e0e068cb8329b6bf1eeb32b879c8a1ac713125e6faf9fb545a2cc583eac54f1",
+      "source": "haechi_runner/evaluation/2026-11-17-llm-judge/private_mapping.json",
+      "source_sha256": "8e0e068cb8329b6bf1eeb32b879c8a1ac713125e6faf9fb545a2cc583eac54f1",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-17-llm-judge/repeat_manifest.json",
+      "published_sha256": "a14b1212defb9d2fc144a3a05105afed8b2a04889432c987452eaec4b19042fd",
+      "source": "haechi_runner/evaluation/2026-11-17-llm-judge/repeat_manifest.json",
+      "source_sha256": "a14b1212defb9d2fc144a3a05105afed8b2a04889432c987452eaec4b19042fd",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-17-llm-judge/repeat_results.jsonl",
+      "published_sha256": "6505523972e17435feb5196514645442a97e742ac5cfd3c490b2b8ff3b44bce1",
+      "source": "haechi_runner/evaluation/2026-11-17-llm-judge/repeat_results.jsonl",
+      "source_sha256": "6505523972e17435feb5196514645442a97e742ac5cfd3c490b2b8ff3b44bce1",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-17-llm-judge/run_judge.py",
+      "published_sha256": "9faed36ca73f8d4f18bc3b0d569066e8133c3db925a7c4dc984aa0427b1fa7d9",
+      "source": "haechi_runner/evaluation/2026-11-17-llm-judge/run_judge.py",
+      "source_sha256": "9faed36ca73f8d4f18bc3b0d569066e8133c3db925a7c4dc984aa0427b1fa7d9",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-17-llm-judge/summarize_judge.py",
+      "published_sha256": "96b8e3a26afbda8c651569b7c20eae0fbaa436f4fd24adc5a016a6743fa1f2e1",
+      "source": "haechi_runner/evaluation/2026-11-17-llm-judge/summarize_judge.py",
+      "source_sha256": "96b8e3a26afbda8c651569b7c20eae0fbaa436f4fd24adc5a016a6743fa1f2e1",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-17-llm-judge/summary.json",
+      "published_sha256": "4ec48794d30c7b311104760995d0a6114107a4cf5e5217d4d8d496d95ce6fd1c",
+      "source": "haechi_runner/evaluation/2026-11-17-llm-judge/summary.json",
+      "source_sha256": "4ec48794d30c7b311104760995d0a6114107a4cf5e5217d4d8d496d95ce6fd1c",
+      "modified": false
+    },
+    {
+      "path": "evaluation/2026-11-17-llm-judge/validation.json",
+      "published_sha256": "29711f8fb795793e739779b9bc983c62e648f7cc52a51193334a6991216f0981",
+      "source": "haechi_runner/evaluation/2026-11-17-llm-judge/validation.json",
+      "source_sha256": "29711f8fb795793e739779b9bc983c62e648f7cc52a51193334a6991216f0981",
+      "modified": false
+    },
+    {
+      "path": "evaluation/README.md",
+      "published_sha256": "4cf761706ae861d2393abd2ac76dc14e651fb046c7f57a96af1aef5fbeb9e6c6",
+      "source": "publication documentation or portability helper"
+    },
+    {
+      "path": "haechi.py",
+      "published_sha256": "6fc08b4ba453f10549ade25d88be6f80f0293b4bd75e3416f59811431e336719",
+      "source": "haechi_runner/haechi.py",
+      "source_sha256": "6fc08b4ba453f10549ade25d88be6f80f0293b4bd75e3416f59811431e336719",
+      "modified": false
+    },
+    {
+      "path": "requirements-evaluation.txt",
+      "published_sha256": "98d869a1eaa05ba063574a4c3137f977570addd4040f6ae62cf676347d0b343f",
+      "source": "publication documentation or portability helper"
+    },
+    {
+      "path": "requirements-hyperclova.lock.txt",
+      "published_sha256": "f6044049c0de37863c7607c3d114ce67b696520b4628dbf03f9f14d8bebc6fb1",
+      "source": "haechi_runner/requirements-hyperclova.lock.txt",
+      "source_sha256": "f6044049c0de37863c7607c3d114ce67b696520b4628dbf03f9f14d8bebc6fb1",
+      "modified": false
+    },
+    {
+      "path": "requirements-hyperclova.txt",
+      "published_sha256": "805ed641ec4f0a8f21553b717a6ea86430cbd35ed0e06e78ea50ff0274910a18",
+      "source": "haechi_runner/requirements-hyperclova.txt",
+      "source_sha256": "805ed641ec4f0a8f21553b717a6ea86430cbd35ed0e06e78ea50ff0274910a18",
+      "modified": false
+    },
+    {
+      "path": "requirements-qwen.lock.txt",
+      "published_sha256": "563530cb6cecbca8afaa7137e4dc65d604c7ea3ed2d657e0c0e7a08eb7727a10",
+      "source": "haechi_runner/requirements-qwen.lock.txt",
+      "source_sha256": "563530cb6cecbca8afaa7137e4dc65d604c7ea3ed2d657e0c0e7a08eb7727a10",
+      "modified": false
+    },
+    {
+      "path": "requirements-qwen.txt",
+      "published_sha256": "a927a09a12a9a0649ef95ffeafc4ab2be0e2dba2f3d286fe1be3224d90e52d11",
+      "source": "haechi_runner/requirements-qwen.txt",
+      "source_sha256": "a927a09a12a9a0649ef95ffeafc4ab2be0e2dba2f3d286fe1be3224d90e52d11",
+      "modified": false
+    },
+    {
+      "path": "run.sh",
+      "published_sha256": "bd5ca3c7f10417ced36448ed1ca567605a047e31c4682a4565d1356fcba0cd16",
+      "source": "haechi_runner/run.sh",
+      "source_sha256": "bd5ca3c7f10417ced36448ed1ca567605a047e31c4682a4565d1356fcba0cd16",
+      "modified": false
+    },
+    {
+      "path": "scripts/verify_release.py",
+      "published_sha256": "8f826e85d472dbf5b9d79871e378d05db30057dbe63e14b79feb6aed4ec17e97",
+      "source": "publication documentation or portability helper"
+    },
+    {
+      "path": "setup.sh",
+      "published_sha256": "e7757d68f5df638b32873ad7fe9c197d55bd6f1e9788266254b5477ed18d65f9",
+      "source": "haechi_runner/setup.sh",
+      "source_sha256": "e7757d68f5df638b32873ad7fe9c197d55bd6f1e9788266254b5477ed18d65f9",
+      "modified": false
+    },
+    {
+      "path": "training/README.md",
+      "published_sha256": "af8e55efb95f752f90df887af0a86b9c224ada3fe27ed481c0c782de02f6c508",
+      "source": "publication documentation or portability helper"
+    },
+    {
+      "path": "training/generic_sft/LICENSE",
+      "published_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "source": "kubeflow-training-snippets/LICENSE",
+      "source_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "modified": false
+    },
+    {
+      "path": "training/generic_sft/THIRD_PARTY_NOTICES.md",
+      "published_sha256": "00ed9f64fdbda5824b208b36896faf52e9d369b775f5f983e496256866fac81e",
+      "source": "kubeflow-training-snippets/THIRD_PARTY_NOTICES.md",
+      "source_sha256": "00ed9f64fdbda5824b208b36896faf52e9d369b775f5f983e496256866fac81e",
+      "modified": false
+    },
+    {
+      "path": "training/generic_sft/VLM_SFT_Custom_Data_HyperClovaX/3_vlm_sft_distributed.py",
+      "published_sha256": "e559aad9a676143772d509827513ea62b9e7529088ef3339bd761dd0779cd561",
+      "source": "kubeflow-training-snippets/public-release/VLM_SFT_Custom_Data_HyperClovaX/3_vlm_sft_distributed.py",
+      "source_sha256": "e559aad9a676143772d509827513ea62b9e7529088ef3339bd761dd0779cd561",
+      "modified": false
+    },
+    {
+      "path": "training/generic_sft/VLM_SFT_Custom_Data_HyperClovaX/Dockerfile",
+      "published_sha256": "89368be9ff0e40ec524bb42f2bc6c5d80be653e63f50da1894dd7d2496c40103",
+      "source": "kubeflow-training-snippets/public-release/VLM_SFT_Custom_Data_HyperClovaX/Dockerfile",
+      "source_sha256": "89368be9ff0e40ec524bb42f2bc6c5d80be653e63f50da1894dd7d2496c40103",
+      "modified": false
+    },
+    {
+      "path": "training/generic_sft/VLM_SFT_Custom_Data_HyperClovaX/trainer.py",
+      "published_sha256": "060eda6fcd587e79caeca7c3f246ea7bab1af410479c9776584470b8f4ac48a8",
+      "source": "kubeflow-training-snippets/public-release/VLM_SFT_Custom_Data_HyperClovaX/trainer.py",
+      "source_sha256": "060eda6fcd587e79caeca7c3f246ea7bab1af410479c9776584470b8f4ac48a8",
+      "modified": false
+    },
+    {
+      "path": "training/generic_sft/VLM_SFT_Custom_Data_Qwen3_5/3_vlm_sft_distributed.py",
+      "published_sha256": "ffdd3d8c2544f2bbfbb30d7d3d3415f03e93ff3ee98cf25e12738bea80b8f382",
+      "source": "kubeflow-training-snippets/public-release/VLM_SFT_Custom_Data_Qwen3_5/3_vlm_sft_distributed.py",
+      "source_sha256": "ffdd3d8c2544f2bbfbb30d7d3d3415f03e93ff3ee98cf25e12738bea80b8f382",
+      "modified": false
+    },
+    {
+      "path": "training/generic_sft/VLM_SFT_Custom_Data_Qwen3_5/Dockerfile",
+      "published_sha256": "5a24b484f3356283b58b68e7fb360c451cc85f433fe57ff9393467867c2e7bc7",
+      "source": "kubeflow-training-snippets/public-release/VLM_SFT_Custom_Data_Qwen3_5/Dockerfile",
+      "source_sha256": "5a24b484f3356283b58b68e7fb360c451cc85f433fe57ff9393467867c2e7bc7",
+      "modified": false
+    },
+    {
+      "path": "training/generic_sft/VLM_SFT_Custom_Data_Qwen3_5/patch.py",
+      "published_sha256": "200bf56eea8ef6ec9526b2f281fe0e6623f14f06fb9d04f7d6e5bca4fe9034c3",
+      "source": "kubeflow-training-snippets/public-release/VLM_SFT_Custom_Data_Qwen3_5/patch.py",
+      "source_sha256": "200bf56eea8ef6ec9526b2f281fe0e6623f14f06fb9d04f7d6e5bca4fe9034c3",
+      "modified": false
+    },
+    {
+      "path": "training/generic_sft/VLM_SFT_Custom_Data_Qwen3_5/trainer.py",
+      "published_sha256": "060eda6fcd587e79caeca7c3f246ea7bab1af410479c9776584470b8f4ac48a8",
+      "source": "kubeflow-training-snippets/public-release/VLM_SFT_Custom_Data_Qwen3_5/trainer.py",
+      "source_sha256": "060eda6fcd587e79caeca7c3f246ea7bab1af410479c9776584470b8f4ac48a8",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/hyperclova/LICENSE",
+      "published_sha256": "bf15be686aa21417522891b13c57e0988c1ebf075ada78b14b2dc25e1524bc4a",
+      "source": "kubeflow-training-snippets/downloaded_models/hyperclovax-seed-think-32b-h400-hs100-s2500-bf16-20260902/LICENSE",
+      "source_sha256": "bf15be686aa21417522891b13c57e0988c1ebf075ada78b14b2dc25e1524bc4a",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/hyperclova/NOTICE",
+      "published_sha256": "e84b582498391207cfc5db49ee3819a9f8d039fcfc9d084fadba12f54b46c29e",
+      "source": "kubeflow-training-snippets/downloaded_models/hyperclovax-seed-think-32b-h400-hs100-s2500-bf16-20260902/NOTICE",
+      "source_sha256": "e84b582498391207cfc5db49ee3819a9f8d039fcfc9d084fadba12f54b46c29e",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/hyperclova/README.md",
+      "published_sha256": "e2342e84907f075307d007f24353827081b7e7230804e07c7024a8033ac36773",
+      "source": "kubeflow-training-snippets/downloaded_models/hyperclovax-seed-think-32b-h400-hs100-s2500-bf16-20260902/README.md",
+      "source_sha256": "e2342e84907f075307d007f24353827081b7e7230804e07c7024a8033ac36773",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/hyperclova/reports/BENCHMARK_GUIDE.md",
+      "published_sha256": "4abf515c1be13f9521646c45a5adf8789ee6e52918d44a417e0ddbb1a5eee360",
+      "source": "kubeflow-training-snippets/downloaded_models/hyperclovax-seed-think-32b-h400-hs100-s2500-bf16-20260902/reports/BENCHMARK_GUIDE.md",
+      "source_sha256": "4abf515c1be13f9521646c45a5adf8789ee6e52918d44a417e0ddbb1a5eee360",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/hyperclova/reports/DETAILED_SCORE_REPORT.md",
+      "published_sha256": "22fa5527684c0700834bb10bad8f11d9c7920e924a9b3057d0e0daa280a75deb",
+      "source": "kubeflow-training-snippets/downloaded_models/hyperclovax-seed-think-32b-h400-hs100-s2500-bf16-20260902/reports/DETAILED_SCORE_REPORT.md",
+      "source_sha256": "22fa5527684c0700834bb10bad8f11d9c7920e924a9b3057d0e0daa280a75deb",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/hyperclova/reports/PAIRED_OUTPUT_EXAMPLES.md",
+      "published_sha256": "9f97c6c503f6f5056fbc45107652e7120209db661df928311ff6c472ff04b1ff",
+      "source": "kubeflow-training-snippets/downloaded_models/hyperclovax-seed-think-32b-h400-hs100-s2500-bf16-20260902/reports/PAIRED_OUTPUT_EXAMPLES.md",
+      "source_sha256": "9f97c6c503f6f5056fbc45107652e7120209db661df928311ff6c472ff04b1ff",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/hyperclova/reports/TRAINING_CONFIG.yaml",
+      "published_sha256": "eaa00ffd9fbfef4c59ae5f8ccba96ff6e1e52ca2a64eb6098ce993794e9cc7a5",
+      "source": "kubeflow-training-snippets/downloaded_models/hyperclovax-seed-think-32b-h400-hs100-s2500-bf16-20260902/reports/TRAINING_CONFIG.yaml",
+      "source_sha256": "eaa00ffd9fbfef4c59ae5f8ccba96ff6e1e52ca2a64eb6098ce993794e9cc7a5",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/hyperclova/reproduction/convert_hf_safetensors_to_bf16.py",
+      "published_sha256": "34453df27342de6ef47e5784684b78dc638b009175011696c1bb2a78ef16c615",
+      "source": "kubeflow-training-snippets/downloaded_models/hyperclovax-seed-think-32b-h400-hs100-s2500-bf16-20260902/reproduction/convert_hf_safetensors_to_bf16.py",
+      "source_sha256": "34453df27342de6ef47e5784684b78dc638b009175011696c1bb2a78ef16c615",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/hyperclova/reproduction/extract_large_model_paired_examples.py",
+      "published_sha256": "001029bcf8f1fbc8390d846ec26b70c71696d6ed8a65a5d17a49b814c8f0d2fc",
+      "source": "kubeflow-training-snippets/downloaded_models/hyperclovax-seed-think-32b-h400-hs100-s2500-bf16-20260902/reproduction/extract_large_model_paired_examples.py",
+      "source_sha256": "001029bcf8f1fbc8390d846ec26b70c71696d6ed8a65a5d17a49b814c8f0d2fc",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/hyperclova/reproduction/generate_large_model_release_docs.py",
+      "published_sha256": "f220a800fe38f231f3a08e9bc29c55ea7611adce02e2df3033d6d2cc78254b0d",
+      "source": "kubeflow-training-snippets/downloaded_models/hyperclovax-seed-think-32b-h400-hs100-s2500-bf16-20260902/reproduction/generate_large_model_release_docs.py",
+      "source_sha256": "f220a800fe38f231f3a08e9bc29c55ea7611adce02e2df3033d6d2cc78254b0d",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/hyperclova/reproduction/generate_performance_chart.py",
+      "published_sha256": "a4d99c1119cdc3a71b408d534b6ed4a07891df090148f67383c08d8304d91b87",
+      "source": "kubeflow-training-snippets/downloaded_models/hyperclovax-seed-think-32b-h400-hs100-s2500-bf16-20260902/reproduction/generate_performance_chart.py",
+      "source_sha256": "a4d99c1119cdc3a71b408d534b6ed4a07891df090148f67383c08d8304d91b87",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/hyperclova/reproduction/package_hf_release_v2.py",
+      "published_sha256": "4651b9a85c38c8f8085775d244b8b34d413858046778d0c696c67871fedd71d1",
+      "source": "kubeflow-training-snippets/downloaded_models/hyperclovax-seed-think-32b-h400-hs100-s2500-bf16-20260902/reproduction/package_hf_release_v2.py",
+      "source_sha256": "4651b9a85c38c8f8085775d244b8b34d413858046778d0c696c67871fedd71d1",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/qwen/LICENSE",
+      "published_sha256": "50cbab8a892c5f2993b8c7351a99182507472def3b1374558308605d99b86b32",
+      "source": "kubeflow-training-snippets/downloaded_models/qwen35-27b-v28cl-9b-recipe-h400-hs100-s2500-20260902/LICENSE",
+      "source_sha256": "50cbab8a892c5f2993b8c7351a99182507472def3b1374558308605d99b86b32",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/qwen/README.md",
+      "published_sha256": "30e89370844485e1c828f02c06a25e062f31ea6b0c3a7e39fbf374f255be91ae",
+      "source": "kubeflow-training-snippets/downloaded_models/qwen35-27b-v28cl-9b-recipe-h400-hs100-s2500-20260902/README.md",
+      "source_sha256": "30e89370844485e1c828f02c06a25e062f31ea6b0c3a7e39fbf374f255be91ae",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/qwen/configs/01_hsm_specialist_3000steps.yaml",
+      "published_sha256": "3a2d5f7ded8e422f246a55b96c5748b8037f6d7d024671db59fecd467fc7fa97",
+      "source": "kubeflow-training-snippets/downloaded_models/qwen35-27b-v28cl-9b-recipe-h400-hs100-s2500-20260902/configs/01_hsm_specialist_3000steps.yaml",
+      "source_sha256": "3a2d5f7ded8e422f246a55b96c5748b8037f6d7d024671db59fecd467fc7fa97",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/qwen/configs/02_task_vector_merge.yaml",
+      "published_sha256": "cb6f7b5e7204291cc5036c14936ab1af9aec667e3235a286867e4dd1dcfc5fa6",
+      "source": "kubeflow-training-snippets/downloaded_models/qwen35-27b-v28cl-9b-recipe-h400-hs100-s2500-20260902/configs/02_task_vector_merge.yaml",
+      "source_sha256": "cb6f7b5e7204291cc5036c14936ab1af9aec667e3235a286867e4dd1dcfc5fa6",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/qwen/configs/03_h400_stage_a_1000steps.yaml",
+      "published_sha256": "9e2573ed3601068c8781a03ddaa1aaa30dfa4f8207fb96d0234d9c014f8f6bcd",
+      "source": "kubeflow-training-snippets/downloaded_models/qwen35-27b-v28cl-9b-recipe-h400-hs100-s2500-20260902/configs/03_h400_stage_a_1000steps.yaml",
+      "source_sha256": "9e2573ed3601068c8781a03ddaa1aaa30dfa4f8207fb96d0234d9c014f8f6bcd",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/qwen/configs/04_h300_identity_acquisition_1000steps.yaml",
+      "published_sha256": "fb86cb9706fd839393c268ca8e11fde2489322d76da5ea7817712d59e1dff0fe",
+      "source": "kubeflow-training-snippets/downloaded_models/qwen35-27b-v28cl-9b-recipe-h400-hs100-s2500-20260902/configs/04_h300_identity_acquisition_1000steps.yaml",
+      "source_sha256": "fb86cb9706fd839393c268ca8e11fde2489322d76da5ea7817712d59e1dff0fe",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/qwen/configs/05_h400_hs100_scaleup_2500steps.yaml",
+      "published_sha256": "08797a3950e6024f5b2b04b04f5a9092e71b3e49968ef2a8e418920c6fc017a8",
+      "source": "kubeflow-training-snippets/downloaded_models/qwen35-27b-v28cl-9b-recipe-h400-hs100-s2500-20260902/configs/05_h400_hs100_scaleup_2500steps.yaml",
+      "source_sha256": "08797a3950e6024f5b2b04b04f5a9092e71b3e49968ef2a8e418920c6fc017a8",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/qwen/configs/06_final_hf_conversion.yaml",
+      "published_sha256": "69e65cf78e57e14008a4eb49d2c2d3f4845ffa6b16ae924db9d775efba815b9f",
+      "source": "kubeflow-training-snippets/downloaded_models/qwen35-27b-v28cl-9b-recipe-h400-hs100-s2500-20260902/configs/06_final_hf_conversion.yaml",
+      "source_sha256": "69e65cf78e57e14008a4eb49d2c2d3f4845ffa6b16ae924db9d775efba815b9f",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/qwen/reports/BENCHMARK_GUIDE.md",
+      "published_sha256": "4abf515c1be13f9521646c45a5adf8789ee6e52918d44a417e0ddbb1a5eee360",
+      "source": "kubeflow-training-snippets/downloaded_models/qwen35-27b-v28cl-9b-recipe-h400-hs100-s2500-20260902/reports/BENCHMARK_GUIDE.md",
+      "source_sha256": "4abf515c1be13f9521646c45a5adf8789ee6e52918d44a417e0ddbb1a5eee360",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/qwen/reports/DETAILED_SCORE_REPORT.md",
+      "published_sha256": "4d494621a16adc09ce2cb018dc28ad68bf695a881054b6e97637bf81bb0ddc53",
+      "source": "kubeflow-training-snippets/downloaded_models/qwen35-27b-v28cl-9b-recipe-h400-hs100-s2500-20260902/reports/DETAILED_SCORE_REPORT.md",
+      "source_sha256": "4d494621a16adc09ce2cb018dc28ad68bf695a881054b6e97637bf81bb0ddc53",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/qwen/reports/EVALUATION_RESULTS.csv",
+      "published_sha256": "e471bb24e95c836dc192644120d4975819d971956b34263f71e7f3e385231194",
+      "source": "kubeflow-training-snippets/downloaded_models/qwen35-27b-v28cl-9b-recipe-h400-hs100-s2500-20260902/reports/EVALUATION_RESULTS.csv",
+      "source_sha256": "e471bb24e95c836dc192644120d4975819d971956b34263f71e7f3e385231194",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/qwen/reports/EVALUATION_RESULTS.json",
+      "published_sha256": "298dc65c788fe14f098cdef91cf9a30c829424a59e42a985411927cbdf7418fe",
+      "source": "kubeflow-training-snippets/downloaded_models/qwen35-27b-v28cl-9b-recipe-h400-hs100-s2500-20260902/reports/EVALUATION_RESULTS.json",
+      "source_sha256": "298dc65c788fe14f098cdef91cf9a30c829424a59e42a985411927cbdf7418fe",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/qwen/reproduction/generate_performance_chart.py",
+      "published_sha256": "8503885fa08c62b8d38222187d0aee8a95af1e079c3c00ed848a379d9134beac",
+      "source": "kubeflow-training-snippets/downloaded_models/qwen35-27b-v28cl-9b-recipe-h400-hs100-s2500-20260902/reproduction/generate_performance_chart.py",
+      "source_sha256": "8503885fa08c62b8d38222187d0aee8a95af1e079c3c00ed848a379d9134beac",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/qwen/reproduction/generate_report.py",
+      "published_sha256": "0ae6119c18914823decc143a7c61f44fdd54de6d758f6b6bafce14f715f99c79",
+      "source": "kubeflow-training-snippets/downloaded_models/qwen35-27b-v28cl-9b-recipe-h400-hs100-s2500-20260902/reproduction/generate_report.py",
+      "source_sha256": "0ae6119c18914823decc143a7c61f44fdd54de6d758f6b6bafce14f715f99c79",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/qwen/reproduction/package_hf_release_v2.py",
+      "published_sha256": "4651b9a85c38c8f8085775d244b8b34d413858046778d0c696c67871fedd71d1",
+      "source": "kubeflow-training-snippets/downloaded_models/qwen35-27b-v28cl-9b-recipe-h400-hs100-s2500-20260902/reproduction/package_hf_release_v2.py",
+      "source_sha256": "4651b9a85c38c8f8085775d244b8b34d413858046778d0c696c67871fedd71d1",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/qwen/reproduction/run_end_to_end.sh",
+      "published_sha256": "b97fff2a802cc06513e27ce73ef5e91e5f5f591c50fa8ffd0b3dfd7692217eb7",
+      "source": "kubeflow-training-snippets/downloaded_models/qwen35-27b-v28cl-9b-recipe-h400-hs100-s2500-20260902/reproduction/run_end_to_end.sh",
+      "source_sha256": "b97fff2a802cc06513e27ce73ef5e91e5f5f591c50fa8ffd0b3dfd7692217eb7",
+      "modified": false
+    },
+    {
+      "path": "training/large_models/qwen/reproduction/run_evaluation_gates.sh",
+      "published_sha256": "28b417b0bcff0c77265b24937e10bac66a38bdd95f24a5f7f6e1224c16e1e9c2",
+      "source": "kubeflow-training-snippets/downloaded_models/qwen35-27b-v28cl-9b-recipe-h400-hs100-s2500-20260902/reproduction/run_evaluation_gates.sh",
+      "source_sha256": "28b417b0bcff0c77265b24937e10bac66a38bdd95f24a5f7f6e1224c16e1e9c2",
+      "modified": false
+    },
+    {
+      "path": "verification.json",
+      "published_sha256": "280db2c9f437ba467718502ab086e4302a2daf0e273107b697c1e59d0bd9dbbe",
+      "source": "haechi_runner/verification.json",
+      "source_sha256": "280db2c9f437ba467718502ab086e4302a2daf0e273107b697c1e59d0bd9dbbe",
+      "modified": false
+    }
+  ]
+}
