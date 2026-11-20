@@ -1,0 +1,56 @@
+{
+  "verified_at": "2026-11-13T17:32:11.449656+09:00",
+  "gpu": {
+    "physical_index": 3,
+    "name": "NVIDIA A100-SXM4-80GB",
+    "dtype": "bfloat16"
+  },
+  "generation": {
+    "max_new_tokens": 32,
+    "thinking": false
+  },
+  "models": {
+    "qwen": {
+      "repo": "KETI-NLP/Qwen3.5-KETI-HAECHI-27B",
+      "revision": "259830921a2f45322018c496b123ce075511286e",
+      "safetensors_sha256": "6f4b2da2ba9378603469564d3022f067b6c6c04c558fdcd7cd39399b0c677525"
+    },
+    "hyperclova": {
+      "repo": "KETI-NLP/HyperCLOVA-X-KETI-HAECHI-32B",
+      "revision": "776bf4ac7207f47f171a00b81ac4f161880f156d",
+      "safetensors_sha256_checks_passed": 29
+    }
+  },
+  "checks": [
+    {
+      "model": "qwen",
+      "input": "image",
+      "answer": "경주 첨성대",
+      "exit_code": 0,
+      "log": "verify-qwen-image.log"
+    },
+    {
+      "model": "qwen",
+      "input": "text",
+      "answer": "서울",
+      "exit_code": 0,
+      "log": "verify-qwen-text.log"
+    },
+    {
+      "model": "hyperclova",
+      "input": "image",
+      "answer": "경복궁 경회루",
+      "exit_code": 0,
+      "log": "verify-hyperclova-image.log"
+    },
+    {
+      "model": "hyperclova",
+      "input": "text",
+      "answer": "서울특별시",
+      "exit_code": 0,
+      "log": "verify-hyperclova-text.log"
+    }
+  ],
+  "dependency_checks": "both pip check passed",
+  "download_cli": "both exit code 0 after completing downloads"
+}
