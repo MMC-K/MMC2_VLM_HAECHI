@@ -403,3 +403,40 @@ def collect_simulation_pair(roots: list[str], suite: str, domain: str) -> dict[s
         - float(left_map[item].get("reward_info", {}).get("reward", 0)),
     )
     return {"base": final_assistant(left_map[key]), "tuned": final_assistant(right_map[key])}
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--model", choices=sorted(MODELS), required=True)
+    parser.add_argument("--output", required=True, type=Path)
+    args = parser.parse_args()
+    spec = MODELS[args.model]
+
+    data: dict[str, Any] = {"model": args.model, "labels": spec["labels"]}
+    data["mammoth"] = {}
+    for source in MAMMOTH:
+        data["mammoth"][source] = choose_pair(
+            read_jsonl(f"{spec['mammoth'][0]}/{source}/predictions.jsonl"),
+            read_jsonl(f"{spec['mammoth'][1]}/{source}/predictions.jsonl"),
+        )
+    data["cultural_focus"] = collect_cultural(spec["cultural"])
+    data["target"] = {}
+    for label, relative in TARGET.items():
+        data["target"][label] = choose_pair(
+            read_jsonl(f"{spec['target'][0]}/{relative}"),
+            read_jsonl(f"{spec['target'][1]}/{relative}"),
+        )
+    data["general_vl"] = collect_vl(spec["vl"])
+    data["opencompass"] = collect_opencompass(spec["opencompass"])
+    data["tau2"] = {
+        domain: collect_simulation_pair(spec["tau2"], "tau2", domain)
+        for domain in ("airline", "retail", "telecom")
+    }
+    data["tau3"] = {
+        domain: collect_simulation_pair(spec["tau3"], "tau3", domain)
+        for domain in ("airline", "retail", "telecom", "banking_knowledge")
+    }
+
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(args.output)
