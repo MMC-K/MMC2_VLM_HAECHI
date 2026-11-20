@@ -150,3 +150,10 @@ def read_jsonl(path: str) -> list[dict[str, Any]]:
 
 def keyed(rows: Iterable[dict[str, Any]]) -> dict[str, dict[str, Any]]:
     return {str(row.get("sample_id", row.get("id", row.get("row_index")))): row for row in rows}
+
+
+def correctness(row: dict[str, Any]) -> float:
+    for key in ("exact", "normalized_exact", "choice_correct"):
+        if key in row:
+            return float(bool(row[key]))
+    return float(row.get("similarity", 0.0))
