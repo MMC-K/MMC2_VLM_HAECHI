@@ -328,3 +328,11 @@ def xlsx_rows(path: str) -> list[dict[str, str]]:
         {headers[index]: value for index, value in enumerate(row) if index < len(headers)}
         for row in table[1:]
     ]
+
+
+def compact_vl(row: dict[str, str]) -> dict[str, str]:
+    aliases = (
+        "index", "category", "l2-category", "question", "hint", "A", "B", "C", "D",
+        "answer", "prediction", "score", "judge", "res",
+    )
+    return {key: str(row[key])[:5000] for key in aliases if key in row and str(row[key]).strip()}
