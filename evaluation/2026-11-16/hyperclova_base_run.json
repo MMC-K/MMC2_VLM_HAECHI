@@ -1,0 +1,34 @@
+{
+  "model": "hyperclova",
+  "stage": "base",
+  "source": "/mnt/nfs5/byunggill/2026_llm_data_generation/__kubeflow-training-snippets/downloaded_models/HyperCLOVAX-SEED-Think-32B",
+  "runtime_and_processor": "/mnt/nfs5/byunggill/mmc2_year5/haechi_runner/models/hyperclova",
+  "torch": "2.9.1+cu128",
+  "transformers": "4.57.6",
+  "physical_gpu": 3,
+  "gpu_name": "NVIDIA A100-SXM4-80GB",
+  "load_seconds": 126.0128479001578,
+  "dtype": "bfloat16",
+  "thinking": false,
+  "sampling": false,
+  "max_image_edge": 512,
+  "min_pixels": 65536,
+  "max_pixels": 262144,
+  "cpu_threads": 8,
+  "budgets": {
+    "h400_direct": 64,
+    "h400_knowledge_image": 128,
+    "ocr": 128
+  },
+  "inputs_sha256": "21f6a6f83e20f07c9f334cce596102e2cbeca89d45f53dbae6e9853980a124f0",
+  "started": "2026-11-16T14:15:22.063310+09:00",
+  "status": "completed",
+  "config_sha256": "295fc5bb55dd771c0d341b8d990fdaa679890beebe1891c3ec5601d4df58c5b6",
+  "download_config_metadata": [
+    "a6cdfd3464d1b767259cad23e164eaf39d3e3960",
+    "6e0ff25e51f82d95ea8acea6f75466a9b0206684"
+  ],
+  "warmup_seconds": 1.4564394589979202,
+  "finished": "2026-11-16T14:29:33.934256+09:00",
+  "expected_count": 300
+}
