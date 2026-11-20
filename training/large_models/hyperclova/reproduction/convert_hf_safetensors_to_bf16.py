@@ -26,3 +26,16 @@ def weight_files(source: Path) -> list[Path]:
     if single.is_file():
         return [single]
     raise SystemExit(f"No safetensors weights found in {source}")
+
+
+def copy_metadata(source: Path, destination: Path) -> None:
+    for entry in sorted(source.iterdir()):
+        if entry.name.startswith("model") and entry.name.endswith(WEIGHT_SUFFIX):
+            continue
+        if entry.name == "model.safetensors.index.json":
+            continue
+        target = destination / entry.name
+        if entry.is_dir():
+            shutil.copytree(entry, target, dirs_exist_ok=True)
+        elif entry.is_file():
+            shutil.copy2(entry, target)
