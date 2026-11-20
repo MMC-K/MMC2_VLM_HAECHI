@@ -1,0 +1,93 @@
+#!/usr/bin/env python3
+"""Generate the complete official-vs-tuned Qwen3.5-27B benchmark report."""
+
+from __future__ import annotations
+
+import csv
+import io
+import json
+import os
+import subprocess
+from pathlib import Path
+from statistics import mean
+
+
+ROOT = Path(__file__).resolve().parent
+OUTPUT = ROOT / "reports/qwen35_27b_official_vs_v28cl_9b_recipe_full_20260902.md"
+JSON_OUTPUT = ROOT / "results/qwen35_27b_official_vs_v28cl_9b_recipe_full_20260902.json"
+CSV_OUTPUT = ROOT / "results/qwen35_27b_official_vs_v28cl_9b_recipe_full_20260902.csv"
+KUBECONFIG = os.environ.get(
+    "KUBECONFIG", str(ROOT.parent / "keti-airc-h200-128-kubeconfig.yaml")
+)
+NAMESPACE = "p-keti-airc-h200-128"
+POD = "upload-pod-san"
+CONTAINER = "uploader"
+
+BASE_LABEL = "Official Qwen3.5-27B"
+TUNED_LABEL = "27B v28cl + 9B heritage recipe"
+BASE_MODEL = "/data/workspace/post-training/outputs/qwen35-27b-official"
+TUNED_MODEL = "/data/workspace/post-training/outputs/qwen35-27b-v28cl-h400-hs100-scale2500-step2500-hf"
+
+OC_PATHS = {
+    "Core": (
+        "/data/workspace/eval_models/test/outputs/oc_all_q35-27b-official-20260901r2full/20260901_113253/summary/summary_20260901_113253.csv",
+        "/data/workspace/eval_models/test/outputs/oc_all_q35-27b-v28cl-hs25-20260902r1/20260902_082336/summary/summary_20260902_082336.csv",
+    ),
+    "Extra": (
+        "/data/workspace/eval_models/test/outputs/oc_extra_registered_q35-27b-official-20260901r2full/20260901_113255/summary/summary_20260901_113255.csv",
+        "/data/workspace/eval_models/test/outputs/oc_extra_registered_q35-27b-v28cl-hs25-20260902r1/20260902_082339/summary/summary_20260902_082339.csv",
+    ),
+    "Korean": (
+        "/data/workspace/eval_models/test/outputs/oc_korean_hf_q35-27b-official-20260901r2full/20260901_113257/summary/summary_20260901_113257.csv",
+        "/data/workspace/eval_models/test/outputs/oc_korean_hf_q35-27b-v28cl-hs25-20260902r1/20260902_082346/summary/summary_20260902_082346.csv",
+    ),
+}
+
+VL_RUNS = {
+    "base": (
+        "/data/workspace/eval_models/test/outputs/vlmeval-q35-27b-official-20260827/"
+        "qwen35-27b-official/T20260827-141946",
+        "qwen35-27b-official",
+    ),
+    "tuned": (
+        "/data/workspace/eval_models/test/outputs/vlmeval-q35-27b-v28cl-hs25-20260902r1/"
+        "qwen35-27b-v28cl-h400-hs100-scale2500/T20260902-082323",
+        "qwen35-27b-v28cl-h400-hs100-scale2500",
+    ),
+}
+
+MAMMOTH_ROOTS = (
+    "/data/workspace/eval_models/mammoth_six_eval/q35-27b-official-20260827",
+    "/data/workspace/eval_models/mammoth_six_eval/q35-27b-v28cl-hs25-20260902r1",
+)
+MAMMOTH_SOURCES = (
+    "heritage_multi_attr",
+    "heritage_reverse_mt",
+    "heritage_simple",
+    "ocr_font",
+    "ocr_outdoor",
+    "ocr_public_exec",
+)
+
+TITLE_ROOTS = (
+    "/data/workspace/eval_models/cultural_heritage_focus_eval/qwen35_27b_official_20260827/base/summary.json",
+    "/data/workspace/eval_models/cultural_heritage_focus_eval/q35-27b-v28cl-hs25-20260902r1/summary.json",
+)
+TARGET_ROOTS = (
+    "/data/workspace/eval_models/heritage_h400_hs100_model_compare/qwen35-27b-official-20260901/target_summary.json",
+    "/data/workspace/eval_models/heritage_h400_hs100_model_compare/qwen35-27b-v28cl-hs25-20260902r1/target_summary.json",
+)
+BFCL_ROOTS = (
+    "/data/workspace/eval_models/bfcl/runs/q35-27b-official-20260827/score",
+    "/data/workspace/eval_models/bfcl/runs/q35-27b-v28cl-hs25-20260902r1/score",
+)
+STATEFUL_ROOTS = (
+    "/data/workspace/eval_models/stateful_tool_axes/q35-27b-official-20260827",
+    "/data/workspace/eval_models/stateful_tool_axes/q35-27b-v28cl-hs25-20260902r1",
+)
+TAU3_ROOTS = (
+    "/data/workspace/eval_models/tau3_axes/q35-27b-official-20260901r2full",
+    "/data/workspace/eval_models/tau3_axes/q35-27b-v28cl-hs25-20260902r1-full",
+)
+
+
