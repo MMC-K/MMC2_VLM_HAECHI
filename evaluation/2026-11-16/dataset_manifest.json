@@ -1,0 +1,15 @@
+{
+  "created": "2026-11-16",
+  "counts": {
+    "h400_direct": 100,
+    "h400_knowledge_image": 100,
+    "ocr": 100
+  },
+  "max_image_edge": 512,
+  "h400_source": "/mnt/nfs5/byunggill/2026_llm_data_generation/__kubeflow-training-snippets/downloaded_models/h400_representative_100x4_20260904",
+  "ocr_source": "/mnt/nfs5/byunggill/2026_llm_data_generation/__kubeflow-training-snippets/korean_heritage_eval_package/datasets/korean_character_ocr_test_hf/data-00000-of-00001.arrow",
+  "ocr_source_description": "실외 문자 OCR 테스트에서 복원된 기존 간이 평가 100건",
+  "h400_limitations": "H400 공통 문화유산 100개. 학습 데이터와 개체·이미지 중복이 없다는 독립 검증은 수행하지 않음. 지식 질문에는 유산 명칭이 포함됨.",
+  "inputs_sha256": "21f6a6f83e20f07c9f334cce596102e2cbeca89d45f53dbae6e9853980a124f0",
+  "answers_sha256": "509c5e50b1118543b61790a34a1ba34127e194c24c38aeed30656e0856898227"
+}
