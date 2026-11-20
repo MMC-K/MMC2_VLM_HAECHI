@@ -351,3 +351,177 @@ def json_rows(rows, *, lower_is_better: bool = False):
             }
         )
     return result
+
+
+def main() -> None:
+    general_vl = vl_rows()
+    mammoth_exact = mammoth_rows("exact_accuracy")
+    mammoth_containment = mammoth_rows("target_containment")
+    mammoth_similarity = mammoth_rows("mean_similarity")
+    mammoth_cer = mammoth_rows("mean_cer", scale=1.0)
+    mammoth_line_recall = mammoth_rows("mean_line_recall")
+    cultural_title = title_rows()
+    target = target_rows()
+    opencompass = {
+        title: opencompass_rows(*paths) for title, paths in OC_PATHS.items()
+    }
+    bfcl = bfcl_rows()
+    toolsandbox = toolsandbox_rows()
+    tau2 = simulation_rows(
+        STATEFUL_ROOTS,
+        (("Tau2 airline", "tau2/airline"), ("Tau2 retail", "tau2/retail"), ("Tau2 telecom", "tau2/telecom")),
+    )
+    tau3 = simulation_rows(
+        TAU3_ROOTS,
+        (
+            ("Tau3 airline", "airline"),
+            ("Tau3 retail", "retail"),
+            ("Tau3 telecom", "telecom"),
+            ("Tau3 banking knowledge", "banking_knowledge"),
+        ),
+    )
+    summary = [
+        general_vl[0],
+        mammoth_exact[0],
+        mammoth_exact[1],
+        next(row for row in mammoth_exact if row[0] == "heritage_simple"),
+        next(row for row in target if row[0] == "H400 direct exact"),
+        next(row for row in target if row[0] == "H400 hard choice"),
+        opencompass["Core"][0],
+        opencompass["Extra"][0],
+        opencompass["Korean"][0],
+        bfcl[0],
+        tau2[-2],
+        tau3[-2],
+    ]
+    sections = [
+        ("general_multimodal", "General multimodal", general_vl, False, "%"),
+        ("mammoth_exact", "Mammoth exact accuracy", mammoth_exact, False, "%"),
+        ("mammoth_containment", "Mammoth target containment", mammoth_containment, False, "%"),
+        ("mammoth_similarity", "Mammoth normalized similarity", mammoth_similarity, False, "%"),
+        ("mammoth_cer", "Mammoth OCR CER", mammoth_cer, True, ""),
+        ("mammoth_line_recall", "Mammoth OCR line recall", mammoth_line_recall, False, "%"),
+        ("cultural_title", "Cultural heritage title-clean", cultural_title, False, "%"),
+        ("heritage_targets", "H400/HS100 target gates", target, False, "%"),
+        ("bfcl", "BFCL V4", bfcl, False, "%"),
+        ("toolsandbox", "ToolSandbox", toolsandbox, False, ""),
+        ("tau2", "Tau2", tau2, False, "%"),
+        ("tau3", "Tau3", tau3, False, "%"),
+    ]
+    sections[8:8] = [
+        (f"opencompass_{name.lower()}", f"OpenCompass {name}", rows, False, "%")
+        for name, rows in opencompass.items()
+    ]
+
+    ranked = []
+    for _, title, rows, lower_is_better, unit in sections:
+        for name, base, tuned in rows:
+            if base is None or tuned is None:
+                continue
+            delta = tuned - base
+            benefit = -delta if lower_is_better else delta
+            ranked.append((benefit, title, name, delta, unit, lower_is_better))
+    top_gains = sorted(ranked, reverse=True)[:10]
+    top_regressions = sorted(ranked)[:10]
+
+    lines = [
+        "# Qwen3.5-27B Official Base vs v28cl + 9B Heritage Recipe",
+        "",
+        "Comparison generated: 2026-09-02 (Asia/Seoul).",
+        "",
+        "## Contract",
+        "",
+        f"- Official base: `{BASE_MODEL}` (untouched official `Qwen/Qwen3.5-27B` weights).",
+        f"- Tuned: `{TUNED_MODEL}`.",
+        "- All deltas are tuned minus official base. Percentage metrics use absolute percentage points.",
+        "- OpenCompass uses the same API, thinking, stop-token, parser, and dataset configuration for both models.",
+        "- Tau3 uses four trials per task and identical BM25/tool simulation settings.",
+        "- The tuned lineage follows the successful 9B heritage recipe: v28cl parent, specialist/task-vector transfer, H400/H300 acquisition, then H400/HS100 scale-up.",
+        "",
+        "## Executive summary",
+        "",
+        *comparison_table(summary),
+        "",
+    ]
+
+    for _, title, rows, lower_is_better, unit in sections:
+        section(
+            lines,
+            title,
+            rows,
+            digits=4 if title in ("Mammoth OCR CER", "ToolSandbox") else 2,
+            unit=unit,
+            lower_is_better=lower_is_better,
+        )
+
+    lines.extend(
+        (
+            "## Largest improvements",
+            "",
+            *(
+                f"- {title} / {name}: {delta:+.2f}{' pp' if unit == '%' else ''}"
+                for _, title, name, delta, unit, _ in top_gains
+            ),
+            "",
+            "## Largest regressions",
+            "",
+            *(
+                f"- {title} / {name}: {delta:+.2f}{' pp' if unit == '%' else ''}"
+                for _, title, name, delta, unit, _ in top_regressions
+            ),
+            "",
+            "## Reading the result",
+            "",
+            "- H400 direct exact measures open-ended canonical-name retrieval; H400 hard measures closed-set choice. A large gap between them indicates recognition/discrimination is stronger than exact name generation.",
+            "- HS100 train, unseen, and Simple distinguish memorization, held-out view generalization, and transfer to a separate simple-identification population. They are not interchangeable with Mammoth Heritage Simple.",
+            "- Mammoth exact is strict. Containment and normalized similarity show whether an answer is usable but differs in annotation, spacing, aliases, or added explanation.",
+            "- OCR CER is the only lower-is-better metric in this report; all other deltas are better when positive.",
+            "- OpenCompass, General-VL, BFCL, ToolSandbox, Tau2, and Tau3 are retention gates. Improvements in heritage should be interpreted together with these broad-capability deltas.",
+            "",
+            "## Source locations",
+            "",
+            "- Official OpenCompass: `/data/workspace/eval_models/test/outputs/*q35-27b-official-20260901r2full`",
+            "- Tuned OpenCompass: `/data/workspace/eval_models/test/outputs/*q35-27b-v28cl-hs25-20260902r1`",
+            "- Official Tau3: `/data/workspace/eval_models/tau3_axes/q35-27b-official-20260901r2full`",
+            "- Tuned Tau3: `/data/workspace/eval_models/tau3_axes/q35-27b-v28cl-hs25-20260902r1-full`",
+            "",
+        )
+    )
+
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    OUTPUT.write_text("\n".join(lines), encoding="utf-8")
+    JSON_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    JSON_OUTPUT.write_text(
+        json.dumps(
+            {
+                "generated_at": "2026-09-02 Asia/Seoul",
+                "official_base": {"label": BASE_LABEL, "model": BASE_MODEL},
+                "tuned": {"label": TUNED_LABEL, "model": TUNED_MODEL},
+                "sections": {
+                    key: {
+                        "title": title,
+                        "unit": unit,
+                        "rows": json_rows(rows, lower_is_better=lower_is_better),
+                    }
+                    for key, title, rows, lower_is_better, unit in sections
+                },
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    CSV_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    with CSV_OUTPUT.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.writer(handle)
+        writer.writerow(
+            ("section", "benchmark", "official_base", "tuned", "delta", "unit", "higher_is_better")
+        )
+        for _, title, rows, lower_is_better, unit in sections:
+            for name, base, tuned in rows:
+                delta = None if base is None or tuned is None else tuned - base
+                writer.writerow((title, name, base, tuned, delta, unit, not lower_is_better))
+    print(OUTPUT)
+    print(JSON_OUTPUT)
+    print(CSV_OUTPUT)
