@@ -1,0 +1,61 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: convert-q35-27b-v28cl-h400hs25
+  namespace: p-keti-airc-h200-128
+spec:
+  backoffLimit: 1
+  template:
+    metadata:
+      annotations:
+        sidecar.istio.io/inject: "false"
+    spec:
+      restartPolicy: Never
+      nodeSelector:
+        mlx.navercorp.com/zone: private-h200-keti-airc-0
+      imagePullSecrets:
+        - name: ketiair-registry-secret
+      containers:
+        - name: converter
+          image: ketiair.com:10004/2.8.0-cuda12.6-cudnn9-long-san-ib-fla-cu126-20260610
+          imagePullPolicy: IfNotPresent
+          workingDir: /data/workspace
+          command: ["bash", "-lc"]
+          args:
+            - |
+              set -euo pipefail
+              SOURCE=/data/workspace/post-training/outputs/qwen35-27b-v28cl-h400-hs100-scale2500-v1-16n
+              OUTPUT=/data/workspace/post-training/outputs/qwen35-27b-v28cl-h400-hs100-scale2500-step2500-hf
+              BASE=/data/workspace/post-training/outputs/qwen35-27b-v28cl-h300-idacq-step500-hf
+              SCRIPT=/data/workspace/eval_models/scripts/merge_multimodal_fsdp_hf.py
+
+              test -f "${SCRIPT}"
+              test -f "${BASE}/config.json"
+              test -f "${BASE}/model.safetensors" || \
+                test -f "${BASE}/model.safetensors.index.json"
+              test -f "${SOURCE}/checkpoint-2500/trainer_state.json"
+              test -d "${SOURCE}/checkpoint-2500/pytorch_model_fsdp_0"
+
+              python "${SCRIPT}" \
+                --source "${SOURCE}" \
+                --output "${OUTPUT}" \
+                --base-model "${BASE}" \
+                --checkpoint-step 2500
+
+              test -f "${OUTPUT}/config.json"
+              test -f "${OUTPUT}/model.safetensors" || \
+                test -f "${OUTPUT}/model.safetensors.index.json"
+          resources:
+            requests:
+              cpu: "32"
+              memory: 512Gi
+            limits:
+              cpu: "64"
+              memory: 900Gi
+          volumeMounts:
+            - name: ddn
+              mountPath: /data
+      volumes:
+        - name: ddn
+          persistentVolumeClaim:
+            claimName: ddn-pvc-test-san1
