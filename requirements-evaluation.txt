@@ -1,0 +1,4 @@
+# Install inside the matching model environment.
+matplotlib
+Pillow
+pyarrow
