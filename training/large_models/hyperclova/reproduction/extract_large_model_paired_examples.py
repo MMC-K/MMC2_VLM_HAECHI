@@ -143,3 +143,6 @@ VL_DATASETS = [
 ]
 
 
+def read_jsonl(path: str) -> list[dict[str, Any]]:
+    with open(path, encoding="utf-8") as stream:
+        return [json.loads(line) for line in stream if line.strip()]
