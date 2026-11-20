@@ -289,3 +289,42 @@ def collect_opencompass(roots: dict[str, list[str]]) -> dict[str, Any]:
                 "tuned": compact_oc(tuned[key]),
             }
     return output
+
+
+def xlsx_rows(path: str) -> list[dict[str, str]]:
+    namespace = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
+    with zipfile.ZipFile(path) as archive:
+        shared: list[str] = []
+        if "xl/sharedStrings.xml" in archive.namelist():
+            root = ElementTree.fromstring(archive.read("xl/sharedStrings.xml"))
+            for item in root.findall(f"{namespace}si"):
+                shared.append("".join(node.text or "" for node in item.iter(f"{namespace}t")))
+        sheet = ElementTree.fromstring(archive.read("xl/worksheets/sheet1.xml"))
+    table: list[list[str]] = []
+    for row in sheet.iter(f"{namespace}row"):
+        values: dict[int, str] = {}
+        for cell in row.findall(f"{namespace}c"):
+            reference = cell.attrib.get("r", "A1")
+            letters = re.match(r"[A-Z]+", reference).group(0)
+            column = 0
+            for letter in letters:
+                column = column * 26 + ord(letter) - ord("A") + 1
+            column -= 1
+            kind = cell.attrib.get("t")
+            if kind == "inlineStr":
+                value = "".join(node.text or "" for node in cell.iter(f"{namespace}t"))
+            else:
+                node = cell.find(f"{namespace}v")
+                value = "" if node is None else (node.text or "")
+                if kind == "s" and value:
+                    value = shared[int(value)]
+            values[column] = value
+        if values:
+            table.append([values.get(index, "") for index in range(max(values) + 1)])
+    if not table:
+        return []
+    headers = table[0]
+    return [
+        {headers[index]: value for index, value in enumerate(row) if index < len(headers)}
+        for row in table[1:]
+    ]
