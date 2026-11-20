@@ -230,3 +230,13 @@ def collect_cultural(roots: list[str]) -> dict[str, Any]:
         if left and right:
             result[label] = choose_pair(left, right)
     return result
+
+
+def flatten_prompt(value: Any) -> str:
+    if isinstance(value, str):
+        return value
+    if isinstance(value, list):
+        return "\n".join(flatten_prompt(item) for item in value)
+    if isinstance(value, dict):
+        return str(value.get("prompt", value.get("content", value)))
+    return str(value)
