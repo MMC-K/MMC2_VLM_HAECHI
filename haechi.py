@@ -121,3 +121,15 @@ def run(args, directory):
                 )
                 output = output[:, inputs['input_ids'].shape[1]:]
     print(processor.batch_decode(output, skip_special_tokens=True)[0].strip())
+
+
+def main():
+    args = parser().parse_args()
+    directory = (args.model_dir or ROOT / 'models' / args.model).resolve()
+    if args.command == 'download':
+        from huggingface_hub import snapshot_download
+        # Entire repo: weights, processor, custom code and sample images.
+        snapshot_download(repo_id=MODELS[args.model], revision=args.revision, local_dir=str(directory))
+        print(directory)
+    else:
+        run(args, directory)
