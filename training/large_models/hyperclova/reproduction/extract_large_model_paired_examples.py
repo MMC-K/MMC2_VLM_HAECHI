@@ -191,3 +191,22 @@ def compact(row: dict[str, Any]) -> dict[str, Any]:
         except Exception as exc:  # source offsets are provenance aids, not required data
             result["source_record_error"] = repr(exc)
     return result
+
+
+def choose_pair(base_rows: list[dict[str, Any]], tuned_rows: list[dict[str, Any]]) -> dict[str, Any]:
+    base = keyed(base_rows)
+    tuned = keyed(tuned_rows)
+    common = sorted(base.keys() & tuned.keys())
+    if not common:
+        raise RuntimeError("No paired sample IDs")
+    ranked = sorted(
+        common,
+        key=lambda key: (
+            correctness(tuned[key]) - correctness(base[key]),
+            correctness(tuned[key]),
+            base[key].get("similarity", 0.0) != tuned[key].get("similarity", 0.0),
+        ),
+        reverse=True,
+    )
+    key = ranked[0]
+    return {"pair_key": key, "base": compact(base[key]), "tuned": compact(tuned[key])}
