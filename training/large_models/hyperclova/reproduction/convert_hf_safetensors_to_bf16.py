@@ -39,3 +39,18 @@ def copy_metadata(source: Path, destination: Path) -> None:
             shutil.copytree(entry, target, dirs_exist_ok=True)
         elif entry.is_file():
             shutil.copy2(entry, target)
+
+
+def convert_shard(source: Path, destination: Path) -> tuple[int, int]:
+    tensors: dict[str, torch.Tensor] = {}
+    converted = 0
+    with safe_open(source, framework="pt", device="cpu") as handle:
+        metadata = handle.metadata()
+        for key in handle.keys():
+            tensor = handle.get_tensor(key)
+            if tensor.is_floating_point() and tensor.dtype != torch.bfloat16:
+                tensor = tensor.to(torch.bfloat16)
+                converted += 1
+            tensors[key] = tensor.contiguous()
+    save_file(tensors, destination, metadata=metadata)
+    return len(tensors), converted
