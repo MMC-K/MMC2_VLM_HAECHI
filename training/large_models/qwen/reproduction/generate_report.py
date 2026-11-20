@@ -137,3 +137,27 @@ def number(value: str):
 
 def fmt(value: float | None, digits: int = 2) -> str:
     return "-" if value is None else f"{value:.{digits}f}"
+
+
+def comparison_table(
+    rows: list[tuple[str, float | None, float | None]],
+    *,
+    digits: int = 2,
+    unit: str = "%",
+    delta_unit: str | None = None,
+    lower_is_better: bool = False,
+) -> list[str]:
+    lines = [
+        "| Benchmark | Official Base | Tuned | Delta | Direction |",
+        "|---|---:|---:|---:|:---:|",
+    ]
+    direction = "lower" if lower_is_better else "higher"
+    if delta_unit is None:
+        delta_unit = " pp" if unit == "%" else unit
+    for name, base, tuned in rows:
+        change = None if base is None or tuned is None else tuned - base
+        lines.append(
+            f"| {name} | {fmt(base, digits)}{unit} | {fmt(tuned, digits)}{unit} | "
+            f"{('-' if change is None else f'{change:+.{digits}f}')}{delta_unit} | {direction} |"
+        )
+    return lines
