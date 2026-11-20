@@ -147,3 +147,7 @@ def main() -> None:
         json.dumps(provenance, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
     print(json.dumps(provenance, indent=2, ensure_ascii=False), flush=True)
+
+
+if __name__ == "__main__":
+    main()
