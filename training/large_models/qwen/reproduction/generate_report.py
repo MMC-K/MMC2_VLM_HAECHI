@@ -174,3 +174,19 @@ def section(
 
 def csv_rows(path: str) -> list[dict[str, str]]:
     return list(csv.DictReader(io.StringIO(remote_text(path))))
+
+
+def opencompass_rows(base_path: str, tuned_path: str):
+    def parse(path: str):
+        scores = []
+        for row in csv.reader(io.StringIO(remote_text(path))):
+            if not row or row[0] == "dataset" or not row[0].strip():
+                continue
+            score = number(row[-1])
+            if score is not None:
+                scores.append((row[0].strip(), score))
+        return scores
+
+    base = parse(base_path)
+    tuned = dict(parse(tuned_path))
+    return [(name, score, tuned.get(name)) for name, score in base]
