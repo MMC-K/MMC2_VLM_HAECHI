@@ -245,3 +245,14 @@ def flatten_prompt(value: Any) -> str:
 def oc_records(path: str) -> dict[str, dict[str, Any]]:
     data = json.load(open(path, encoding="utf-8"))
     return {str(key): value for key, value in data.items()}
+
+
+def compact_oc(row: dict[str, Any]) -> dict[str, Any]:
+    result = {
+        "prompt": flatten_prompt(row.get("origin_prompt", row.get("prompt", "")))[:3000],
+        "prediction": str(row.get("prediction", ""))[:5000],
+    }
+    for key in ("gold", "reference", "answer", "label"):
+        if key in row:
+            result[key] = row[key]
+    return result
