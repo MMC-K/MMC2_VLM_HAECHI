@@ -385,3 +385,21 @@ def final_assistant(simulation: dict[str, Any]) -> dict[str, Any]:
         "tool_calls": last.get("tool_calls"),
         "termination_reason": simulation.get("termination_reason"),
     }
+
+
+def collect_simulation_pair(roots: list[str], suite: str, domain: str) -> dict[str, Any]:
+    pattern = f"{roots[0]}/{suite}/{domain}/**/results.json" if suite == "tau2" else f"{roots[0]}/{domain}/**/results.json"
+    tuned_pattern = f"{roots[1]}/{suite}/{domain}/**/results.json" if suite == "tau2" else f"{roots[1]}/{domain}/**/results.json"
+    left_path = glob.glob(pattern, recursive=True)[0]
+    right_path = glob.glob(tuned_pattern, recursive=True)[0]
+    left = json.load(open(left_path, encoding="utf-8"))["simulations"]
+    right = json.load(open(right_path, encoding="utf-8"))["simulations"]
+    left_map = {str(row.get("task_id")): row for row in left}
+    right_map = {str(row.get("task_id")): row for row in right}
+    common = sorted(left_map.keys() & right_map.keys())
+    key = max(
+        common,
+        key=lambda item: float(right_map[item].get("reward_info", {}).get("reward", 0))
+        - float(left_map[item].get("reward_info", {}).get("reward", 0)),
+    )
+    return {"base": final_assistant(left_map[key]), "tuned": final_assistant(right_map[key])}
