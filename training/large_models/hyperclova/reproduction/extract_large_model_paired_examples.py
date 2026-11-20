@@ -240,3 +240,8 @@ def flatten_prompt(value: Any) -> str:
     if isinstance(value, dict):
         return str(value.get("prompt", value.get("content", value)))
     return str(value)
+
+
+def oc_records(path: str) -> dict[str, dict[str, Any]]:
+    data = json.load(open(path, encoding="utf-8"))
+    return {str(key): value for key, value in data.items()}
