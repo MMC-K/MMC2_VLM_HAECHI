@@ -237,3 +237,23 @@ def mammoth_rows(metric: str, scale: float = 100.0):
         ("OCR macro (3)", mean(row[1] for row in rows[3:]), mean(row[2] for row in rows[3:])),
         *rows,
     ]
+
+
+def title_rows():
+    base = remote_json(TITLE_ROOTS[0])["groups"]
+    tuned = remote_json(TITLE_ROOTS[1])["groups"]
+    rows = []
+    for group in ("overall", "identity", "view_caption", "national_treasure", "other"):
+        if group not in base or group not in tuned:
+            continue
+        for metric, label in (
+            ("exact_accuracy", "exact"),
+            ("containment_accuracy", "containment"),
+            ("mean_similarity", "similarity"),
+            ("identity_any_exact", "identity-any exact"),
+        ):
+            if metric in base[group] and metric in tuned[group]:
+                rows.append(
+                    (f"{group} / {label}", 100 * base[group][metric], 100 * tuned[group][metric])
+                )
+    return rows
