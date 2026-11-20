@@ -170,3 +170,7 @@ def section(
     **kwargs,
 ) -> None:
     lines.extend((f"## {title}", "", *comparison_table(rows, **kwargs), ""))
+
+
+def csv_rows(path: str) -> list[dict[str, str]]:
+    return list(csv.DictReader(io.StringIO(remote_text(path))))
