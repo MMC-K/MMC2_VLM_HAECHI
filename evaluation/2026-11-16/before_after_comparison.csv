@@ -1,0 +1,25 @@
+﻿model,task,metric,n,before,after,delta,unit
+qwen,h400_direct,strict_exact,100,0.0,28.000000000000004,28.000000000000004,percent; delta in percentage points
+qwen,h400_direct,normalized_exact,100,0.0,28.000000000000004,28.000000000000004,percent; delta in percentage points
+qwen,h400_direct,similarity,100,20.77671571962311,47.2195320030241,26.442816283400994,percent; delta in percentage points
+qwen,h400_direct,cer,100,117.35611510791367,59.71223021582733,-57.64388489208633,percent; delta in percentage points
+qwen,h400_knowledge_image,strict_exact,100,0.0,0.0,0.0,percent; delta in percentage points
+qwen,h400_knowledge_image,normalized_exact,100,0.0,0.0,0.0,percent; delta in percentage points
+qwen,h400_knowledge_image,similarity,100,21.32550862147778,41.19777789196142,19.872269270483642,percent; delta in percentage points
+qwen,h400_knowledge_image,cer,100,360.1018010963195,87.39232576350823,-272.7094753328113,percent; delta in percentage points
+qwen,ocr,strict_exact,100,34.0,41.0,6.999999999999995,percent; delta in percentage points
+qwen,ocr,normalized_exact,100,54.0,56.00000000000001,2.0000000000000018,percent; delta in percentage points
+qwen,ocr,similarity,100,81.4617268267708,82.25586707873423,0.7941402519634266,percent; delta in percentage points
+qwen,ocr,cer,100,62.55924170616114,44.66824644549763,-17.890995260663512,percent; delta in percentage points
+hyperclova,h400_direct,strict_exact,100,4.0,63.0,59.0,percent; delta in percentage points
+hyperclova,h400_direct,normalized_exact,100,5.0,63.0,57.99999999999999,percent; delta in percentage points
+hyperclova,h400_direct,similarity,100,23.777867840001676,73.63122352071194,49.853355680710266,percent; delta in percentage points
+hyperclova,h400_direct,cer,100,155.57553956834533,27.428057553956837,-128.14748201438852,percent; delta in percentage points
+hyperclova,h400_knowledge_image,strict_exact,100,0.0,3.0,3.0,percent; delta in percentage points
+hyperclova,h400_knowledge_image,normalized_exact,100,0.0,3.0,3.0,percent; delta in percentage points
+hyperclova,h400_knowledge_image,similarity,100,9.008624218208519,48.89335082177259,39.88472660356407,percent; delta in percentage points
+hyperclova,h400_knowledge_image,cer,100,964.2129992169146,68.55912294440094,-895.6538762725137,percent; delta in percentage points
+hyperclova,ocr,strict_exact,100,42.0,41.0,-1.0000000000000009,percent; delta in percentage points
+hyperclova,ocr,normalized_exact,100,54.0,56.00000000000001,2.0000000000000018,percent; delta in percentage points
+hyperclova,ocr,similarity,100,81.74529349378166,83.00611886666586,1.2608253728842,percent; delta in percentage points
+hyperclova,ocr,cer,100,66.35071090047393,58.53080568720379,-7.81990521327014,percent; delta in percentage points
