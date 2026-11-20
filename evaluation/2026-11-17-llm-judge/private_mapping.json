@@ -1,0 +1,2402 @@
+[
+  {
+    "blind_id": "7520f59e41fe4b9b8fe6",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-001-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "a90970dd3fa814a5ca53",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-002-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "2ffb44a6d1360b9a0891",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-003-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "67f79b4059c2acd4e7d1",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-004-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "fd38cdde0806f58c92a0",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-005-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "333ef5a42713bc329a47",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-006-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "d16e746390263f67059e",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-007-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "c5e658a3eebf50f91a81",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-008-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "8ec3db1ef744e926af33",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-009-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "e01dac9d8119471ac596",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-010-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "46254d6d337758670266",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-011-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "d7c908057d1169e03fdf",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-012-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "03c7d08f4b20849213ff",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-013-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "6f09cd6008ab8529e40b",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-014-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "ea66f69aecc70475bb4b",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-015-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "b0ec6dcb479b864668b5",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-016-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "8fb25d144d4848c481a5",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-017-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "2dd2a45b6fdf77ae098d",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-018-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "81b20f53de410fc8712d",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-019-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "b6803fc0561a77469281",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-020-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "13e3799742fa7a52794a",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-021-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "dd5395801b388591e976",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-022-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "d0201561028fe8134d32",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-023-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "06b91b16f52cb1323a02",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-024-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "dff7d6a1c5a49ca67b63",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-025-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "cfa29d8912ff73f82488",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-026-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "56a776f255464ab31e5c",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-027-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "83516a43316c1559043a",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-028-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "ae7a3bd63197e4e318b2",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-029-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "442296f0fa4ff1c0d6d1",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-030-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "e7a5f60485fc81d55649",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-031-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "55a89d6b06b2632173a0",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-032-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "54cff006c19616e66cee",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-033-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "974fb1774a3a1b76fc60",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-034-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "a66e062c71224b749914",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-035-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "b84ef2c599b9d7df1394",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-036-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "2838efd592db5efa2cd6",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-037-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "a36fc488bc1ffbb73301",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-038-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "348b011a43164faee528",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-039-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "ef8c1862d6b70efdf262",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-040-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "ea9c85d66c853b47a70a",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-041-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "70539be3134b10a68dfe",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-042-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "d9cd96ac81f3a22b3511",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-043-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "d2cfdde11491113ed710",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-044-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "67e81d2eb06ab1e17d15",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-045-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "0861e2d6a857a4ccab1b",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-046-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "a2bbe75c44abdb551242",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-047-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "323026e9e89afed0512d",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-048-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "7e9d70905946633dbdf2",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-049-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "5dd06c5af9ba373b0cd0",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-050-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "82758ba669d6c7b90350",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-051-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "7ffb32005eb78529bb3e",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-052-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "d1647784809ea49b482a",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-053-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "44f2b4bc6ec0cc9f5157",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-054-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "eafd26e106bb20cf3a1d",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-055-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "d38f7765fd599673e6a4",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-056-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "ea87f5ad731da9de18d8",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-057-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "57176b7631e6d228e1a4",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-058-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "0ddf4b91fa921b618ee2",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-059-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "cd43d839b1dc4f32aeaa",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-060-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "2a0d27f55d18ca607796",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-061-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "0ced4c6baa7dfa612ef6",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-062-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "4b96dc7b7e6bfc2375ae",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-063-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "76be4dacffe471d0bc58",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-064-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "2919eb22f76dd540f10f",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-065-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "fa5a8ef7f8f6b25d74c9",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-066-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "38b6858b995002e04837",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-067-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "2b9d74d3466a81017fa8",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-068-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "1c4fe80d150525ab380f",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-069-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "188190a4bd5dca3ca4d8",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-070-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "f84ecc85b6dc50265424",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-071-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "d84412187a56fbd13a1c",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-072-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "90bf5a093d787eada701",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-073-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "0f5d426f76815b3bd5f6",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-074-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "0f044ee9a924a9ea8d22",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-075-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "084acbd291a74b076b28",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-076-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "fde5dcd830d84d462b33",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-077-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "c9c2e799bd7c647a2e77",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-078-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "dfaa7a9dc8f8c972ca3c",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-079-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "913f58f0ba71ed4baafc",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-080-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "716f7bfdca14755580f4",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-081-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "57ff4d859ccf921d4a5b",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-082-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "790c93aff119fa2ccd5f",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-083-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "179fd1afd8c9969dbbdb",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-084-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "08a73d01bcf3d55fbcbd",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-085-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "b1047b449338fc1bbc05",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-086-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "bd7837dbd14a2514959b",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-087-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "d29b8f6f2ce831edd550",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-088-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "2b761eea8d66135aee09",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-089-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "e0e45ab38d8c3bc033e2",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-090-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "ef92b1c234bcb28e8560",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-091-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "faae3f866a1f8d4f0375",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-092-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "ad60399018c7dad802df",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-093-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "992c9ab36c608ad0a123",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-094-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "befcad93c6a8ec4e9738",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-095-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "bcdf9de93e80f20472dd",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-096-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "fcec77b9563ffb6ff04c",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-097-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "4fda9be1b539f6a501fb",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-098-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "c7385473317f1f039c38",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-099-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "3d6a8ea224b470a9c0f5",
+    "model_stage": "qwen_base",
+    "sample_id": "h400-100-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "362a7e8bcdc6dcc6fefc",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-001-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "29f47cfead71fd5341a6",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-002-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "b49d0759f3b85092e38c",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-003-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "2d4288a7d39fdfe18223",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-004-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "e8b315b6e39bcf3c18fe",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-005-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "e6bed6828b0526d592c8",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-006-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "b5cb7df8f81a8845ef27",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-007-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "217ba9f0bfc1cae473c0",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-008-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "503135e92d100c71d3da",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-009-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "30de7ee845523ced08b7",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-010-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "c385ac79ff9c7a045167",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-011-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "a4ad793c82d3e3dc2be8",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-012-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "57500125bff84af841f9",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-013-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "2bf2da3ce63237ab257b",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-014-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "d5048aa5b13ecffe2871",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-015-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "4254ca2de96cb5b1558e",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-016-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "673526c13f2af7860e90",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-017-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "182a099a9919263c6d47",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-018-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "bf05b4ed03c70a7c1f41",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-019-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "9063619a3583d0edfdeb",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-020-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "b03a118205e21e37ba33",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-021-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "3db11df9a332bbeb671b",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-022-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "ea3fffe370056f872c98",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-023-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "d4f34c14adb0a3799f46",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-024-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "d9165bd99c5c1da3984c",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-025-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "ad70cc2e89ac61a408e0",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-026-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "b7d9f6d2c951870cb313",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-027-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "3463c2762c1a6a8c4c48",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-028-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "8db2c1dfed270c7fc022",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-029-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "63f57a8bd4ab9b2a450a",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-030-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "0062d9cecc20ea34d34a",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-031-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "0f4311882818bc9269ec",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-032-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "fa086839c1d8fd66a75a",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-033-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "8ac2c6d9e0ec9f207f77",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-034-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "acb6367651067d974624",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-035-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "ed4cef718bb6e617ea66",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-036-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "cb0df97bcd85c1055875",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-037-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "84f8da649ef8ea2263e6",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-038-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "7f71ea086890ee5231a5",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-039-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "3d893f162c1140f046cf",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-040-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "621156f596f8e5a79cb3",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-041-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "0b116ec037098e3d5e58",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-042-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "6ba9b0d35f5dfeb200ff",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-043-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "720e6afad4bfab81c1ae",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-044-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "6036d592165c46af5fc9",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-045-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "723f662e85d071ad63ac",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-046-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "327a52e6ef05f6f053fe",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-047-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "cf7ad839597ce9e25410",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-048-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "65fa6743c39a62cd2c57",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-049-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "afbe0b1eefb5e368b812",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-050-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "4ddf79bbd2011782afb4",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-051-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "8aa35c6d49de128cd781",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-052-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "a6a315c7c1418ed732b8",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-053-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "55ed14021cfc272b3dc8",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-054-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "1961570a5df383485170",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-055-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "dde144cc053189f41b68",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-056-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "d9f130348dda93d766dd",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-057-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "0ff6fe7a388719a5e097",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-058-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "50b5e568dbe07de766be",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-059-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "8e8441d4a509555ff306",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-060-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "ca7a6873a50f8ae55d4c",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-061-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "81dadf9e865bacd2e210",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-062-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "8566fe6cdd91a9227513",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-063-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "a0800b887bcaf5767a3c",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-064-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "5bc32bd4d1f7f94231d8",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-065-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "9d7952c937908ff531f7",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-066-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "d2086c9d9ee427037573",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-067-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "5bf21c7355620bf8fb5c",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-068-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "7795e1c753e0031f5563",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-069-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "deb10f2e6861d1e5f99f",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-070-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "9b79d8c7eb944f63bd19",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-071-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "21b4afd7ae39c513e12c",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-072-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "d5fce78c21dad0649a99",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-073-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "cd00a53562d1f6c24627",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-074-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "d995e415a34dfb8cb80e",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-075-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "1bb10e1df66fd4411c74",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-076-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "8842a32404923ee38377",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-077-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "c41ec842752b453e591d",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-078-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "db7fcc441d45aaf45550",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-079-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "01796ca2226d53f6691a",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-080-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "8b2fb8d7414974f22345",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-081-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "db61e791134b33c0229c",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-082-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "fbbffd70ff27e63a029e",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-083-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "435218e13346c6c46905",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-084-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "2f350a3027904def872b",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-085-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "836a31d2ca4056ff7a25",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-086-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "c347604f48b2b164b41b",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-087-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "458df51bdd321a338cef",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-088-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "b17830f2a03c12133d13",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-089-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "28973624a482f3ce7c96",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-090-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "3ca384264fb4c4569ab6",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-091-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "2cf4988785d27508effe",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-092-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "a0a294b074429c324824",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-093-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "099d249953932134b710",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-094-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "2430db7c3c68a79e35c6",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-095-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "c5a5b1d75f6117709bc6",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-096-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "467643a586be426b91f7",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-097-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "791009fc95e154819d95",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-098-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "994c67767321831fb177",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-099-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "b5c1c239b9fd2d242146",
+    "model_stage": "qwen_haechi",
+    "sample_id": "h400-100-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "20fa6daa2f8edc6e8662",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-001-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "fabe251e600c3d767b6f",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-002-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "d8057b623b0e8fb9789d",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-003-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "f7c54ce5185f1e39fdac",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-004-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "1d5dec74d7e4a075a6ca",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-005-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "3d859aece38ea209b80b",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-006-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "f898f66a1a431034f459",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-007-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "a8001a7fc4d92afa71da",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-008-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "3a54b9c47d7977dec51a",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-009-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "75cedc3ca671c5d25fe0",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-010-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "354f5c6b7ea67b6efd16",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-011-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "4d6058f6464586fcd846",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-012-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "f3cc549a6b82fc611750",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-013-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "1fb1b611101fbb3e775d",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-014-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "50bc787e3f7ffa64339b",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-015-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "2e19e476d2e5c335abd5",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-016-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "c56f7ca1f687f80a8cb4",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-017-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "7b291490b4ea4c1157bf",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-018-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "d486d0e84e303e51ab04",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-019-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "0ae3fbf7bdf8d7c95a16",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-020-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "be90197785f59ede9706",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-021-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "1149d97df5e87ef7a00b",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-022-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "c6e1833326ded62a8deb",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-023-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "485e2c04aabbe32897ee",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-024-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "b54c293d42950dcf27f3",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-025-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "878cd81756f263f6e975",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-026-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "4d052eb4a28f668b033e",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-027-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "92adee93446d8be394da",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-028-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "23b2444902810535b883",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-029-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "5576b568ebdfcb8eacaa",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-030-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "ee0532c92d6673bf069e",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-031-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "ded6c7fa3cee2162091d",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-032-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "90b92cbd45386c107f8f",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-033-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "908f1ccdfedca848f506",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-034-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "48ee801a853dc7382054",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-035-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "24fa5d143fe200bf11d6",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-036-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "de3347946ef2816b7bd3",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-037-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "52d13ac6d9621f8f3590",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-038-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "1469268c1f96f004efb0",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-039-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "0a6a76ead5e3a5bc3a29",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-040-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "9d234a9e2736989cd189",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-041-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "6617186be3268d65ae3a",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-042-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "bb2c76ca7ee224206d16",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-043-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "7bec83acc2544a6806cd",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-044-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "92ab4c75d1adf9244757",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-045-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "0eccd48dceaf1d37a950",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-046-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "ec9d76771ad2a8f4a360",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-047-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "9d4bb0fab5e8bcefb8cd",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-048-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "c5778190780cced1e66a",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-049-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "fc11fae326f6fb065d63",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-050-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "5a3fed51b3c47256b9d3",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-051-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "c6d8c74d69398e179184",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-052-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "f25101fb84487b35ba99",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-053-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "0fee434a1059513b2a56",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-054-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "8dc485a45ae30dbaeb40",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-055-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "195d6a7111b78d0f0797",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-056-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "2b47d28e5a568b8cfa6b",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-057-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "8d78d7fed9972fe67fb0",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-058-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "b32d3d5d2b1adc8aac25",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-059-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "23b7b2bf7a2778a506c2",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-060-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "3a60ee70cd9dcc3bc10d",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-061-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "0b5984edafc0683038c0",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-062-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "07f74995c4c574b1f72f",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-063-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "7a4540a24527751929c6",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-064-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "cd0ba44ee264bf002c4d",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-065-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "4e2e521f5b6fc2ca305b",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-066-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "e4e496b394298672bf06",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-067-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "bf54c8d2b440eb72c42a",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-068-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "52d71deaf3dea19eafd3",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-069-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "54f660b35f47e9a021b8",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-070-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "536488180fd28559e24d",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-071-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "4254e3ac247bf338b979",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-072-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "da0d347ad6bca91c3a18",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-073-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "ec90ad8233b9321fb8ad",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-074-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "428a52fd5d3b68dd324f",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-075-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "a88799150abf4ed631a0",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-076-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "e99bc9dbc5e96c91d5d2",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-077-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "1aaf2de034bd966a8173",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-078-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "87dba78a3375212ab3ca",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-079-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "719aaac5c30b5e6c602d",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-080-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "1bb01054d55f6f9f4124",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-081-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "484f16de2c89890b15f0",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-082-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "dca38dc0bcf368d5a289",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-083-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "4262090714b631a875be",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-084-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "328f58df3bb02c4baeee",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-085-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "ba0c72780dd9fe285853",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-086-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "5c519f4ef34d30e51966",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-087-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "c188424546082570b19a",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-088-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "2e65b0468e82d8f0f498",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-089-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "c5410eb6009e384eab3a",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-090-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "5dbc5a41db9f457fa595",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-091-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "ee795c7f540036908923",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-092-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "1112f7a8bdd58a8a1f4c",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-093-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "da705b7993e867785c55",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-094-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "43473ffbcfb2bf872f3a",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-095-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "34605912cd0ad1e91493",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-096-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "1504fdec3be97f779147",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-097-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "31c05e62288a4dded65a",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-098-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "135250e37c4bfac6241c",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-099-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "12dda181ef0ac199a57c",
+    "model_stage": "hyperclova_base",
+    "sample_id": "h400-100-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "7f048d267585b919899b",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-001-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "a348f84c2fb9875866a4",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-002-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "bd5dc02e779655e63ee3",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-003-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "97ec926b51a87d433409",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-004-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "f2d1ef9d8b47a98f0932",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-005-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "ac370c59dc92bb15ecfc",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-006-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "9340c9fb43a9c2d97565",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-007-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "a8921802cdd89ad6cf2d",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-008-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "c9b96c2fd2c3f27916c6",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-009-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "ce7478faf0455ce763df",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-010-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "9f118f3725b9436f17ec",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-011-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "fbcb47cbfd2276c59582",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-012-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "b3e3d16d9b9287af0858",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-013-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "47aac9169612d3edb476",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-014-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "097459bc06764661d373",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-015-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "236189b8369c1ea17f64",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-016-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "04a12f2b300e5fc593a8",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-017-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "6acf328d4198ffc28275",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-018-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "26028aeef35aa41e85bd",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-019-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "8bb54c06893d6208df83",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-020-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "f1e2a47c08066fe12a37",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-021-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "e83c9859ebc7dca9953a",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-022-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "6019cf60d72da5f86d35",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-023-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "e0faf73397c89448194c",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-024-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "f5eb900b7e65e0ee2fe6",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-025-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "c98a4972ca4254c3ab72",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-026-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "6e7b171c17d85dd7564d",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-027-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "5fbd6dec8eb3f414b8ce",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-028-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "5d3d1894f489f3fead4d",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-029-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "6b4abce4cfa9d83a255d",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-030-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "210758476e528da84419",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-031-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "f2705af5511a92b60305",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-032-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "6dc3491031d041d2b045",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-033-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "98591580b88ec8bb11ff",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-034-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "3bc81051249deebfa653",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-035-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "e7195445d4f9595d42bb",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-036-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "b8b6d913a914107932dd",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-037-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "549d7258423ffc64493f",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-038-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "46fb8f22c9505075b9ba",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-039-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "68405b2e8192a704e39c",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-040-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "933a89aaaba96255661d",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-041-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "8bdb82c2013f9fb3d28a",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-042-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "4c5a2fc89220958761a1",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-043-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "5ca3ca24758097374ae7",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-044-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "96a4b3e7d49f37789124",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-045-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "0d3c79cc53346bcf3042",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-046-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "1f735aaf167372942162",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-047-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "66ac790865beaa2bc786",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-048-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "61af6c364c3305c16b39",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-049-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "f4a68c640e88887fa883",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-050-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "cafdcb02c667f2a9c8fd",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-051-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "55637a5e7a5204ae0a71",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-052-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "dec7d15438fc04e3eb71",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-053-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "a4d0e9780b6206f7e0f1",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-054-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "c747f60c0a08c0224de9",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-055-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "c09eadbf4b4d97818f4e",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-056-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "72c776f71f0c9e54866f",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-057-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "1b0f4e7e5e0ad34c2a76",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-058-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "fdac1760a7b2233a2309",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-059-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "0dc4dd1531cbcb6df00f",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-060-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "ece59ac1968029a3dfa5",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-061-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "7274787654a9d369ea0c",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-062-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "6ad9e83a21cb6a141f1a",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-063-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "53a4ac48c1132d2c4deb",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-064-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "678a7adae85d939b3363",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-065-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "7e8b2f53a8f7a923c001",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-066-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "8c9e0fc26acb22be9608",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-067-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "0022ae3889bb29156a63",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-068-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "3a1a00e1ba25f5c28a27",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-069-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "a904c486257e9c5612ad",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-070-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "da968c2d27979899f565",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-071-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "6cb2ff77ddb0734c0bf2",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-072-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "07e336856efec9f7ec2f",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-073-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "7e2b69b589187a3fd4d9",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-074-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "e7f15619535d02bc7bf9",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-075-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "0bdd9990e998f84003c1",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-076-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "35ce1406ff575aeb7db0",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-077-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "df4f3f227861ee2d295f",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-078-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "345d0ad955adfea78c5c",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-079-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "845857ca4255f726d089",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-080-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "28071405df369a443eb3",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-081-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "a5ff0532053edce10e7c",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-082-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "a12c9b33cb6f5451ff6d",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-083-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "0b881908899578c23510",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-084-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "fcdae17d3895197dbfe8",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-085-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "1b4f42d6f7c59500b316",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-086-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "c0e9f9a857f59d11078f",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-087-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "177a234488ea92944ac5",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-088-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "95cff088fee8db5e6967",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-089-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "f2c79dd45dea6450694d",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-090-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "1d58de98ea8c498552da",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-091-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "181c9adb52bafc3d9ea2",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-092-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "95aabbcc3330d3cee8a6",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-093-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "08f0491fa167df800bac",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-094-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "2c230ad80016ca86f6e7",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-095-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "e0ccc7eb9e36160fdf68",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-096-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "387699e1fe1d54ae1084",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-097-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "33e217593368cff70986",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-098-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "eb8c388d15970dd3fb2b",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-099-h400_knowledge_image",
+    "generation_error": null
+  },
+  {
+    "blind_id": "757796dea7c14427413e",
+    "model_stage": "hyperclova_haechi",
+    "sample_id": "h400-100-h400_knowledge_image",
+    "generation_error": null
+  }
+]
