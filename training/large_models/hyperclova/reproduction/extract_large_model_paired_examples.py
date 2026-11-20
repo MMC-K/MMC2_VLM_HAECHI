@@ -256,3 +256,36 @@ def compact_oc(row: dict[str, Any]) -> dict[str, Any]:
         if key in row:
             result[key] = row[key]
     return result
+
+
+def collect_opencompass(roots: dict[str, list[str]]) -> dict[str, Any]:
+    output = {}
+    for suite, patterns in OC_PATTERNS.items():
+        base_files = glob.glob(f"{roots[suite][0]}/predictions/*/*.json")
+        tuned_files = glob.glob(f"{roots[suite][1]}/predictions/*/*.json")
+        tuned_by_name = {Path(path).name: path for path in tuned_files}
+        for pattern in patterns:
+            candidates = sorted(
+                path for path in base_files
+                if pattern.lower() in Path(path).name.lower() and Path(path).name in tuned_by_name
+            )
+            if not candidates:
+                continue
+            base_path = candidates[0]
+            tuned_path = tuned_by_name[Path(base_path).name]
+            base = oc_records(base_path)
+            tuned = oc_records(tuned_path)
+            common = sorted(base.keys() & tuned.keys())
+            if not common:
+                continue
+            key = next(
+                (key for key in common if base[key].get("prediction") != tuned[key].get("prediction")),
+                common[0],
+            )
+            output[f"{suite}/{pattern}"] = {
+                "source_file": Path(base_path).name,
+                "sample_key": key,
+                "base": compact_oc(base[key]),
+                "tuned": compact_oc(tuned[key]),
+            }
+    return output
