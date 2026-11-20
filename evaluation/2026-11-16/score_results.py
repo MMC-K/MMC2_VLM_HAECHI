@@ -52,3 +52,34 @@ def score(label,partial=False):
    s.update({'median_generation_seconds':statistics.median(durations),'p95_generation_seconds':quantile(durations,.95),'mean_generation_seconds':statistics.mean(durations),'mean_output_tokens':statistics.mean(r['generated_tokens'] for r in success),'output_tokens_per_second':sum(r['generated_tokens'] for r in success)/sum(durations),'peak_allocated_gib':max(r['peak_allocated_gib'] for r in success),'peak_reserved_gib':max(r['peak_reserved_gib'] for r in success),'hit_token_budget':sum(r['hit_token_budget'] for r in success)})
   output['tasks'][task]=s
  return output
+
+if __name__=='__main__':
+ import argparse
+ p=argparse.ArgumentParser();p.add_argument('--partial',action='store_true');args=p.parse_args()
+ all_results={}
+ for label in ['hyperclova_base','hyperclova_haechi','qwen_base','qwen_haechi']:
+  r=score(label,partial=args.partial)
+  if r:
+   all_results[label]=r
+   if not args.partial:(OUT/f'{label}_scores.json').write_text(json.dumps(r,ensure_ascii=False,indent=2)+'\n')
+   print(label,r['completed_count'],{k:{m:round(v[m],4) for m in ['strict_exact','normalized_exact','similarity','cer']} for k,v in r['tasks'].items()})
+ if not args.partial:
+  assert len(all_results)==4
+  summary={'dataset':json.loads((OUT/'dataset_manifest.json').read_text()),'results':{k:{'run':v['run'],'tasks':v['tasks']} for k,v in all_results.items()},'comparisons':{}}
+  for alias in ['qwen','hyperclova']:
+   summary['comparisons'][alias]={}
+   a=all_results[f'{alias}_base'];b=all_results[f'{alias}_haechi']
+   for task in ['h400_direct','h400_knowledge_image','ocr']:
+    summary['comparisons'][alias][task]={m:b['tasks'][task][m]-a['tasks'][task][m] for m in ['strict_exact','normalized_exact','similarity','cer','normalized_cer']}
+    ar={r['sample_id']:r for r in a['details'] if r['task']==task};br={r['sample_id']:r for r in b['details'] if r['task']==task}
+    summary['comparisons'][alias][task]['paired_normalized_exact']={'improved':sum(not ar[k]['normalized_exact'] and br[k]['normalized_exact'] for k in ar),'regressed':sum(ar[k]['normalized_exact'] and not br[k]['normalized_exact'] for k in ar),'both_correct':sum(ar[k]['normalized_exact'] and br[k]['normalized_exact'] for k in ar),'both_incorrect':sum(not ar[k]['normalized_exact'] and not br[k]['normalized_exact'] for k in ar)}
+  (OUT/'summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n')
+  import csv
+  with (OUT/'before_after_comparison.csv').open('w',encoding='utf-8-sig',newline='') as stream:
+   writer=csv.writer(stream);writer.writerow(['model','task','metric','n','before','after','delta','unit'])
+   for alias in ['qwen','hyperclova']:
+    for task in ['h400_direct','h400_knowledge_image','ocr']:
+     for metric in ['strict_exact','normalized_exact','similarity','cer']:
+      a=summary['results'][f'{alias}_base']['tasks'][task][metric];b=summary['results'][f'{alias}_haechi']['tasks'][task][metric]
+      writer.writerow([alias,task,metric,100,100*a,100*b,100*(b-a),'percent; delta in percentage points'])
+
