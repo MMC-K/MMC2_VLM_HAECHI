@@ -222,3 +222,18 @@ def vl_rows():
         ),
     )
     return result
+
+
+def mammoth_rows(metric: str, scale: float = 100.0):
+    rows = []
+    for source in MAMMOTH_SOURCES:
+        values = []
+        for root in MAMMOTH_ROOTS:
+            data = remote_json(f"{root}/{source}/summary.json")["sources"][source]
+            values.append(scale * float(data[metric]))
+        rows.append((source, *values))
+    return [
+        ("Heritage macro (3)", mean(row[1] for row in rows[:3]), mean(row[2] for row in rows[:3])),
+        ("OCR macro (3)", mean(row[1] for row in rows[3:]), mean(row[2] for row in rows[3:])),
+        *rows,
+    ]
