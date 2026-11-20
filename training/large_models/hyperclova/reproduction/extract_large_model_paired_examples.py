@@ -210,3 +210,23 @@ def choose_pair(base_rows: list[dict[str, Any]], tuned_rows: list[dict[str, Any]
     )
     key = ranked[0]
     return {"pair_key": key, "base": compact(base[key]), "tuned": compact(tuned[key])}
+
+
+def collect_cultural(roots: list[str]) -> dict[str, Any]:
+    pairs = []
+    for root in roots:
+        rows = []
+        for path in sorted(glob.glob(f"{root}/shard_*/predictions.jsonl")):
+            rows.extend(read_jsonl(path))
+        pairs.append(rows)
+    result = {}
+    for label, predicate in {
+        "identity": lambda row: row.get("task_type") == "heritage_identity" or row.get("question_category") == "identity",
+        "view_caption": lambda row: row.get("task_type") == "heritage_view_caption" or row.get("question_category") == "view_caption",
+        "national_treasure": lambda row: bool(row.get("is_national_treasure")) or row.get("heritage_grade") == "국보",
+    }.items():
+        left = [row for row in pairs[0] if predicate(row)]
+        right = [row for row in pairs[1] if predicate(row)]
+        if left and right:
+            result[label] = choose_pair(left, right)
+    return result
