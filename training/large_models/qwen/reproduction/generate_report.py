@@ -307,3 +307,31 @@ def toolsandbox_rows():
     if counts[0] != counts[1]:
         raise RuntimeError(f"ToolSandbox count mismatch: {counts}")
     return [(f"ToolSandbox similarity (n={counts[0]})", *scores)]
+
+
+def simulation_rows(roots: tuple[str, str], domains: tuple[tuple[str, str], ...]):
+    rows = []
+    totals = [[0.0, 0], [0.0, 0]]
+    for label, directory in domains:
+        values = []
+        counts = []
+        for index, root in enumerate(roots):
+            path = remote_find(f"{root}/{directory}", "results.json")
+            simulations = remote_json(path)["simulations"]
+            rewards = [float(row.get("reward_info", {}).get("reward", 0.0)) for row in simulations]
+            values.append(100 * sum(rewards) / len(rewards))
+            counts.append(len(rewards))
+            totals[index][0] += sum(rewards)
+            totals[index][1] += len(rewards)
+        if counts[0] != counts[1]:
+            raise RuntimeError(f"{label} count mismatch: {counts}")
+        rows.append((f"{label} (n={counts[0]})", *values))
+    rows.append(
+        (
+            f"Weighted overall (n={totals[0][1]})",
+            100 * totals[0][0] / totals[0][1],
+            100 * totals[1][0] / totals[1][1],
+        )
+    )
+    rows.append(("Domain macro", mean(row[1] for row in rows[:-1]), mean(row[2] for row in rows[:-1])))
+    return rows
