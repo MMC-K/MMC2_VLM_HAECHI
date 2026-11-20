@@ -110,3 +110,7 @@ def kubectl(*args: str) -> str:
 
 def remote_text(path: str) -> str:
     return kubectl("cat", path)
+
+
+def remote_json(path: str) -> dict:
+    return json.loads(remote_text(path))
