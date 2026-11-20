@@ -1,0 +1,24 @@
+# Environments, caches and credentials
+.venv*/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.env.*
+!.env.example
+*credentials*
+*kubeconfig*
+**/.image_cache/
+**/.cache/
+wheelhouse/
+models/
+base_models/
+**/.models/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+**/best_adapter/
+**/last_adapter/
+*.log
