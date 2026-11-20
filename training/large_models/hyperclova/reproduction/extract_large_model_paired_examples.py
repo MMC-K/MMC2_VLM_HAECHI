@@ -370,3 +370,18 @@ def collect_vl(roots: list[list[str]]) -> dict[str, Any]:
             "tuned": compact_vl(tuned_row),
         }
     return output
+
+
+def final_assistant(simulation: dict[str, Any]) -> dict[str, Any]:
+    messages = simulation.get("messages", [])
+    user = next((item.get("content", "") for item in messages if item.get("role") == "user"), "")
+    assistants = [item for item in messages if item.get("role") == "assistant"]
+    last = assistants[-1] if assistants else {}
+    return {
+        "task_id": simulation.get("task_id"),
+        "reward": simulation.get("reward_info", {}).get("reward"),
+        "user": str(user)[:2500],
+        "final_assistant": str(last.get("content", ""))[:3500],
+        "tool_calls": last.get("tool_calls"),
+        "termination_reason": simulation.get("termination_reason"),
+    }
