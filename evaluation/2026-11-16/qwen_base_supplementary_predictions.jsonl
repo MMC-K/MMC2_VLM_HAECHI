@@ -1,0 +1,1 @@
+{"sample_id": "supplementary_cheomseongdae", "task": "h400_direct", "prediction": "보물 제1호 경주 남산 석탑", "generated_tokens": 12, "input_tokens": 210, "generation_seconds": 0.8060580210294574, "preprocess_seconds": 0.00934599805623293, "peak_allocated_gib": 51.17619705200195, "peak_reserved_gib": 51.2109375, "hit_token_budget": false, "error": null}
