@@ -335,3 +335,19 @@ def simulation_rows(roots: tuple[str, str], domains: tuple[tuple[str, str], ...]
     )
     rows.append(("Domain macro", mean(row[1] for row in rows[:-1]), mean(row[2] for row in rows[:-1])))
     return rows
+
+
+def json_rows(rows, *, lower_is_better: bool = False):
+    result = []
+    for name, base, tuned in rows:
+        delta = None if base is None or tuned is None else tuned - base
+        result.append(
+            {
+                "benchmark": name,
+                "official_base": base,
+                "tuned": tuned,
+                "delta": delta,
+                "higher_is_better": not lower_is_better,
+            }
+        )
+    return result
