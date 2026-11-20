@@ -1,0 +1,7 @@
+torch==2.9.1
+torchvision==0.24.1
+transformers @ git+https://github.com/huggingface/transformers.git@c93057d4835cd31752bb56f59989dd27696eb45b
+accelerate
+pillow
+safetensors
+huggingface_hub
