@@ -1,0 +1,16 @@
+[
+  {
+    "stage": "base",
+    "max_absolute_difference": 0.015625,
+    "conv3d_seconds": 5.25455256504938,
+    "linear_seconds": 0.0004893138539046049,
+    "exactly_equal_fraction": 0.9994512796401978
+  },
+  {
+    "stage": "haechi",
+    "max_absolute_difference": 0.015625,
+    "conv3d_seconds": 5.11111297016032,
+    "linear_seconds": 0.0001804789062589407,
+    "exactly_equal_fraction": 0.9994512796401978
+  }
+]
