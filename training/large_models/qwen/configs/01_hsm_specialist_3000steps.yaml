@@ -1,0 +1,242 @@
+apiVersion: kubeflow.org/v1
+kind: PyTorchJob
+metadata:
+  name: sft-q35-27b-v28cl-hsm3k-16n
+  namespace: p-keti-airc-h200-128
+spec:
+  nprocPerNode: "8"
+  elasticPolicy:
+    rdzvId: sft-q35-27b-v28cl-hsm3k-16n
+    rdzvBackend: c10d
+    minReplicas: 16
+    maxReplicas: 16
+  runPolicy:
+    cleanPodPolicy: None
+  pytorchReplicaSpecs:
+    Worker:
+      replicas: 16
+      restartPolicy: OnFailure
+      template:
+        metadata:
+          annotations:
+            sidecar.istio.io/inject: "false"
+        spec:
+          nodeSelector:
+            mlx.navercorp.com/zone: private-h200-keti-airc-0
+          imagePullSecrets:
+            - name: ketiair-registry-secret
+          containers:
+            - name: pytorch
+              image: ketiair.com:10004/2.8.0-cuda12.6-cudnn9-long-san-ib-fla-cu126-20260610
+              imagePullPolicy: IfNotPresent
+              workingDir: /data/workspace
+              securityContext:
+                capabilities:
+                  add: ["IPC_LOCK"]
+              env:
+                - name: HF_HOME
+                  value: /data/workspace/hf_cache
+                - name: HF_HUB_OFFLINE
+                  value: "1"
+                - name: TOKENIZERS_PARALLELISM
+                  value: "false"
+                - name: CUDA_DEVICE_MAX_CONNECTIONS
+                  value: "1"
+                - name: NCCL_DEBUG
+                  value: WARN
+                - name: NCCL_IB_TIMEOUT
+                  value: "50"
+                - name: NCCL_IB_RETRY_CNT
+                  value: "10"
+                - name: TORCH_NCCL_ASYNC_ERROR_HANDLING
+                  value: "1"
+                - name: TORCH_NCCL_TRACE_BUFFER_SIZE
+                  value: "1048576"
+                - name: TORCH_NCCL_DUMP_ON_TIMEOUT
+                  value: "1"
+                - name: TORCH_NCCL_HEARTBEAT_TIMEOUT_SEC
+                  value: "7200"
+                - name: PYTORCH_CUDA_ALLOC_CONF
+                  value: expandable_segments:True
+                - name: TILELANG_CACHE_DIR
+                  value: /dev/shm/tilelang-cache
+                - name: XDG_CACHE_HOME
+                  value: /dev/shm/.cache
+                - name: RUN_ID
+                  value: run-sft-20260902-q35-27b-v28cl-hsm3k-16n
+                - name: RDZV_RUN_TOKEN
+                  value: "20260902-q35-27b-v28cl-hsm3k-01"
+                - name: POD_IP
+                  valueFrom:
+                    fieldRef:
+                      fieldPath: status.podIP
+                - name: REPLICA_INDEX
+                  valueFrom:
+                    fieldRef:
+                      fieldPath: metadata.labels['training.kubeflow.org/replica-index']
+              command: ["bash", "-lc"]
+              args:
+                - |
+                  set -euo pipefail
+                  MODEL=/data/workspace/post-training/outputs/qwen35-27b-official-heritage-title-acq-step1000-hf
+                  FABLE=/data/image_dataset/qwen35_fable_v28c_v1_data
+                  VISUALWEB=/data/image_dataset/VisualWebInstruct-verified
+                  MAMMOTH=/data/image_dataset/cultural_heritage/focus_national_top2k_titleclean_v4_20260825/train
+                  MAMMOTH_ROWS=/data/image_dataset/cultural_heritage/focus_national_top2k_titleclean_v4_20260825/train_rows.json
+                  HERITAGE_ANSWER_MAP=/data/image_dataset/mammothvl2_korean_ocr_openai_compat/heritage_simple_answer_map_v2.json
+                  OUTPUT=/data/workspace/post-training/outputs/qwen35-27b-v28cl-hsm3k-v1-16n
+                  LOG_DIR=/data/workspace/logs/sft_qwen35_27b_v28cl_hsm3k_16n-${RUN_ID}
+                  mkdir -p "${LOG_DIR}" "${OUTPUT}" "${TILELANG_CACHE_DIR}" "${XDG_CACHE_HOME}/torch/kernels"
+                  LOG_FILE=${LOG_DIR}/${HOSTNAME}_$(date +%Y%m%d_%H%M%S).log
+
+                  for path in \
+                    "${MODEL}/config.json" \
+                    "${FABLE}/manifest.json" \
+                    "${VISUALWEB}" \
+                    "${MAMMOTH}/ocr_font.jsonl" \
+                    "${MAMMOTH}/ocr_outdoor.jsonl" \
+                    "${MAMMOTH}/ocr_public_exec.jsonl" \
+                    "${MAMMOTH}/heritage_multi_attr.jsonl" \
+                    "${MAMMOTH}/heritage_reverse_mt.jsonl" \
+                    "${MAMMOTH}/heritage_simple.jsonl" \
+                    "${MAMMOTH}/heritage_refine_identity.jsonl" \
+                    "${MAMMOTH}/heritage_refine_view_caption.jsonl" \
+                    "${MAMMOTH_ROWS}" \
+                    "${HERITAGE_ANSWER_MAP}"; do
+                    test -e "${path}" || { echo "Missing required path: ${path}"; exit 2; }
+                  done
+                  test -f "${MODEL}/model.safetensors" || test -f "${MODEL}/model.safetensors.index.json" || {
+                    echo "Missing model weights under ${MODEL}"
+                    exit 2
+                  }
+
+                  RESUME_ARGS=()
+                  LATEST_CHECKPOINT=$(find "${OUTPUT}" -mindepth 1 -maxdepth 1 -type d -name 'checkpoint-*' 2>/dev/null | sort -V | tail -n 1)
+                  if [[ -n "${LATEST_CHECKPOINT}" ]]; then
+                    RESUME_ARGS=(--resume_from_checkpoint "${LATEST_CHECKPOINT}")
+                    echo "Resuming from ${LATEST_CHECKPOINT}" | tee -a "${LOG_FILE}"
+                  fi
+
+                  RDZV_DIR=/data/workspace/.torchrun_rdzv
+                  RDZV_FILE=${RDZV_DIR}/${PET_RDZV_ID}-${RDZV_RUN_TOKEN}.endpoint
+                  mkdir -p "${RDZV_DIR}"
+                  if [[ "${REPLICA_INDEX}" == "0" ]]; then
+                    printf '%s\n' "${POD_IP}" > "${RDZV_FILE}.tmp"
+                    mv "${RDZV_FILE}.tmp" "${RDZV_FILE}"
+                  fi
+                  for _ in $(seq 1 1200); do
+                    [[ -s "${RDZV_FILE}" ]] && break
+                    sleep 1
+                  done
+                  RDZV_IP=$(head -n 1 "${RDZV_FILE}" 2>/dev/null)
+                  test -n "${RDZV_IP}"
+
+                  torchrun \
+                    --nnodes "${PET_NNODES}" \
+                    --nproc_per_node "${PET_NPROC_PER_NODE}" \
+                    --local-addr "${POD_IP}" \
+                    --rdzv_id "${PET_RDZV_ID}" \
+                    --rdzv_backend "${PET_RDZV_BACKEND}" \
+                    --rdzv_endpoint "${RDZV_IP}:23456" \
+                    --rdzv_conf timeout=36000 \
+                    sft_training_code/qwen35_multimodal_sft.py \
+                    --model_name_or_path "${MODEL}" \
+                    --fable_root "${FABLE}" \
+                    --visualweb_root "${VISUALWEB}" \
+                    --mammoth_root "${MAMMOTH}" \
+                    --mammoth_rows_json "${MAMMOTH_ROWS}" \
+                    --output_dir "${OUTPUT}" \
+                    --max_length 4096 \
+                    --max_text_only_length 3584 \
+                    --min_pixels 65536 \
+                    --max_pixels 262144 \
+                    --pack_buffer_size 32 \
+                    --max_vision_patch_rows_per_pack 2048 \
+                    --source_fable_weight 0.10 \
+                    --source_visualweb_weight 0.20 \
+                    --source_mammoth_weight 0.70 \
+                    --fable_lane_weights '{"terminal_math_fable":0.45,"stateful_recovery":0.30,"stateful_scale":0.25}' \
+                    --mammoth_source_weights '{"ocr_font":0.05,"ocr_outdoor":0.05,"ocr_public_exec":0.05,"heritage_multi_attr":0.02,"heritage_reverse_mt":0.02,"heritage_simple":0.60,"heritage_refine_identity":0.16,"heritage_refine_view_caption":0.05}' \
+                    --canonicalize_heritage_answers true \
+                    --canonicalize_ocr_answers true \
+                    --heritage_simple_answer_map "${HERITAGE_ANSWER_MAP}" \
+                    --augment_ocr_images true \
+                    --ocr_augmentation_probability 0.35 \
+                    --augment_heritage_simple_images true \
+                    --heritage_augmentation_probability 0.50 \
+                    --heritage_affine_scale_min 0.85 \
+                    --heritage_affine_rotation_degrees 2.0 \
+                    --heritage_affine_translate_fraction 0.04 \
+                    --heritage_photometric_augmentation true \
+                    --heritage_brightness_min 0.75 \
+                    --heritage_brightness_max 1.25 \
+                    --heritage_contrast_min 0.75 \
+                    --heritage_contrast_max 1.25 \
+                    --heritage_saturation_min 0.80 \
+                    --heritage_saturation_max 1.20 \
+                    --heritage_sharpness_min 0.80 \
+                    --heritage_sharpness_max 1.20 \
+                    --heritage_blur_probability 0.10 \
+                    --heritage_blur_radius_max 1.0 \
+                    --heritage_jpeg_probability 0.20 \
+                    --heritage_jpeg_quality_min 65 \
+                    --per_device_train_batch_size 1 \
+                    --gradient_accumulation_steps 1 \
+                    --max_steps 3000 \
+                    --learning_rate 2e-6 \
+                    --vision_learning_rate 5e-6 \
+                    --vision_encoder_learning_rate 2e-7 \
+                    --freeze_vision_encoder true \
+                    --freeze_visual_merger false \
+                    --vision_unfreeze_last_n_blocks 0 \
+                    --warmup_steps 100 \
+                    --lr_scheduler_type constant_with_warmup \
+                    --weight_decay 0.0 \
+                    --max_grad_norm 1.0 \
+                    --adam_beta1 0.9 \
+                    --adam_beta2 0.95 \
+                    --adam_epsilon 1e-8 \
+                    --bf16 true \
+                    --tf32 true \
+                    --gradient_checkpointing true \
+                    --gradient_checkpointing_kwargs '{"use_reentrant":false}' \
+                    --fsdp "full_shard auto_wrap" \
+                    --fsdp_config '{"transformer_layer_cls_to_wrap":["Qwen3_5DecoderLayer","Qwen3_5VisionBlock"],"sharding_group_size":16,"state_dict_type":"SHARDED_STATE_DICT","activation_checkpointing":false,"use_orig_params":true,"sync_module_states":true}' \
+                    --dataloader_num_workers 2 \
+                    --dataloader_prefetch_factor 2 \
+                    --dataloader_pin_memory true \
+                    --logging_steps 1 \
+                    --save_strategy steps \
+                    --save_steps 1000000 \
+                    --save_total_limit 4 \
+                    --milestone_save_steps 1000,2000,3000 \
+                    --seed 20260902 \
+                    --data_seed 20260902 \
+                    --remove_unused_columns false \
+                    --ddp_find_unused_parameters false \
+                    --ddp_timeout 7200000 \
+                    --include_num_input_tokens_seen true \
+                    --report_to none \
+                    "${RESUME_ARGS[@]}" 2>&1 | tee -a "${LOG_FILE}"
+              resources:
+                requests:
+                  cpu: "96"
+                  memory: 800Gi
+                  nvidia.com/gpu: 8
+                limits:
+                  cpu: "96"
+                  memory: 1Ti
+                  nvidia.com/gpu: 8
+              volumeMounts:
+                - name: shm
+                  mountPath: /dev/shm
+                - name: ddn
+                  mountPath: /data
+          volumes:
+            - name: shm
+              emptyDir:
+                medium: Memory
+                sizeLimit: 128Gi
+            - name: ddn
+              persistentVolumeClaim:
+                claimName: ddn-pvc-test-san1
