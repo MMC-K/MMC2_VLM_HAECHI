@@ -190,3 +190,35 @@ def opencompass_rows(base_path: str, tuned_path: str):
     base = parse(base_path)
     tuned = dict(parse(tuned_path))
     return [(name, score, tuned.get(name)) for name, score in base]
+
+
+def vl_rows():
+    result = []
+    for dataset in (
+        "MMBench_DEV_EN_V11",
+        "MMStar",
+        "MMStar_KO",
+        "KRETA",
+        "MMMU_Pro_10c",
+    ):
+        values = []
+        for key in ("base", "tuned"):
+            root, model = VL_RUNS[key]
+            row = csv_rows(f"{root}/{model}_{dataset}_acc.csv")[0]
+            values.append(100 * float(row["Overall"]))
+        result.append((dataset, *values))
+    values = []
+    for key in ("base", "tuned"):
+        root, model = VL_RUNS[key]
+        row = csv_rows(f"{root}/{model}_HallusionBench_score.csv")[0]
+        values.append(float(row["aAcc"]))
+    result.append(("HallusionBench aAcc", *values))
+    result.insert(
+        0,
+        (
+            "General-VL macro (6)",
+            mean(row[1] for row in result),
+            mean(row[2] for row in result),
+        ),
+    )
+    return result
